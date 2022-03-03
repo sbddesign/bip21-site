@@ -3,6 +3,12 @@
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;800&display=swap');
 
+$color-orange: #FBB13C;
+$color-purple: #D264B6;
+$color-pink: #FF499E;
+$color-blue: #779BE7;
+$color-cyan: #49B6FF;
+
 html,
 body {
   padding: 0;
@@ -17,4 +23,12 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.hero {
+  background: $color-orange;
+}
+
+p {
+  margin-bottom: 1rem;
 }
