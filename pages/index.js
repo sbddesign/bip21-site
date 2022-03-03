@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import { BitcoinCircleIcon } from '@bitcoin-design/bitcoin-icons-react/filled'
+import H2 from '../components/h2'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
@@ -19,8 +20,7 @@ export default function Home() {
             No more on-chain and lightning UI tabs. No more wallet interoperability issues. A simple,
             backwards-compatible way to request bitcoin for on-chain and lightning.
         </p>
-          
-          <h2>The Problem</h2>
+          <H2 text="The Problem" />
           
           <h3>
             Asking users to choose between on-chain and lightning payments can be confusing. However, this has been a
@@ -37,7 +37,7 @@ export default function Home() {
               a way that’s maintains interoperability between wallets?
           </p>
 
-          <h2>A Solution</h2>
+          <H2 text="A Solution" />
 
           <h3>BIP21 Payment URIs with an optional lightning parameter</h3>
 
@@ -52,7 +52,7 @@ export default function Home() {
             the future?
           </p>
           
-          <h2>Examples</h2>
+          <H2 text="Examples" />
           
           <h3>Bitcoin Payment Request</h3>
           
@@ -62,7 +62,7 @@ export default function Home() {
 
           <p>Examples will go here.</p>
           
-          <h2>Why this technique?</h2>
+          <H2 text="Why this technique?" />
           
           <p>
             BIP21 is an existing and agreed-upon standard. Most existing on-chain bitcoin wallets likely already
@@ -72,7 +72,7 @@ export default function Home() {
           
           <p>For lightning wallets, adding support should be relatively simple.</p>
 
-          <h2>Drawbacks</h2>
+          <H2 text="Drawbacks" />
 
           <h3>QR code size is very large</h3>
           
