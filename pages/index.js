@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import { BitcoinCircleIcon } from '@bitcoin-design/bitcoin-icons-react/filled'
 import H2 from '../components/h2'
 import H3 from '../components/h3'
