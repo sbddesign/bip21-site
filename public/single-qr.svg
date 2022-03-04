@@ -1,0 +1,31 @@
+<svg width="439" height="439" viewBox="0 0 439 439" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect x="13.5" y="13.5" width="412" height="412" rx="50.5" fill="white" stroke="#779BE7" stroke-width="27"/>
+    <path d="M113 68H194" stroke="#49B6FF" stroke-width="14" stroke-linecap="round"/>
+    <path d="M179 99H260" stroke="#49B6FF" stroke-width="14" stroke-linecap="round"/>
+    <path d="M103 343H252.5" stroke="#49B6FF" stroke-width="14" stroke-linecap="round"/>
+    <path d="M173 370H322.5" stroke="#49B6FF" stroke-width="14" stroke-linecap="round"/>
+    <path d="M286 343H308.5" stroke="#49B6FF" stroke-width="14" stroke-linecap="round"/>
+    <path d="M220 68H271" stroke="#49B6FF" stroke-width="14" stroke-linecap="round"/>
+    <path d="M286 99H337" stroke="#49B6FF" stroke-width="14" stroke-linecap="round"/>
+    <path d="M315.064 242.663L315.064 242.662C328.22 189.885 296.099 136.428 243.321 123.27C190.553 110.112 137.094 142.235 123.94 195.013C110.774 247.784 142.897 301.237 195.661 314.395L195.661 314.395C248.446 327.554 301.9 295.436 315.064 242.663Z" fill="white" stroke="#FBB13C" stroke-width="4.02083"/>
+    <path d="M262.035 205.085C263.956 192.243 254.177 185.342 240.808 180.736L245.143 163.342L234.557 160.703L230.333 177.639C227.547 176.945 224.691 176.291 221.848 175.643L226.098 158.595L215.518 155.956L211.177 173.347C208.873 172.822 206.612 172.305 204.415 171.758L204.426 171.704L189.825 168.059L187.008 179.367C187.008 179.367 194.863 181.167 194.697 181.279C198.986 182.35 199.759 185.187 199.63 187.436L194.691 207.252C194.986 207.329 195.368 207.435 195.792 207.606C195.438 207.518 195.061 207.423 194.674 207.329L187.75 235.086C187.225 236.389 185.894 238.344 182.897 237.602C183.003 237.754 175.197 235.681 175.197 235.681L169.943 247.798L183.721 251.234C186.282 251.876 188.798 252.546 191.27 253.181L186.891 270.775L197.467 273.414L201.806 256.008C204.698 256.79 207.502 257.515 210.247 258.198L205.923 275.522L216.511 278.161L220.894 260.601C238.951 264.016 252.53 262.638 258.242 246.309C262.848 233.161 258.014 225.577 248.514 220.63C255.431 219.035 260.645 214.483 262.035 205.085ZM237.844 239.009C234.569 252.158 212.433 245.05 205.251 243.266L211.066 219.96C218.243 221.749 241.262 225.295 237.844 239.009ZM241.115 204.896C238.131 216.857 219.704 210.779 213.726 209.288L218.996 188.149C224.972 189.64 244.225 192.421 241.115 204.896Z" fill="white" stroke="#FBB13C" stroke-width="4.02083"/>
+    <path d="M300 316H364" stroke="#49B6FF" stroke-width="14" stroke-linecap="round"/>
+    <path d="M59 316H143" stroke="#49B6FF" stroke-width="14" stroke-linecap="round"/>
+    <path d="M59 287H95.5" stroke="#49B6FF" stroke-width="14" stroke-linecap="round"/>
+    <path d="M352 287H388.5" stroke="#49B6FF" stroke-width="14" stroke-linecap="round"/>
+    <path d="M334 263H370.5" stroke="#49B6FF" stroke-width="14" stroke-linecap="round"/>
+    <path d="M356 229H382.5" stroke="#49B6FF" stroke-width="14" stroke-linecap="round"/>
+    <path d="M59 229H85.5" stroke="#49B6FF" stroke-width="14" stroke-linecap="round"/>
+    <path d="M68 172H94.5" stroke="#49B6FF" stroke-width="14" stroke-linecap="round"/>
+    <path d="M337 172H384.5" stroke="#49B6FF" stroke-width="14" stroke-linecap="round"/>
+    <path d="M308 139H338.5" stroke="#49B6FF" stroke-width="14" stroke-linecap="round"/>
+    <path d="M52 139H82.5" stroke="#49B6FF" stroke-width="14" stroke-linecap="round"/>
+    <path d="M52 115H139.5" stroke="#49B6FF" stroke-width="14" stroke-linecap="round"/>
+    <path d="M356 139H367.5" stroke="#49B6FF" stroke-width="14" stroke-linecap="round"/>
+    <path d="M59 200H67" stroke="#49B6FF" stroke-width="14" stroke-linecap="round"/>
+    <path d="M73 263H89.5" stroke="#49B6FF" stroke-width="14" stroke-linecap="round"/>
+    <circle cx="66" cy="68" r="16" stroke="#49B6FF" stroke-width="14"/>
+    <circle cx="66" cy="370" r="16" stroke="#49B6FF" stroke-width="14"/>
+    <circle cx="373" cy="68" r="16" stroke="#49B6FF" stroke-width="14"/>
+    <circle cx="373" cy="370" r="16" stroke="#49B6FF" stroke-width="14"/>
+</svg>

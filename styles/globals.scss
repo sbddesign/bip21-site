@@ -32,12 +32,16 @@ a {
 }
 
 h2 {
-  @apply text-2xl;
+  @apply text-2xl lg:text-3xl xl:text-4xl;
   font-weight: 800;
 }
 
 h3 {
-  @apply text-xl;
+  @apply text-xl lg:text-2xl xl:text-3xl;
+}
+
+h4 {
+  @apply text-base lg:text-lg xl:text-xl;
 }
 
 p {
