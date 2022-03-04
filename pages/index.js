@@ -1,9 +1,5 @@
 import Head from "next/head";
-import Image from "next/image";
 import { BitcoinCircleIcon } from "@bitcoin-design/bitcoin-icons-react/filled";
-import h2 from "../components/h2";
-import h3 from "../components/h3";
-import styles from "../styles/Home.module.css";
 import Example from "../components/example";
 import Table from "../components/table";
 
@@ -39,7 +35,7 @@ export default function Home() {
           </h3>
         </div>
 
-        <div className="container mx-auto px-12">
+        <div className="mx-auto px-12">
           <section>
             <div className="basis-6/12 space-y-4">
               <h2 className="text-bpr-purple">The Problem</h2>
