@@ -160,7 +160,14 @@ export default function Home() {
             </div>
           </section>
 
-          <div class="h-[60rem] bg-bpr-blue">FLOW CHART</div>
+          <div className="container mx-auto flex justify-center p-12">
+            
+            <picture>
+              <source srcset="flowchart.png 1x, flowchart@2x.png 2x" media="(min-width: 768px)" />
+              <source srcset="flowchart-mobile.png, flowchart-mobile@2x.png 2x" />
+              <img src="flowchart.png" alt="Flowchart of a decision tree for how a BIP21 QR should be interpreted" />
+            </picture>
+          </div>
 
           <section>
             <div className="basis-6/12 space-y-4">
