@@ -24,4 +24,4 @@
 | Wallet of Satoshi | ✔️ | ✔️  |  |            
 | Zap |  |  |   |
 | Zebedee | ❌ | ❌ | "This looks like an on-chain QR code..." |            
-| Zeus | ✔️ | ❌ |   |            
+| Zeus | ✔️ | ❌ |   |  [Link](https://github.com/ZeusLN/zeus/issues/879)          
