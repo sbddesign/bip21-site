@@ -10,8 +10,18 @@ export default function Home() {
         <title>The Bitcoin Payment Request</title>
         <meta
           name="description"
-          content="No more on-chain and lightning UI tabs. No more wallet interoperability issues. A simple, backwards-compatible way to request bitcoin for on-chain and lightning."
+          content="Let's talk about using BIP21 payment URIs to combine on-chain and lightning payments into a single QR code, simplifying the user experience."
         />
+        <meta property="og:image" content="bitcoin-payment-request-poster.jpg" />
+        <meta property="og:image:width" content="1920" />
+        <meta property="og:image:height" content="1080" />
+        <meta property="og:image:alt" content="Logo of the Bitcoin Payment Request" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@bitcoin_design" />
+        <meta name="twitter:creator" content="@bitcoin_design" />
+        <meta name="twitter:title" content="The Bitcoin Payment Request" />
+        <meta name="twitter:description" content="Let's talk about using BIP21 payment URIs to combine on-chain and lightning payments into a single QR code, simplifying the user experience." />
+        <meta name="twitter:image" content="bitcoin-payment-request-poster.jpg" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
