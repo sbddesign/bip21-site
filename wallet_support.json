@@ -3,6 +3,7 @@
     "wallet": "Muun",
     "scans_bip21": "yes",
     "recognizes_lightning": "yes",
+    "generates_bip21": "no",
     "description": "",
     "notes": ""
   },
@@ -10,6 +11,7 @@
     "wallet": "Bluewallet",
     "scans_bip21": "yes",
     "recognizes_lightning": "yes",
+    "creates_bip21": "",
     "description": "Asks me to select a wallet, and I can choose my lightning wallet or on-chain wallet.",
     "notes": "Note that Bluewallet has 2 scanning methods. You can select a wallet and then scan the QR, or you can scan the QR without selecting a wallet. If you choose the latter and scan a BIP21 QR with lightning param, then it will prompt you to select a wallet because it sees your on-chain and lightning wallet as both being valid choices for this payment."
   },
@@ -17,6 +19,8 @@
     "wallet": "Breez",
     "scans_bip21": "yes",
     "recognizes_lightning": "yes",
+    "creates_bip21": "",
+
     "description": "",
     "notes": ""
   },
@@ -24,6 +28,7 @@
     "wallet": "Blixt",
     "scans_bip21": "yes",
     "recognizes_lightning": "yes",
+    "creates_bip21": "",
     "description": "QR code is not a valid bitcoin lightning invoice",
     "notes": ""
   },
@@ -31,6 +36,7 @@
     "wallet": "Phoenix",
     "scans_bip21": "yes",
     "recognizes_lightning": "yes",
+    "creates_bip21": "",
     "description": "",
     "notes": ""
   },
@@ -38,6 +44,7 @@
     "wallet": "Casa",
     "scans_bip21": "yes",
     "recognizes_lightning": "n/a",
+    "creates_bip21": "",
     "description": "",
     "notes": ""
   },
@@ -45,6 +52,7 @@
     "wallet": "CashApp",
     "scans_bip21": "yes",
     "recognizes_lightning": "no",
+    "creates_bip21": "",
     "description": "Takes me to PIN entry followed by on-chain TX fee selection",
     "notes": ""
   },
@@ -52,6 +60,7 @@
     "wallet": "Strike",
     "scans_bip21": "yes",
     "recognizes_lightning": "no",
+    "creates_bip21": "",
     "description": "Amount is too low\" I think it is defaulting to on-chain",
     "notes": ""
   },
@@ -59,13 +68,16 @@
     "wallet": "Zeus",
     "scans_bip21": "yes",
     "recognizes_lightning": "no",
+    "creates_bip21": "",
     "description": "",
-    "notes": ""
+    "notes": "",
+    "issue_link": "https://github.com/ZeusLN/zeus/issues/879"
   },
   {
     "wallet": "BitcoinBeach",
     "scans_bip21": "yes",
     "recognizes_lightning": "no",
+    "creates_bip21": "",
     "description": "",
     "notes": ""
   },
@@ -73,6 +85,7 @@
     "wallet": "Bluewallet - onchain",
     "scans_bip21": "yes",
     "recognizes_lightning": "n/a",
+    "creates_bip21": "",
     "description": "recognizes_the QR",
     "notes": ""
   },
@@ -80,6 +93,7 @@
     "wallet": "BitPay",
     "scans_bip21": "yes",
     "recognizes_lightning": "n/a",
+    "creates_bip21": "",
     "description": "",
     "notes": ""
   },
@@ -87,6 +101,7 @@
     "wallet": "Chaincase",
     "scans_bip21": "yes",
     "recognizes_lightning": "n/a",
+    "creates_bip21": "",
     "description": "Pulls in the entire string including the 'bitcoin:', but I think it sees it as an on-chain address",
     "notes": ""
   },
@@ -94,6 +109,7 @@
     "wallet": "Zebedee",
     "scans_bip21": "no",
     "recognizes_lightning": "no",
+    "creates_bip21": "",
     "description": "This looks like an on-chain QR code...",
     "notes": ""
   },
