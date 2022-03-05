@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;500;800&display=swap");
+
+$color-orange: #fbb13c;
+$color-purple: #d264b6;
+$color-pink: #ff499e;
+$color-blue: #779be7;
+$color-cyan: #49b6ff;
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  //font-weight: 300;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.hero {
+  background: $color-orange;
+  background-image: url("data:image/svg+xml,%3Csvg%20width%3D%221512%22%20height%3D%22982%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20clip-path%3D%22url(%23a)%22%3E%3Cpath%20fill%3D%22url(%23b)%22%20d%3D%22M0%200h1512v982H0z%22%2F%3E%3Cpath%20fill%3D%22url(%23c)%22%20d%3D%22M0%200h1512v982H0z%22%2F%3E%3Cpath%20d%3D%22m380-38%20329.09%20190v380L380%20722%2050.91%20532V152L380-38Z%22%20fill%3D%22url(%23d)%22%2F%3E%3Cpath%20d%3D%22m214%20380%20329.09%20190v380L214%201140l-329.09-190V570L214%20380Z%22%20fill%3D%22url(%23e)%22%2F%3E%3Cpath%20d%3D%22m712%20150%20329.09%20190v380L712%20910%20382.91%20720V340L712%20150Z%22%20fill%3D%22url(%23f)%22%2F%3E%3Cpath%20d%3D%22M712.5-53%20899.995%2055.25v216.5L712.5%20380%20525.005%20271.75V55.25L712.5-53Z%22%20fill%3D%22url(%23g)%22%2F%3E%3Cpath%20d%3D%22m1228.5%20448%20187.49%20108.25v216.5L1228.5%20881l-187.49-108.25v-216.5L1228.5%20448Z%22%20fill%3D%22url(%23h)%22%2F%3E%3Cpath%20d%3D%22m1229%200%20266.74%20154v308L1229%20616%20962.264%20462V154L1229%200Z%22%20fill%3D%22url(%23i)%22%2F%3E%3Cpath%20d%3D%22m1228.5%20178%20421.32%20243.25v486.5L1228.5%201151%20807.179%20907.75v-486.5L1228.5%20178Z%22%20fill%3D%22url(%23j)%22%2F%3E%3Cpath%20d%3D%22M-90-112%20213.975%2063.5v351L-90%20590l-303.975-175.5v-351L-90-112Z%22%20fill%3D%22url(%23k)%22%2F%3E%3Cpath%20d%3D%22m541%20811%20329.09%20190v380L541%201571l-329.09-190v-380L541%20811Z%22%20fill%3D%22url(%23l)%22%2F%3E%3C%2Fg%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22b%22%20x1%3D%22756%22%20y1%3D%220%22%20x2%3D%22756%22%20y2%3D%22982%22%20gradientUnits%3D%22userSpaceOnUse%22%3E%3Cstop%20stop-color%3D%22%23D264B6%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23779BE7%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20id%3D%22c%22%20x1%3D%22756%22%20y1%3D%220%22%20x2%3D%22756%22%20y2%3D%22982%22%20gradientUnits%3D%22userSpaceOnUse%22%3E%3Cstop%20stop-color%3D%22%23FBB13C%22%2F%3E%3Cstop%20offset%3D%22.526%22%20stop-color%3D%22%23D264B6%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23779BE7%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20id%3D%22d%22%20x1%3D%22158.65%22%20y1%3D%22161.5%22%20x2%3D%22639.35%22%20y2%3D%22513%22%20gradientUnits%3D%22userSpaceOnUse%22%3E%3Cstop%20stop-color%3D%22%23fff%22%20stop-opacity%3D%22.39%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23fff%22%20stop-opacity%3D%220%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20id%3D%22e%22%20x1%3D%22-7.35%22%20y1%3D%22579.5%22%20x2%3D%22473.35%22%20y2%3D%22931%22%20gradientUnits%3D%22userSpaceOnUse%22%3E%3Cstop%20stop-color%3D%22%23fff%22%20stop-opacity%3D%22.39%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23fff%22%20stop-opacity%3D%220%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20id%3D%22f%22%20x1%3D%22490.65%22%20y1%3D%22349.5%22%20x2%3D%22971.35%22%20y2%3D%22701%22%20gradientUnits%3D%22userSpaceOnUse%22%3E%3Cstop%20stop-color%3D%22%23fff%22%20stop-opacity%3D%22.39%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23fff%22%20stop-opacity%3D%220%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%22586.389%22%20y1%3D%2260.663%22%20x2%3D%22860.261%22%20y2%3D%22260.925%22%20gradientUnits%3D%22userSpaceOnUse%22%3E%3Cstop%20stop-color%3D%22%23fff%22%20stop-opacity%3D%22.39%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23fff%22%20stop-opacity%3D%220%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20id%3D%22h%22%20x1%3D%221102.39%22%20y1%3D%22561.662%22%20x2%3D%221376.26%22%20y2%3D%22761.925%22%20gradientUnits%3D%22userSpaceOnUse%22%3E%3Cstop%20stop-color%3D%22%23fff%22%20stop-opacity%3D%22.39%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23fff%22%20stop-opacity%3D%220%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20id%3D%22i%22%20x1%3D%221049.59%22%20y1%3D%22161.7%22%20x2%3D%221439.21%22%20y2%3D%22446.6%22%20gradientUnits%3D%22userSpaceOnUse%22%3E%3Cstop%20stop-color%3D%22%23fff%22%20stop-opacity%3D%22.39%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23fff%22%20stop-opacity%3D%220%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20id%3D%22j%22%20x1%3D%22945.114%22%20y1%3D%22433.412%22%20x2%3D%221560.54%22%20y2%3D%22883.425%22%20gradientUnits%3D%22userSpaceOnUse%22%3E%3Cstop%20stop-color%3D%22%23fff%22%20stop-opacity%3D%22.39%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23fff%22%20stop-opacity%3D%220%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20id%3D%22k%22%20x1%3D%22-294.457%22%20y1%3D%2272.275%22%20x2%3D%22149.557%22%20y2%3D%22396.95%22%20gradientUnits%3D%22userSpaceOnUse%22%3E%3Cstop%20stop-color%3D%22%23fff%22%20stop-opacity%3D%22.39%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23fff%22%20stop-opacity%3D%220%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20id%3D%22l%22%20x1%3D%22319.65%22%20y1%3D%221010.5%22%20x2%3D%22800.35%22%20y2%3D%221362%22%20gradientUnits%3D%22userSpaceOnUse%22%3E%3Cstop%20stop-color%3D%22%23fff%22%20stop-opacity%3D%22.39%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23fff%22%20stop-opacity%3D%220%22%2F%3E%3C%2FlinearGradient%3E%3CclipPath%20id%3D%22a%22%3E%3Cpath%20fill%3D%22%23fff%22%20d%3D%22M0%200h1512v982H0z%22%2F%3E%3C%2FclipPath%3E%3C%2Fdefs%3E%3C%2Fsvg%3E");
+  background-size: cover;
+}
+
+h2 {
+  @apply text-2xl lg:text-3xl xl:text-4xl;
+  font-weight: 800;
+}
+
+h3 {
+  @apply text-xl lg:text-2xl xl:text-3xl;
+}
+
+h4 {
+  @apply text-base lg:text-lg xl:text-xl;
+}
+
+p {
+  @apply mb-4 font-light;
+}
+
+section {
+  @apply flex flex-col pt-12 pb-12 space-y-4 md:flex-row md:space-x-4 md:space-y-0;
+}
+
+@keyframes hero-scroll-bounce {
+  0% {
+    transform: translateY(0%);
+  }
+  70% {
+    transform: translateY(0%);
+  }
+  75% {
+    transform: translateY(25%);
+  }
+  80% {
+    transform: translateY(0%);
+  }
+  85% {
+    transform: translateY(25%);
+  }
+  90% {
+    transform: translateY(0%);
+  }
+  95% {
+    transform: translateY(25%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+.hero-scroll {
+  animation: hero-scroll-bounce 8s ease both infinite;
+}
