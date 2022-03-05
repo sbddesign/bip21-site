@@ -208,7 +208,8 @@ export default function Home() {
               </p>
             </div>
           </section>
-          <div className="pt-12 pb-12 flex flex-col items-center space-y-4">
+          
+          <div className="pt-12 pb-12 flex flex-col items-center space-y-4 container mx-auto">
             <h2 className="text-bpr-orange">What's next?</h2>
             <p className="max-w-screen-sm text-center">
               Adoption of the Bitcoin Payment Request is as simple as getting
