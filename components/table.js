@@ -1,25 +1,30 @@
-import { CrossIcon } from '@bitcoin-design/bitcoin-icons-react/filled';
-import { CheckIcon } from '@bitcoin-design/bitcoin-icons-react/filled';
+import wallets from "../wallet_support.json";
 
-function Item({ status, text, title, children }) {
-  return (
-    <div className="flex space-x-4">
-      <div>{status ? <CheckIcon className="w-8 h-8 text-bpr-blue" /> : <CrossIcon className="w-8 h-8 text-bpr-pink" />}</div>
-      <div>{title} </div>
-      <div>{text}</div>
-    </div>
-  );
-}
+export default function Table() {
+  function ynm(status) {
+    return status === "yes" ? "✅" : status === "no" ? "❌" : "N/A";
+  }
 
-export default function Table({ title, caption, raw }) {
   return (
     <div className="flex flex-col items-center space-y-4 px-4">
-      <Item
-        status={true}
-        title="Placeholder wallet title"
-        text="Full support"
-      />
-      <Item status={false} title="Placeholder wallet title" text="No support" />
+      <div class="flex w-full px-2 md:w-[50ch]">
+        <div class="basis-2/6">Wallet</div>
+        <div class="basis-2/6">Scans BIP21 QR</div>
+        <div class="basis-2/6">Recognizes Lightning</div>
+      </div>
+      <ul className="w-full">
+        {wallets.map((w) => (
+          <li class="border-b border-black p-1 last:border-b-0">
+            <div class="flex rounded-xl p-2">
+              <div class="font-light basis-2/6">{w.wallet}</div>
+              <div class="font-light basis-2/6">{ynm(w.scans_bip21)}</div>
+              <div class="font-light basis-2/6">
+                {ynm(w.recognizes_lightning)}
+              </div>
+            </div>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
