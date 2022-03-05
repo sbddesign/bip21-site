@@ -1,8 +1,11 @@
 import wallets from "../wallet_support.json";
+import { CrossIcon } from '@bitcoin-design/bitcoin-icons-react/filled';
+import { CheckIcon } from '@bitcoin-design/bitcoin-icons-react/filled';
+import { QuestionIcon } from '@bitcoin-design/bitcoin-icons-react/filled';
 
 export default function Table() {
   function ynm(status) {
-    return status === "yes" ? "✅" : status === "no" ? "❌" : "N/A";
+    return status === "yes" ? <CheckIcon className="w-8 h-8 text-bpr-blue" /> : status === "no" ? <CrossIcon className="w-8 h-8 text-bpr-pink" /> : status === "n/a" ? "N/A" : <QuestionIcon className="w-8 h-8 text-bpr-purple" />;
   }
 
   return (
