@@ -220,16 +220,25 @@ export default function Home() {
             <Table />
           </div>
         </div>
-        <div className="pt-12 pb-12 text-center space-y-4 flex flex-col items-center">
+        
+        <div className="pt-12 pb-12 text-center space-y-4 flex flex-col items-center container mx-auto">
           <h2 className="text-bpr-pink">Follow along</h2>
           <p class="text-xl">
-            Leave feedback and participate in the conversation here
+            Leave feedback and participate in the conversation on GitHub or in the Bitcoin Design slack workspace in the #unified-qr-code channel.
           </p>
-          <a href="#">
-            <div class="border-4 border-bpr-orange p-4 text-xl text-bpr-orange">
-              Link to GH issue
-            </div>
-          </a>
+          <div className="flex space-x-4">
+            <a href="https://github.com/sbddesign/bip21-site">
+              <div className="border-4 border-bpr-orange p-4 text-xl text-bpr-orange">
+                GitHub
+              </div>
+            </a>
+            <a href="https://join.slack.com/t/bitcoindesign/shared_invite/zt-10sxfovaq-isViijl4RThKRs_TsAQnuA">
+              <div className="border-4 border-bpr-orange p-4 text-xl text-bpr-orange">
+                Slack
+              </div>
+            </a>
+          </div>
+          
         </div>
       </main>
     </div>
