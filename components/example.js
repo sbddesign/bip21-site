@@ -5,7 +5,7 @@ export default function Example({ title, caption, raw, src }) {
       <div className="bg-white drop-shadow-lg">
           <img src={src} alt={title} className="w-full" />
       </div>
-      <p>{caption}</p>
+      <p className="text-left">{caption}</p>
       <h4>Raw Data</h4>
       <pre className="bg-bpr-code-gray break-all p-4 rounded whitespace-pre-wrap">
         {raw}
