@@ -63,21 +63,18 @@ export default function Home() {
               <h2 className="text-bpr-purple">The Problem</h2>
 
               <h3>
-                Asking users to choose between on-chain and lightning payments
-                can be confusing. However, this has been a necessity to maintain
-                interoperability between wallets.
+                Asking users to choose between on-chain and lightning payments can be confusing &mdash; but it's been
+                necessary to maintain interoperability between wallets.
               </h3>
+              
+              <p>
+                Most wallets either take a lightning-only or on-chain-only approach. Wallets that support both use a
+                tab or toggle for switching between the two formats.
+              </p>
 
               <p>
-                As it stands currently, most wallets will either take a
-                lightning-only or on-chain-only approach, or there will be a
-                separate tab or toggle for switching between generating on-chain
-                addresses and lightning invoices.
-              </p>
-              <p>
-                What if we could simplify this so the user doesn’t have to make
-                these choices? And how might we do this in a way that’s
-                maintains interoperability between wallets?
+                What if we could simplify this so the user doesn't have to make these choices? And how might we do this
+                in a way that maintains interoperability between wallets?
               </p>
             </div>
             
@@ -93,14 +90,14 @@ export default function Home() {
               <h3>BIP21 Payment URIs with an optional lightning parameter</h3>
 
               <p>
-                BIP-21 defines a URI scheme for creating a “payment link”. By
+                <a href="https://github.com/bitcoin/bips/blob/master/bip-0021.mediawiki" className="text-bpr-cyan font-medium">BIP-21</a> defines a URI scheme for creating a “payment link”. By
                 default, it includes an on-chain address to send funds to.
               </p>
 
               <p>
-                BIP-21 was designed to be extensible, however. The spec allows
-                for optional parameters to the URI. Why can’t one of these
-                optional parameters be used to include a BOLT 11 invoice, or
+                BIP-21 was designed to be extensible. The spec allows
+                for <a href="https://github.com/bitcoin/bips/blob/master/bip-0021.mediawiki#examples" className="text-bpr-cyan font-medium">optional parameters</a> in the URI. Why can’t one of these
+                parameters be used to include a BOLT 11 invoice, or
                 even a BOLT 12 offer in the future?
               </p>
             </div>
@@ -159,14 +156,15 @@ export default function Home() {
               <h2 className="text-bpr-blue">Why this technique?</h2>
               <p>
                 BIP21 is an existing and agreed-upon standard. Most existing
-                on-chain bitcoin wallets likely already support BIP21. When
+                on-chain bitcoin wallets already support BIP21. When
                 these wallets scan the QR code on the right, they will retrieve
-                an on-chain address, making this QR code backwards compatible.
+                an on-chain address and ignore the Lightning invoice.
               </p>
 
               <p>
-                For lightning wallets, adding support should be relatively
-                simple.
+                For Lightning wallets, adding support should be simple. They just need to know where to look for the
+                Lightning invoice in the BIP21 URI. Wallets can also give a choice of on-chain and Lightning, if the
+                wallet supports both.
               </p>
             </div>
             <div class="basis-6/12 flex justify-center p-6">
@@ -176,7 +174,7 @@ export default function Home() {
             </div>
           </section>
 
-          <div className="flex justify-center p-12">
+          <div className="flex justify-center p-12 mb-8">
             <picture>
               <source srcset="flowchart.png 1x, flowchart@2x.png 2x" media="(min-width: 768px)" />
               <source srcset="flowchart-mobile.png, flowchart-mobile@2x.png 2x" />
@@ -184,35 +182,46 @@ export default function Home() {
             </picture>
           </div>
 
-          <section>
-            <div className="basis-6/12 space-y-4">
-              <h2 class="text-bpr-purple">Drawbacks</h2>
-              <h3>QR code size is very large</h3>
-              <p>
-                The QR becomes large enough to where their could be scanning
-                difficulties with some devices. This is a valid concern.
-                Arguably, BOLT 11 invoices alone also have scannability issues
-                on some devices.
-              </p>
-              <p>
-                BOLT12 offers can significantly reduce the size of the QR code.
-                Additionally, techniques like animated QR codes or NFC could be
-                used to avoid scanning problems.
-              </p>
+          <div>
+            <h2 className="text-bpr-purple mb-4">Common Questions &amp; Concerns</h2>
+            <div className="flex flex-row m-0 gap-16">
+              <div className="basis-6/12">
+                <h3>QR code size is very large</h3>
+
+                <p>
+                  The QR becomes large enough to cause scanning difficulties with some devices. This is a valid concern.
+                  In fact, BOLT 11 invoices alone also have scan-ability issues on some devices.
+                </p>
+
+                <p>
+                  BOLT12 offers can significantly reduce the size of the QR code. Additionally, techniques like
+                  animated QR codes or NFC could help avoid scanning problems.
+                </p>
+              </div>
+              <div className="basis-6/12 space-y-4">
+                <h3>Does this take away choice from the user?</h3>
+
+                <p>In many situations, the user already lacks a choice in the matter. For example:</p>
+                
+                <ul className="list-disc">
+                  <li>If the sending user has an on-chain-only wallet, then they have no choice: they can only pay on-chain.</li>
+                  <li>If the sending user has a Lightning-only wallet, then they have no choice: they can only pay via Lightning.</li>
+                </ul>
+                
+                <p>
+                  For wallets that support both on-chain and Lightning, it would be helpful to the user to default to
+                  the option that offers the lowest fees, which in most cases is going to be Lightning.
+                </p>
+                
+                <p>
+                  In edge cases
+                  where the on-chain fees are actually lower than Lightning, then the wallet could opt to send on-chain
+                  or even present the user which a choice: "You can save X amount on fees, but this transaction will
+                  take longer to confirm. Is this OK?"
+                </p>
+              </div>
             </div>
-            <div className="basis-6/12 space-y-4">
-              <h2>&nbsp;</h2>
-              <h3>Some other problems</h3>
-              <p>
-                Bitcoin ipsum dolor sit amet. Genesis block UTXO satoshis
-                private key key pair blockchain private key. Hashrate SHA-256
-                private key wallet decentralized hash difficulty blocksize.
-                Block reward satoshis genesis block SHA-256 full node hashrate
-                peer-to-peer blockchain. Proof-of-work Merkle Tree inputs
-                mempool bitcoin hash stacking sats? Private key hash hard fork?
-              </p>
-            </div>
-          </section>
+          </div>
         </div>
 
         <div className="md:p-12 flex flex-col items-center space-y-8 p-4 container mx-auto">
@@ -221,7 +230,18 @@ export default function Home() {
           <p className="max-w-screen-sm text-center">
             Adoption of the Bitcoin Payment Request is as simple as getting
             more Lightning wallets, exchanges, and other bitcoin services to
-            support it. Here is the current list of support.
+            support it. See below for the current list of support.
+          </p>
+
+          <p className="max-w-screen-sm text-center font-medium">
+            The most important next step is getting wallets and services to support scanning BIP21 QR codes.
+          </p>
+          
+          <p className="max-w-screen-sm text-center">
+             Once their
+            is wide support for <em>scanning</em> in place, wallets can begin to roll out support for <em>generating</em> BIP 21
+            QR codes. Likely, most projects will not default to generating BIP21 QR codes if there is not wide support
+            for scanning BIP21 QR codes first.
           </p>
           
           <h3 className="text-xl mb-4">Software and services supporting BIP21</h3>
