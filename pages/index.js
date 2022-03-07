@@ -238,7 +238,7 @@ export default function Home() {
           </p>
           
           <p className="max-w-screen-sm text-center">
-             Once their
+             Once there
             is wide support for <em>scanning</em> in place, wallets can begin to roll out support for <em>generating</em> BIP 21
             QR codes. Likely, most projects will not default to generating BIP21 QR codes if there is not wide support
             for scanning BIP21 QR codes first.
