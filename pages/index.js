@@ -226,7 +226,7 @@ export default function Home() {
           
           <h3 className="text-xl mb-4">Software and services supporting BIP21</h3>
           
-          <div className="bg-slate-200 p-4 font-light space-y-4">
+          <div className="bg-slate-200 p-4 font-light space-y-4 rounded">
             <h4 className="font-medium">Defining support</h4>
             <div className="flex">
               <ScanIcon className="w-8 h-8 text-black inline mr-2"/>
