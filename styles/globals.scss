@@ -44,7 +44,7 @@ h4 {
   @apply text-base lg:text-lg xl:text-xl;
 }
 
-p {
+p, ul, ol {
   @apply mb-4 font-light;
 }
 

@@ -1,5 +1,12 @@
 import Head from "next/head";
-import { BitcoinCircleIcon } from "@bitcoin-design/bitcoin-icons-react/filled";
+import {
+  AlertIcon,
+  BitcoinCircleIcon,
+  LightningIcon,
+  QrCodeIcon,
+  ScanIcon,
+  WalletIcon
+} from "@bitcoin-design/bitcoin-icons-react/filled";
 import Example from "../components/example";
 import Table from "../components/table";
 
@@ -38,7 +45,7 @@ export default function Home() {
             The Bitcoin Payment Request
           </h1>
 
-          <h3 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-medium drop-shadow-md mb-24">
+          <h3 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-medium drop-shadow-md mb-24 max-w-5xl">
             No more on-chain and lightning UI tabs.
             No more wallet interoperability issues.
             A simple, backwards-compatible way to
@@ -50,117 +57,114 @@ export default function Home() {
           </svg>
         </div>
 
+        <div className="container mx-auto px-12 max-w-screen-xl">
+          <section>
+            <div className="basis-6/12 space-y-4 flex justify-center flex-col">
+              <h2 className="text-bpr-purple">The Problem</h2>
 
-          <div className="mx-auto px-12">
-            <section className="container mx-auto">
-              <div className="basis-6/12 space-y-4 flex justify-center flex-col">
-                <h2 className="text-bpr-purple">The Problem</h2>
-  
-                <h3>
-                  Asking users to choose between on-chain and lightning payments
-                  can be confusing. However, this has been a necessity to maintain
-                  interoperability between wallets.
-                </h3>
-  
-                <p>
-                  As it stands currently, most wallets will either take a
-                  lightning-only or on-chain-only approach, or there will be a
-                  separate tab or toggle for switching between generating on-chain
-                  addresses and lightning invoices.
-                </p>
-                <p>
-                  What if we could simplify this so the user doesn’t have to make
-                  these choices? And how might we do this in a way that’s
-                  maintains interoperability between wallets?
-                </p>
-              </div>
+              <h3>
+                Asking users to choose between on-chain and lightning payments can be confusing &mdash; but it's been
+                necessary to maintain interoperability between wallets.
+              </h3>
               
-              <div className="basis-6/12 pt-6 md:p-6">
-                <img src="problem-ui.svg" alt="Problematic UI" />
-              </div>
-            </section>
+              <p>
+                Most wallets either take a lightning-only or on-chain-only approach. Wallets that support both use a
+                tab or toggle for switching between the two formats.
+              </p>
 
-            <section className="container mx-auto">
-              <div className="basis-6/12 space-y-4 flex justify-center flex-col">
-                <h2 className="text-bpr-orange">A Solution</h2>
-  
-                <h3>BIP21 Payment URIs with an optional lightning parameter</h3>
+              <p>
+                What if we could simplify this so the user doesn't have to make these choices? And how might we do this
+                in a way that maintains interoperability between wallets?
+              </p>
+            </div>
+            
+            <div className="basis-6/12 pt-6 md:p-6 flex justify-center">
+              <img src="problem-ui.svg" alt="Problematic UI" className="xl:w-8/12" />
+            </div>
+          </section>
 
-                <p>
-                  BIP-21 defines a URI scheme for creating a “payment link”. By
-                  default, it includes an on-chain address to send funds to.
-                </p>
-  
-                <p>
-                  BIP-21 was designed to be extensible, however. The spec allows
-                  for optional parameters to the URI. Why can’t one of these
-                  optional parameters be used to include a BOLT 11 invoice, or
-                  even a BOLT 12 offer in the future?
-                </p>
-              </div>
-              
-              <div className="basis-6/12 pt-6 md:p-6 flex justify-center items-center">
-                <img src="single-qr.svg" alt="Graphic representing a single, unified BIP-21 QR code" />
-              </div>
-            </section>
+          <section>
+            <div className="basis-6/12 space-y-4 flex justify-center flex-col">
+              <h2 className="text-bpr-orange">A Solution</h2>
 
-            <div className="pt-12 pb-12 text-center space-y-4 container mx-auto">
-              <h2 className="text-bpr-pink">Examples</h2>
-  
-              <h3>Bitcoin Payment Request</h3>
-              <div className="flex flex-col space-y-8 md:flex-row md:space-x-4 md:space-y-0 pb-12 lg:justify-around">
-                <div className="basis-6/12 lg:basis-5/12 xl:basis-4/12">
-                  <Example
-                    title="BIP21 URI with BOLT 11 invoice"
-                    src="qr-bip21-bolt11.png"
-                    caption="This includes an on-chain address and a BOLT 11 invoice. It is easily backwards compatible, but is quite large."
-                    raw="bitcoin:bc1qylh3u67j673h6y6alv70m0pl2yz53tzhvxgg7u?amount=0.00001&label=sbddesign%3A%20For%20lunch%20Tuesday&message=For%20lunch%20Tuesday&lightning=lnbc10u1p3pj257pp5yztkwjcz5ftl5laxkav23zmzekaw37zk6kmv80pk4xaev5qhtz7qdpdwd3xger9wd5kwm36yprx7u3qd36kucmgyp282etnv3shjcqzpgxqyz5vqsp5usyc4lk9chsfp53kvcnvq456ganh60d89reykdngsmtj6yw3nhvq9qyyssqjcewm5cjwz4a6rfjx77c490yced6pemk0upkxhy89cmm7sct66k8gneanwykzgdrwrfje69h9u5u0w57rrcsysas7gadwmzxc8c6t0spjazup6"
-                  />
-                </div>
-                <div className="basis-6/12 lg:basis-5/12 xl:basis-4/12">
-                  <Example
-                    title="BIP21 URI with BOLT 12 offer"
-                    src="qr-bip21-bolt12.png"
-                    caption="While BOLT 12 is not widely implemented yet, we can see that using an offer instead of an invoice reduces the QR code size significantly."
-                    raw="bitcoin:bc1qylh3u67j673h6y6alv70m0pl2yz53tzhvxgg7u?amount=0.00001&label=sbddesign%3A%20For%20lunch%20Tuesday&message=For%20lunch%20Tuesday&lightning=lno1pg257enxv4ezqcneype82um50ynhxgrwdajx283qfwdpl28qqmc78ymlvhmxcsywdk5wrjnj36jryg488qwlrnzyjczs"
-                  />
-                </div>
+              <h3>BIP21 Payment URIs with an optional lightning parameter</h3>
+
+              <p>
+                <a href="https://github.com/bitcoin/bips/blob/master/bip-0021.mediawiki" className="text-bpr-cyan font-medium">BIP-21</a> defines a URI scheme for creating a “payment link”. By
+                default, it includes an on-chain address to send funds to.
+              </p>
+
+              <p>
+                BIP-21 was designed to be extensible. The spec allows
+                for <a href="https://github.com/bitcoin/bips/blob/master/bip-0021.mediawiki#examples" className="text-bpr-cyan font-medium">optional parameters</a> in the URI. Why can’t one of these
+                parameters be used to include a BOLT 11 invoice, or
+                even a BOLT 12 offer in the future?
+              </p>
+            </div>
+            
+            <div className="basis-6/12 pt-6 md:p-6 flex justify-center items-center">
+              <img src="single-qr.svg" alt="Graphic representing a single, unified BIP-21 QR code" className="xl:w-8/12" />
+            </div>
+          </section>
+
+          <div className="pt-12 pb-12 text-center space-y-8">
+            <h2 className="text-bpr-pink">Examples</h2>
+
+            <h3>Bitcoin Payment Request</h3>
+            <div className="flex flex-col space-y-8 md:flex-row md:space-x-4 md:space-y-0 pb-12 lg:justify-around">
+              <div className="basis-6/12 lg:basis-5/12 xl:basis-4/12">
+                <Example
+                  title="BIP21 URI with BOLT 11 invoice"
+                  src="qr-bip21-bolt11.png"
+                  caption="This includes an on-chain address and a BOLT 11 invoice. It is easily backwards compatible, but is quite large."
+                  raw="bitcoin:bc1qylh3u67j673h6y6alv70m0pl2yz53tzhvxgg7u?amount=0.00001&label=sbddesign%3A%20For%20lunch%20Tuesday&message=For%20lunch%20Tuesday&lightning=lnbc10u1p3pj257pp5yztkwjcz5ftl5laxkav23zmzekaw37zk6kmv80pk4xaev5qhtz7qdpdwd3xger9wd5kwm36yprx7u3qd36kucmgyp282etnv3shjcqzpgxqyz5vqsp5usyc4lk9chsfp53kvcnvq456ganh60d89reykdngsmtj6yw3nhvq9qyyssqjcewm5cjwz4a6rfjx77c490yced6pemk0upkxhy89cmm7sct66k8gneanwykzgdrwrfje69h9u5u0w57rrcsysas7gadwmzxc8c6t0spjazup6"
+                />
               </div>
-  
-              <h3>Standard QR Codes</h3>
-              <div className="flex flex-col space-y-8 md:flex-row md:space-x-4 md:space-y-0">
-                <div className="basis-6/12">
-                  <Example
-                    title="BIP21 URI with On-chain address"
-                    src="qr-bip21-on-chain.png"
-                    caption="A standard BIP 21 URI, for reference. This has the smallest QR code, but will not work with lightning."
-                    raw="bitcoin:bc1qylh3u67j673h6y6alv70m0pl2yz53tzhvxgg7u?amount=0.00001&label=sbddesign%3A%20For%20lunch%20Tuesday&message=For%20lunch%20Tuesday"
-                  />
-                </div>
-                <div className="basis-6/12">
-                  <Example
-                    title="BOLT 11 Invoice"
-                    src="qr-bolt11.png"
-                    caption="BOLT 11 invoice QR codes are already significantly large, even without the additional data of the BIP21 URI."
-                    raw="lnbc10u1p3pj257pp5yztkwjcz5ftl5laxkav23zmzekaw37zk6kmv80pk4xaev5qhtz7qdpdwd3xger9wd5kwm36yprx7u3qd36kucmgyp282etnv3shjcqzpgxqyz5vqsp5usyc4lk9chsfp53kvcnvq456ganh60d89reykdngsmtj6yw3nhvq9qyyssqjcewm5cjwz4a6rfjx77c490yced6pemk0upkxhy89cmm7sct66k8gneanwykzgdrwrfje69h9u5u0w57rrcsysas7gadwmzxc8c6t0spjazup6"
-                  />
-                </div>
+              <div className="basis-6/12 lg:basis-5/12 xl:basis-4/12">
+                <Example
+                  title="BIP21 URI with BOLT 12 offer"
+                  src="qr-bip21-bolt12.png"
+                  caption="While BOLT 12 is not widely implemented yet, we can see that using an offer instead of an invoice reduces the QR code size significantly."
+                  raw="bitcoin:bc1qylh3u67j673h6y6alv70m0pl2yz53tzhvxgg7u?amount=0.00001&label=sbddesign%3A%20For%20lunch%20Tuesday&message=For%20lunch%20Tuesday&lightning=lno1pg257enxv4ezqcneype82um50ynhxgrwdajx283qfwdpl28qqmc78ymlvhmxcsywdk5wrjnj36jryg488qwlrnzyjczs"
+                />
               </div>
             </div>
 
-          <section className="container mx-auto">
+            <h3>Standard QR Codes</h3>
+            <div className="flex flex-col space-y-8 md:flex-row md:space-x-4 md:space-y-0 pb-12 lg:justify-around">
+              <div className="basis-6/12 lg:basis-5/12 xl:basis-4/12">
+                <Example
+                  title="BIP21 URI with On-chain address"
+                  src="qr-bip21-on-chain.png"
+                  caption="A standard BIP 21 URI, for reference. This has the smallest QR code, but will not work with lightning."
+                  raw="bitcoin:bc1qylh3u67j673h6y6alv70m0pl2yz53tzhvxgg7u?amount=0.00001&label=sbddesign%3A%20For%20lunch%20Tuesday&message=For%20lunch%20Tuesday"
+                />
+              </div>
+              <div className="basis-6/12 lg:basis-5/12 xl:basis-4/12">
+                <Example
+                  title="BOLT 11 Invoice"
+                  src="qr-bolt11.png"
+                  caption="BOLT 11 invoice QR codes are already significantly large, even without the additional data of the BIP21 URI."
+                  raw="lnbc10u1p3pj257pp5yztkwjcz5ftl5laxkav23zmzekaw37zk6kmv80pk4xaev5qhtz7qdpdwd3xger9wd5kwm36yprx7u3qd36kucmgyp282etnv3shjcqzpgxqyz5vqsp5usyc4lk9chsfp53kvcnvq456ganh60d89reykdngsmtj6yw3nhvq9qyyssqjcewm5cjwz4a6rfjx77c490yced6pemk0upkxhy89cmm7sct66k8gneanwykzgdrwrfje69h9u5u0w57rrcsysas7gadwmzxc8c6t0spjazup6"
+                />
+              </div>
+            </div>
+          </div>
+
+          <section>
             <div className="basis-6/12 space-y-4 flex flex-col justify-center">
               <h2 className="text-bpr-blue">Why this technique?</h2>
               <p>
                 BIP21 is an existing and agreed-upon standard. Most existing
-                on-chain bitcoin wallets likely already support BIP21. When
+                on-chain bitcoin wallets already support BIP21. When
                 these wallets scan the QR code on the right, they will retrieve
-                an on-chain address, making this QR code backwards compatible.
+                an on-chain address and ignore the Lightning invoice.
               </p>
 
               <p>
-                For lightning wallets, adding support should be relatively
-                simple.
+                For Lightning wallets, adding support should be simple. They just need to know where to look for the
+                Lightning invoice in the BIP21 URI. Wallets can also give a choice of on-chain and Lightning, if the
+                wallet supports both.
               </p>
             </div>
             <div class="basis-6/12 flex justify-center p-6">
@@ -170,8 +174,7 @@ export default function Home() {
             </div>
           </section>
 
-          <div className="container mx-auto flex justify-center p-12">
-            
+          <div className="flex justify-center p-12 mb-8">
             <picture>
               <source srcset="flowchart.png 1x, flowchart@2x.png 2x" media="(min-width: 768px)" />
               <source srcset="flowchart-mobile.png, flowchart-mobile@2x.png 2x" />
@@ -179,49 +182,93 @@ export default function Home() {
             </picture>
           </div>
 
-          <section>
-            <div className="basis-6/12 space-y-4">
-              <h2 class="text-bpr-purple">Drawbacks</h2>
-              <h3>QR code size is very large</h3>
-              <p>
-                The QR becomes large enough to where their could be scanning
-                difficulties with some devices. This is a valid concern.
-                Arguably, BOLT 11 invoices alone also have scannability issues
-                on some devices.
-              </p>
-              <p>
-                BOLT12 offers can significantly reduce the size of the QR code.
-                Additionally, techniques like animated QR codes or NFC could be
-                used to avoid scanning problems.
-              </p>
+          <div>
+            <h2 className="text-bpr-purple mb-4">Common Questions &amp; Concerns</h2>
+            <div className="flex flex-row m-0 gap-16">
+              <div className="basis-6/12">
+                <h3>QR code size is very large</h3>
+
+                <p>
+                  The QR becomes large enough to cause scanning difficulties with some devices. This is a valid concern.
+                  In fact, BOLT 11 invoices alone also have scan-ability issues on some devices.
+                </p>
+
+                <p>
+                  BOLT12 offers can significantly reduce the size of the QR code. Additionally, techniques like
+                  animated QR codes or NFC could help avoid scanning problems.
+                </p>
+              </div>
+              <div className="basis-6/12 space-y-4">
+                <h3>Does this take away choice from the user?</h3>
+
+                <p>In many situations, the user already lacks a choice in the matter. For example:</p>
+                
+                <ul className="list-disc">
+                  <li>If the sending user has an on-chain-only wallet, then they have no choice: they can only pay on-chain.</li>
+                  <li>If the sending user has a Lightning-only wallet, then they have no choice: they can only pay via Lightning.</li>
+                </ul>
+                
+                <p>
+                  For wallets that support both on-chain and Lightning, it would be helpful to the user to default to
+                  the option that offers the lowest fees, which in most cases is going to be Lightning.
+                </p>
+                
+                <p>
+                  In edge cases
+                  where the on-chain fees are actually lower than Lightning, then the wallet could opt to send on-chain
+                  or even present the user which a choice: "You can save X amount on fees, but this transaction will
+                  take longer to confirm. Is this OK?"
+                </p>
+              </div>
             </div>
-            <div className="basis-6/12 space-y-4">
-              <h2>&nbsp;</h2>
-              <h3>Some other problems</h3>
-              <p>
-                Bitcoin ipsum dolor sit amet. Genesis block UTXO satoshis
-                private key key pair blockchain private key. Hashrate SHA-256
-                private key wallet decentralized hash difficulty blocksize.
-                Block reward satoshis genesis block SHA-256 full node hashrate
-                peer-to-peer blockchain. Proof-of-work Merkle Tree inputs
-                mempool bitcoin hash stacking sats? Private key hash hard fork?
-              </p>
-            </div>
-          </section>
-          
-          <div className="pt-12 pb-12 flex flex-col items-center space-y-4 container mx-auto">
-            <h2 className="text-bpr-orange">What's next?</h2>
-            <p className="max-w-screen-sm text-center">
-              Adoption of the Bitcoin Payment Request is as simple as getting
-              more Lightning wallets, exchanges, and other bitcoin services to
-              support it. Here is the current list of support.
-            </p>
-            <p class="text-xl">Software and services supporting BIP21</p>
-            <Table />
           </div>
         </div>
+
+        <div className="md:p-12 flex flex-col items-center space-y-8 p-4 container mx-auto">
+          <h2 className="text-bpr-orange">What's next?</h2>
+          
+          <p className="max-w-screen-sm text-center">
+            Adoption of the Bitcoin Payment Request is as simple as getting
+            more Lightning wallets, exchanges, and other bitcoin services to
+            support it. See below for the current list of support.
+          </p>
+
+          <p className="max-w-screen-sm text-center font-medium">
+            The most important next step is getting wallets and services to support scanning BIP21 QR codes.
+          </p>
+          
+          <p className="max-w-screen-sm text-center">
+             Once there
+            is wide support for <em>scanning</em> in place, wallets can begin to roll out support for <em>generating</em> BIP 21
+            QR codes. Likely, most projects will not default to generating BIP21 QR codes if there is not wide support
+            for scanning BIP21 QR codes first.
+          </p>
+          
+          <h3 className="text-xl mb-4">Software and services supporting BIP21</h3>
+          
+          <div className="bg-slate-200 p-4 font-light space-y-4 rounded">
+            <h4 className="font-medium">Defining support</h4>
+            <div className="flex">
+              <ScanIcon className="w-8 h-8 text-black inline mr-2"/>
+              Can the wallet or service scan a BIP21 QR code?
+            </div>
+            <div className="flex">
+              <LightningIcon className="w-8 h-8 text-black inline mr-2"/>
+              Can the wallet or service recognize the lightning parameter in the BIP21 URI?
+            </div>
+            <div className="flex">
+              <QrCodeIcon className="w-8 h-8 text-black inline mr-2"/>
+              Can the wallet generate it's own BIP21 QR code?
+            </div>
+            <div className="flex">
+              <AlertIcon className="w-8 h-8 text-black inline mr-2"/>
+              Is there an open issue or discussion about adding this feature?
+            </div>
+          </div>
+          <Table/>
+        </div>
         
-        <div className="pt-12 pb-12 text-center space-y-4 flex flex-col items-center container mx-auto">
+        <div className="pt-24 pb-24 pl-12 pr-12 max-w-4xl text-center space-y-4 flex flex-col items-center container mx-auto max-w-screen-lg">
           <h2 className="text-bpr-pink">Follow along</h2>
           <p class="text-xl">
             Leave feedback and participate in the conversation on GitHub or in the Bitcoin Design slack workspace in the #unified-qr-code channel.
