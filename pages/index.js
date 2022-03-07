@@ -1,5 +1,12 @@
 import Head from "next/head";
-import { BitcoinCircleIcon } from "@bitcoin-design/bitcoin-icons-react/filled";
+import {
+  AlertIcon,
+  BitcoinCircleIcon,
+  LightningIcon,
+  QrCodeIcon,
+  ScanIcon,
+  WalletIcon
+} from "@bitcoin-design/bitcoin-icons-react/filled";
 import Example from "../components/example";
 import Table from "../components/table";
 
@@ -208,14 +215,36 @@ export default function Home() {
           </section>
         </div>
 
-        <div className="p-12 flex flex-col items-center space-y-4 container mx-auto">
+        <div className="md:p-12 flex flex-col items-center space-y-8 p-4 container mx-auto">
           <h2 className="text-bpr-orange">What's next?</h2>
+          
           <p className="max-w-screen-sm text-center">
             Adoption of the Bitcoin Payment Request is as simple as getting
             more Lightning wallets, exchanges, and other bitcoin services to
             support it. Here is the current list of support.
           </p>
-          <p className="text-xl">Software and services supporting BIP21</p>
+          
+          <h3 className="text-xl mb-4">Software and services supporting BIP21</h3>
+          
+          <div className="bg-slate-200 p-4 font-light space-y-4">
+            <h4 className="font-medium">Defining support</h4>
+            <div className="flex">
+              <ScanIcon className="w-8 h-8 text-black inline mr-2"/>
+              Can the wallet or service scan a BIP21 QR code?
+            </div>
+            <div className="flex">
+              <LightningIcon className="w-8 h-8 text-black inline mr-2"/>
+              Can the wallet or service recognize the lightning parameter in the BIP21 URI?
+            </div>
+            <div className="flex">
+              <QrCodeIcon className="w-8 h-8 text-black inline mr-2"/>
+              Can the wallet generate it's own BIP21 QR code?
+            </div>
+            <div className="flex">
+              <AlertIcon className="w-8 h-8 text-black inline mr-2"/>
+              Is there an open issue or discussion about adding this feature?
+            </div>
+          </div>
           <Table/>
         </div>
         

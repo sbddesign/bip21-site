@@ -11,6 +11,7 @@ module.exports = {
       "bpr-orange": "#FBB13C",
       "bpr-pink": "#FF499E",
       "bpr-blue": "#779BE7",
+      "bpr-cyan": "#49B6FF",
       "bpr-code-gray": "#EAEAEA",
       ...colors,
     },
