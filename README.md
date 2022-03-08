@@ -6,6 +6,7 @@ This is a WIP microsite to promote the usage of a BIP21 payment URI QR code that
 
 | Wallet        | BIP21 support     | Recognizes Lightning | Description | Issue |
 |--------------|-----------|------------|------------|------------|
+| Alby | ❌ | ❌ |   |
 | Bitcoin Beach | ✔️ | ❌ |   |        
 | Blixt | ✔️ | ✔️ | QR code is not a valid bitcoin lightning invoice. |          
 | Bluewallet | ✔️ | ✔️ |  Asks to select a wallet, and I can choose my lightning wallet or on-chain wallet. |          
