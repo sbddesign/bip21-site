@@ -166,6 +166,10 @@ export default function Home() {
                 Lightning invoice in the BIP21 URI. Wallets can also give a choice of on-chain and Lightning, if the
                 wallet supports both.
               </p>
+              
+              <p>
+                This technique is even <a href="https://github.com/lightning/bolts/blob/master/11-payment-encoding.md#encoding-overview" className="text-bpr-cyan font-medium">mentioned in the BOLT 11 spec</a>!
+              </p>
             </div>
             <div class="basis-6/12 flex justify-center p-6">
               <div className="bg-bpr-orange w-[240px] h-[240px] md:w-[340px] md:h-[340px]">
@@ -270,8 +274,9 @@ export default function Home() {
         
         <div className="pt-24 pb-24 pl-12 pr-12 max-w-4xl text-center space-y-4 flex flex-col items-center container mx-auto max-w-screen-lg">
           <h2 className="text-bpr-pink">Follow along</h2>
-          <p class="text-xl">
-            Leave feedback and participate in the conversation on GitHub or in the Bitcoin Design slack workspace in the #unified-qr-code channel.
+          <p className="text-xl">
+            Leave feedback and participate in the conversation on GitHub or in the Bitcoin Design slack workspace in
+            the #unified-qr-code channel.
           </p>
           <div className="flex space-x-4">
             <a href="https://github.com/sbddesign/bip21-site">
@@ -285,7 +290,26 @@ export default function Home() {
               </div>
             </a>
           </div>
-          
+        </div>
+
+        <div className="pt-24 pb-24 pl-12 pr-12 max-w-4xl text-center space-y-4 flex flex-col items-center container mx-auto max-w-screen-lg">
+          <h2 className="text-bpr-blue">Developer Resources</h2>
+          <p className="text-lg">
+            Here's a list of references to help with implementation and testing.
+          </p>
+
+          <ul>
+            <li>
+              <a href="https://github.com/peakshift/bitcoin-ux/tree/master/packages/payment-requests">
+                Peakshift Bitcoin UX Payment Requests Package
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/sbddesign/bip21-lightning">
+                QR Code Generator for Testing
+              </a>
+            </li>
+          </ul>
         </div>
       </main>
     </div>
