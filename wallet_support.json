@@ -91,15 +91,6 @@
     "credit": "@sbddesign"
   },
   {
-    "wallet": "Bluewallet - onchain",
-    "scans_bip21": "yes",
-    "recognizes_lightning": "n/a",
-    "creates_bip21": "no",
-    "description": "recognizes_the QR",
-    "notes": "",
-    "credit": "@sbddesign"
-  },
-  {
     "wallet": "BitPay",
     "scans_bip21": "yes",
     "recognizes_lightning": "n/a",
