@@ -82,15 +82,15 @@ export default function Home() {
               <li><a href="#solution" onClick={scrollTo}>Solution</a></li>
               <li><a href="#examples" onClick={scrollTo}>Examples</a></li>
               <li><a href="#why" onClick={scrollTo}>Why this technique?</a></li>
-              <li><a href="#faq" onClick={scrollTo}>Common Questions &amp; Concerns</a></li>
+              <li><a href="#plan" onClick={scrollTo}>The Plan</a></li>
               <li><a href="#contribute" onClick={scrollTo}>How to contribute</a></li>
+              <li><a href="#faq" onClick={scrollTo}>Common Questions &amp; Concerns</a></li>
               <li><a href="#follow" onClick={scrollTo}>Follow</a></li>
             </ul>
           </nav>
         </header>
       </div>
-      
-      
+
       <main className="text-left">
         <div className="hero text-center text-white flex items-center justify-center flex-col w-full p-12 pt-16 h-screen lg:p-36">
           <div className="min-w-[156px] min-h-[156px]">
@@ -244,51 +244,10 @@ export default function Home() {
               <img src="flowchart.png" alt="Flowchart of a decision tree for how a BIP21 QR should be interpreted" />
             </picture>
           </div>
-
-          <div>
-            <h2 className="text-bpr-purple mb-4" id="faq">Common Questions &amp; Concerns</h2>
-            <div className="flex flex-col md:flex-row m-0 gap-8 md:gap-16">
-              <div className="basis-6/12">
-                <h3>QR code size is very large</h3>
-
-                <p>
-                  The QR becomes large enough to cause scanning difficulties with some devices. This is a valid concern.
-                  In fact, BOLT 11 invoices alone also have scan-ability issues on some devices.
-                </p>
-
-                <p>
-                  BOLT12 offers can significantly reduce the size of the QR code. Additionally, techniques like
-                  animated QR codes or NFC could help avoid scanning problems.
-                </p>
-              </div>
-              <div className="basis-6/12 space-y-4">
-                <h3>Does this take away choice from the user?</h3>
-
-                <p>In many situations, the user already lacks a choice in the matter. For example:</p>
-                
-                <ul className="list-disc">
-                  <li>If the sending user has an on-chain-only wallet, then they have no choice: they can only pay on-chain.</li>
-                  <li>If the sending user has a Lightning-only wallet, then they have no choice: they can only pay via Lightning.</li>
-                </ul>
-                
-                <p>
-                  For wallets that support both on-chain and Lightning, it would be helpful to the user to default to
-                  the option that offers the lowest fees, which in most cases is going to be Lightning.
-                </p>
-                
-                <p>
-                  In edge cases
-                  where the on-chain fees are actually lower than Lightning, then the wallet could opt to send on-chain
-                  or even present the user which a choice: "You can save X amount on fees, but this transaction will
-                  take longer to confirm. Is this OK?"
-                </p>
-              </div>
-            </div>
-          </div>
         </div>
 
         <div className="md:p-12 flex flex-col md:items-center space-y-8 p-4 container mx-auto">
-          <h2 className="text-bpr-orange" id="contribute">How to contribute</h2>
+          <h2 className="text-bpr-orange" id="plan">The Plan</h2>
 
           <p className="max-w-screen-sm md:text-center">
             Adoption of the a unified BIP21 QR code for bitcoin is as simple as getting
@@ -310,6 +269,7 @@ export default function Home() {
           </p>
           
           <div className="max-w-screen-lg pt-8">
+            <h2 className="text-bpr-blue mb-8" id="contribute">How to contribute</h2>
             <h3 className="mb-4">How to test a wallet</h3>
             <div className="flex flex-col md:flex-row m-0 gap-8 md:gap-16">
               <div className="basis-6/12 space-y-4">
@@ -407,7 +367,48 @@ export default function Home() {
           </div>
           <Table/>
         </div>
-        
+
+        <div className="container mx-auto px-12 max-w-screen-xl">
+          <h2 className="text-bpr-purple mb-4" id="faq">Common Questions &amp; Concerns</h2>
+          <div className="flex flex-col md:flex-row m-0 gap-8 md:gap-16">
+            <div className="basis-6/12">
+              <h3>QR code size is very large</h3>
+
+              <p>
+                The QR becomes large enough to cause scanning difficulties with some devices. This is a valid concern.
+                In fact, BOLT 11 invoices alone also have scan-ability issues on some devices.
+              </p>
+
+              <p>
+                BOLT12 offers can significantly reduce the size of the QR code. Additionally, techniques like
+                animated QR codes or NFC could help avoid scanning problems.
+              </p>
+            </div>
+            <div className="basis-6/12 space-y-4">
+              <h3>Does this take away choice from the user?</h3>
+
+              <p>In many situations, the user already lacks a choice in the matter. For example:</p>
+
+              <ul className="list-disc">
+                <li>If the sending user has an on-chain-only wallet, then they have no choice: they can only pay on-chain.</li>
+                <li>If the sending user has a Lightning-only wallet, then they have no choice: they can only pay via Lightning.</li>
+              </ul>
+
+              <p>
+                For wallets that support both on-chain and Lightning, it would be helpful to the user to default to
+                the option that offers the lowest fees, which in most cases is going to be Lightning.
+              </p>
+
+              <p>
+                In edge cases
+                where the on-chain fees are actually lower than Lightning, then the wallet could opt to send on-chain
+                or even present the user which a choice: "You can save X amount on fees, but this transaction will
+                take longer to confirm. Is this OK?"
+              </p>
+            </div>
+          </div>
+        </div>
+          
         <div className="pt-24 pb-24 pl-12 pr-12 max-w-4xl text-center space-y-4 flex flex-col items-center container mx-auto max-w-screen-lg">
           <h2 className="text-bpr-pink" id="follow">Follow along</h2>
           <p className="text-xl">
