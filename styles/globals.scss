@@ -19,6 +19,7 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+  @apply text-bpr-cyan font-medium;
 }
 
 * {
@@ -82,3 +83,41 @@ section {
 .hero-scroll {
   animation: hero-scroll-bounce 8s ease both infinite;
 }
+
+#header-container {
+  &.transparent {
+    @apply bg-transparent lg:bg-transparent;
+    
+    a {
+      @apply text-white drop-shadow-md;
+    }
+    
+    header, .controls, #nav {
+      @apply bg-transparent lg:bg-transparent;
+    }
+    
+    .logo {
+      @apply opacity-0;
+    }
+  }
+  
+  #nav {
+    @apply transition-all duration-200 block opacity-100 translate-y-[0%] lg:transition-none;
+  }
+
+  #nav-overlay {
+    @apply opacity-50 transition-opacity duration-200;
+  }
+  
+  &.deactivated {
+    #nav {
+      @apply translate-y-[-100%] opacity-0 lg:opacity-100 lg:translate-y-0 transition-all duration-200 pointer-events-none lg:pointer-events-auto lg:transition-none;
+    }
+
+    #nav-overlay {
+      @apply opacity-0;
+    }
+  }
+}
+
+

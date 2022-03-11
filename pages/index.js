@@ -5,14 +5,45 @@ import {
   LightningIcon,
   QrCodeIcon,
   ScanIcon,
-  WalletIcon
+  WalletIcon,
+  MenuIcon
 } from "@bitcoin-design/bitcoin-icons-react/filled";
 import Example from "../components/example";
 import Table from "../components/table";
+import React from "react";
+
+function toggleMenu() {
+  let header = document.getElementById('header-container');
+  if(header.classList.contains('deactivated')) header.classList.remove('deactivated');
+  else header.classList.add('deactivated');
+}
+
+function scrollTo(e){
+  e.preventDefault();
+  let element = document.getElementById( e.target.hash.substring(1) );
+  element.scrollIntoView({behavior: 'smooth', block: 'center'});
+  toggleMenu();
+}
+
+function changeMenuStyle(transparent = 'true') {
+  let header = document.getElementById('header-container');
+  if(transparent) header.classList.add('transparent');
+  else header.classList.remove('transparent');
+}
+
+function checkScrollPosition(e) {
+  if(window.scrollY > 200) changeMenuStyle(false);
+  else changeMenuStyle();
+   
+}
 
 export default function Home() {
+  React.useEffect(()=>{
+    window.addEventListener('scroll', checkScrollPosition);
+  });
+  
   return (
-    <div className="w-full max-w-80ch">
+    <div className="w-full max-w-80ch" onScroll={checkScrollPosition}>
       <Head>
         <title>The Bitcoin Payment Request</title>
         <meta
@@ -31,9 +62,36 @@ export default function Home() {
         <meta name="twitter:image" content="bitcoin-payment-request-poster.jpg" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      
+      <div id="header-container" className="deactivated transparent">
+        <div id="nav-overlay" className="fixed w-full h-full bg-white z-[47] lg:hidden deactivated" onClick={toggleMenu}></div>
 
+        <header className="fixed top-0 w-full left-0 z-[48] lg:flex lg:flex-row lg:bg-white lg:justify-between lg:items-center">
+          <div className="controls flex flex-row justify-between p-4 bg-white z-[50] relative">
+            <a href="/">
+              <BitcoinCircleIcon className="logo text-black w-12 h-12" />
+              <span className="sr-only">The Bitcoin Payment Request</span>
+            </a>
+            <MenuIcon className="text-black w-12 h-12 lg:hidden" onClick={toggleMenu} />
+          </div>
+
+          <nav id="nav" className="deactivated p-4 bg-white z-[49]">
+            <ul className="space-y-4 lg:flex lg:flex-row lg:space-x-4 lg:space-y-0 items-center lg:mb-0 lg:text-sm">
+              <li><a href="#problem" onClick={scrollTo}>Problem</a></li>
+              <li><a href="#solution" onClick={scrollTo}>Solution</a></li>
+              <li><a href="#examples" onClick={scrollTo}>Examples</a></li>
+              <li><a href="#why" onClick={scrollTo}>Why this technique?</a></li>
+              <li><a href="#faq" onClick={scrollTo}>Common Questions &amp; Concerns</a></li>
+              <li><a href="#contribute" onClick={scrollTo}>How to contribute</a></li>
+              <li><a href="#follow" onClick={scrollTo}>Follow</a></li>
+            </ul>
+          </nav>
+        </header>
+      </div>
+      
+      
       <main className="text-left">
-        <div className="hero text-center text-white flex items-center justify-center flex-col w-full p-12 h-screen lg:p-36">
+        <div className="hero text-center text-white flex items-center justify-center flex-col w-full p-12 pt-16 h-screen lg:p-36">
           <div className="min-w-[156px] min-h-[156px]">
             <BitcoinCircleIcon
               style={{ width: "156px", height: "156px" }}
@@ -60,7 +118,7 @@ export default function Home() {
         <div className="container mx-auto px-12 max-w-screen-xl">
           <section>
             <div className="basis-6/12 space-y-4 flex justify-center flex-col">
-              <h2 className="text-bpr-purple">The Problem</h2>
+              <h2 className="text-bpr-purple" id="problem">The Problem</h2>
 
               <h3>
                 Asking users to choose between on-chain and lightning payments can be confusing &mdash; but it's been
@@ -85,7 +143,7 @@ export default function Home() {
 
           <section>
             <div className="basis-6/12 space-y-4 flex justify-center flex-col">
-              <h2 className="text-bpr-orange">A Solution</h2>
+              <h2 className="text-bpr-orange" id="solution">A Solution</h2>
 
               <h3>BIP21 Payment URIs with an optional lightning parameter</h3>
 
@@ -108,7 +166,7 @@ export default function Home() {
           </section>
 
           <div className="pt-12 pb-12 text-center space-y-8">
-            <h2 className="text-bpr-pink">Examples</h2>
+            <h2 className="text-bpr-pink" id="examples">Examples</h2>
 
             <h3>Bitcoin Payment Request</h3>
             <div className="flex flex-col space-y-8 md:flex-row md:space-x-4 md:space-y-0 pb-12 lg:justify-around">
@@ -153,7 +211,7 @@ export default function Home() {
 
           <section>
             <div className="basis-6/12 space-y-4 flex flex-col justify-center">
-              <h2 className="text-bpr-blue">Why this technique?</h2>
+              <h2 className="text-bpr-blue" id="why">Why this technique?</h2>
               <p>
                 BIP21 is an existing and agreed-upon standard. Most existing
                 on-chain bitcoin wallets already support BIP21. When
@@ -166,8 +224,12 @@ export default function Home() {
                 Lightning invoice in the BIP21 URI. Wallets can also give a choice of on-chain and Lightning, if the
                 wallet supports both.
               </p>
+              
+              <p>
+                This technique is even <a href="https://github.com/lightning/bolts/blob/master/11-payment-encoding.md#encoding-overview" className="text-bpr-cyan font-medium">mentioned in the BOLT 11 spec</a>!
+              </p>
             </div>
-            <div class="basis-6/12 flex justify-center p-6">
+            <div className="basis-6/12 flex justify-center p-6">
               <div className="bg-bpr-orange w-[240px] h-[240px] md:w-[340px] md:h-[340px]">
                 <img src="qr-bip21-bolt11.png" alt="Sample of a BIP21 and BOLT11 QR code" className="drop-shadow-xl rotate-[-12deg]" />
               </div>
@@ -176,15 +238,15 @@ export default function Home() {
 
           <div className="flex justify-center p-12 mb-8">
             <picture>
-              <source srcset="flowchart.png 1x, flowchart@2x.png 2x" media="(min-width: 768px)" />
-              <source srcset="flowchart-mobile.png, flowchart-mobile@2x.png 2x" />
+              <source srcSet="flowchart.png 1x, flowchart@2x.png 2x" media="(min-width: 768px)" />
+              <source srcSet="flowchart-mobile.png, flowchart-mobile@2x.png 2x" />
               <img src="flowchart.png" alt="Flowchart of a decision tree for how a BIP21 QR should be interpreted" />
             </picture>
           </div>
 
           <div>
-            <h2 className="text-bpr-purple mb-4">Common Questions &amp; Concerns</h2>
-            <div className="flex flex-row m-0 gap-16">
+            <h2 className="text-bpr-purple mb-4" id="faq">Common Questions &amp; Concerns</h2>
+            <div className="flex flex-col md:flex-row m-0 gap-8 md:gap-16">
               <div className="basis-6/12">
                 <h3>QR code size is very large</h3>
 
@@ -224,27 +286,104 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="md:p-12 flex flex-col items-center space-y-8 p-4 container mx-auto">
-          <h2 className="text-bpr-orange">What's next?</h2>
-          
-          <p className="max-w-screen-sm text-center">
+        <div className="md:p-12 flex flex-col md:items-center space-y-8 p-4 container mx-auto">
+          <h2 className="text-bpr-orange" id="contribute">How to contribute</h2>
+
+          <p className="max-w-screen-sm md:text-center">
             Adoption of the Bitcoin Payment Request is as simple as getting
             more Lightning wallets, exchanges, and other bitcoin services to
             support it. See below for the current list of support.
+            You can help by testing your favorite wallets and services for support, or by implementing this BIP21
+            support in a wallet or service that does not have support.
           </p>
 
-          <p className="max-w-screen-sm text-center font-medium">
+          <p className="max-w-screen-sm md:text-center font-medium">
             The most important next step is getting wallets and services to support scanning BIP21 QR codes.
           </p>
-          
-          <p className="max-w-screen-sm text-center">
-             Once there
-            is wide support for <em>scanning</em> in place, wallets can begin to roll out support for <em>generating</em> BIP 21
-            QR codes. Likely, most projects will not default to generating BIP21 QR codes if there is not wide support
-            for scanning BIP21 QR codes first.
+
+          <p className="max-w-screen-sm md:text-center">
+            Once there
+            is wide support for <em>scanning</em> in place, wallets projects can decide if they want to roll out
+            support for <em>generating</em> BIP 21 QR codes. Likely, most projects will not default to generating
+            BIP21 QR codes if there is not wide support for scanning BIP21 QR codes first.
           </p>
           
-          <h3 className="text-xl mb-4">Software and services supporting BIP21</h3>
+          <div className="max-w-screen-lg pt-8">
+            <h3 className="mb-4">How to test a wallet</h3>
+            <div className="flex flex-col md:flex-row m-0 gap-8 md:gap-16">
+              <div className="basis-6/12 space-y-4">
+                <p>
+                  Testing a wallet or service is easy. Choose a bitcoin app from the <a href="#support">list below</a> that has
+                  not been tested yet, or choose one that is not on the list. Then, open the app, scan the QR code below,
+                  and see what happens.
+                </p>
+
+                <img src="qr-bip21-bolt11.png" alt="BIP21 QR code with a BOLT 11 Lightning invoice" />
+              </div>
+              <div className="basis-6/12 space-y-4">
+                <h4>Interpreting what you see</h4>
+
+                <ul className="list-disc space-y-4 ml-4">
+                  <li>
+                    If the app is an on-chain only wallet:
+                    <ul className="list-disc space-y-4 ml-8 mt-4">
+                      <li>
+                        If the app fails to scan the QR code, then it <strong >can NOT scan BIP21 QR codes</strong>.
+                        Lightning is <strong>not applicable</strong> in this case.
+                      </li>
+                      <li>
+                        If the app successfully scans the QR code and recognizes the "bc1q..." address,
+                        then it <strong>CAN scan BIP21 QR codes</strong>.
+                        Lightning is <strong>not applicable</strong> in this case.
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    If the app supports Lightning:
+                    <ul className="list-disc space-y-4 ml-8 mt-4">
+                      <li>
+                        If the app scans the QR code but tries to initiate an on-chain payment using the "bc1q..."
+                        address, then it <strong>CAN scan the BIP21 QR code</strong> but <strong>can NOT recognize lightning</strong>.
+                      </li>
+                      <li>
+                        If the app scans the QR code and tries to initiate a Lightning payment,
+                        then it <strong>CAN scan the BIP21 QR code</strong> and <strong>CAN recognize Lightning</strong>.
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+
+                <p>
+                  Once you have your results, submit a PR to update the <a href="https://github.com/sbddesign/bip21-site/blob/main/wallet_support.json">wallet_support.json</a> file
+                  on GitHub. If you are not comfortable working with the code, then simply <a href="https://github.com/sbddesign/bip21-site/issues/new">file an issue</a> in
+                  our GitHub repo or message us in <strong>#unified-qr-code</strong> on <a href="https://join.slack.com/t/bitcoindesign/shared_invite/zt-10sxfovaq-isViijl4RThKRs_TsAQnuA">Slack</a>.
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <h3>How to implement support</h3>
+
+          <p className="text-lg">
+            Here's a list of references to help with implementation and testing.
+          </p>
+
+          <ul className="md:text-center">
+            <li>
+              <a href="https://github.com/peakshift/bitcoin-ux/tree/master/packages/payment-requests">
+                Peakshift Bitcoin UX Payment Requests Package
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/sbddesign/bip21-lightning">
+                QR Code Generator for Testing
+              </a>
+            </li>
+          </ul>
+          
+          
+
+          <h3 className="text-xl mb-4" id="support">Software and services supporting BIP21</h3>
           
           <div className="bg-slate-200 p-4 font-light space-y-4 rounded">
             <h4 className="font-medium">Defining support</h4>
@@ -269,9 +408,10 @@ export default function Home() {
         </div>
         
         <div className="pt-24 pb-24 pl-12 pr-12 max-w-4xl text-center space-y-4 flex flex-col items-center container mx-auto max-w-screen-lg">
-          <h2 className="text-bpr-pink">Follow along</h2>
-          <p class="text-xl">
-            Leave feedback and participate in the conversation on GitHub or in the Bitcoin Design slack workspace in the #unified-qr-code channel.
+          <h2 className="text-bpr-pink" id="follow">Follow along</h2>
+          <p className="text-xl">
+            Leave feedback and participate in the conversation on GitHub or in the Bitcoin Design slack workspace in
+            the #unified-qr-code channel.
           </p>
           <div className="flex space-x-4">
             <a href="https://github.com/sbddesign/bip21-site">
@@ -285,7 +425,6 @@ export default function Home() {
               </div>
             </a>
           </div>
-          
         </div>
       </main>
     </div>

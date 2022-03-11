@@ -15,16 +15,16 @@ export default function Table() {
 
   return (
     <div className="flex flex-col items-center px-4 w-full text-center">
-      <div class="hidden md:flex flex w-full px-4 bb-solid border-b border-b-black mb-0 pb-4 text-xs xl:text-base">
-        <div class="basis-4/12 text-left flex items-center justify-start">
+      <div className="hidden md:flex flex w-full px-4 bb-solid border-b border-b-black mb-0 pb-4 text-xs xl:text-base">
+        <div className="basis-4/12 text-left flex items-center justify-start">
           <WalletIcon className="w-8 h-8 text-black inline" />
           Wallet
         </div>
-        <div class="basis-2/12 flex items-center justify-center">
+        <div className="basis-2/12 flex items-center justify-center">
           <ScanIcon className="w-8 h-8 text-black inline" />
           <span>Scans</span>
         </div>
-        <div class="basis-2/12 flex items-center justify-center">
+        <div className="basis-2/12 flex items-center justify-center">
           <LightningIcon className="w-8 h-8 text-black inline" />
           <span>Lightning</span>
         </div>
@@ -39,10 +39,10 @@ export default function Table() {
       </div>
       <ul className="w-full m-0">
         {wallets.map((w) => (
-          <li class="border-b border-black p-4 last:border-b-0">
-            <div class="flex flex-wrap md:flex-nowrap rounded-xl items-center font-light">
-              <div class="basis-full md:basis-4/12 text-left font-medium md:font-light">{w.wallet}</div>
-              <div class="md:basis-2/12 flex items-center md:justify-center">
+          <li className="border-b border-black p-4 last:border-b-0">
+            <div className="flex flex-wrap md:flex-nowrap rounded-xl items-center font-light">
+              <div className="basis-full md:basis-4/12 text-left font-medium md:font-light">{w.wallet}</div>
+              <div className="md:basis-2/12 flex items-center md:justify-center">
                 <span className="sr-only">
                   {w.scans_bip21 === "yes" ? "Scans BIP21 QR codes" : w.scans_bip21 === "no" ? "Does not scan BIP21 QR codes" : "Unknown BIP21 support"}
                 </span>
@@ -55,7 +55,7 @@ export default function Table() {
                   </span>
                 : ""}
               </div>
-              <div class="md:basis-2/12 flex justify-center">
+              <div className="md:basis-2/12 flex justify-center">
                 <span className="sr-only">
                   {w.recognizes_lightning === "yes" ? "Recognizes the lightning parameter" : w.recognizes_lightning === "no" ? "Does not scan BIP21 QR codes" : w.recognizes_lightning === "n/a" ? "Not Applicable" : "Unknown lightning support"}
                 </span>
