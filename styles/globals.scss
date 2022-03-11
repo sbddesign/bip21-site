@@ -115,7 +115,7 @@ section {
     }
 
     #nav-overlay {
-      @apply opacity-0;
+      @apply opacity-0 pointer-events-none;
     }
   }
 }
