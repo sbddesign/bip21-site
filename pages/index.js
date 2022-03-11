@@ -228,27 +228,104 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="md:p-12 flex flex-col items-center space-y-8 p-4 container mx-auto">
-          <h2 className="text-bpr-orange">What's next?</h2>
-          
-          <p className="max-w-screen-sm text-center">
+        <div className="md:p-12 flex flex-col md:items-center space-y-8 p-4 container mx-auto">
+          <h2 className="text-bpr-orange">How to contribute</h2>
+
+          <p className="max-w-screen-sm md:text-center">
             Adoption of the Bitcoin Payment Request is as simple as getting
             more Lightning wallets, exchanges, and other bitcoin services to
             support it. See below for the current list of support.
+            You can help by testing your favorite wallets and services for support, or by implementing this BIP21
+            support in a wallet or service that does not have support.
           </p>
 
-          <p className="max-w-screen-sm text-center font-medium">
+          <p className="max-w-screen-sm md:text-center font-medium">
             The most important next step is getting wallets and services to support scanning BIP21 QR codes.
           </p>
-          
-          <p className="max-w-screen-sm text-center">
-             Once there
-            is wide support for <em>scanning</em> in place, wallets can begin to roll out support for <em>generating</em> BIP 21
-            QR codes. Likely, most projects will not default to generating BIP21 QR codes if there is not wide support
-            for scanning BIP21 QR codes first.
+
+          <p className="max-w-screen-sm md:text-center">
+            Once there
+            is wide support for <em>scanning</em> in place, wallets projects can decide if they want to roll out
+            support for <em>generating</em> BIP 21 QR codes. Likely, most projects will not default to generating
+            BIP21 QR codes if there is not wide support for scanning BIP21 QR codes first.
           </p>
           
-          <h3 className="text-xl mb-4">Software and services supporting BIP21</h3>
+          <div className="max-w-screen-lg pt-8">
+            <h3 className="mb-4">How to test a wallet</h3>
+            <div className="flex flex-col md:flex-row m-0 gap-8 md:gap-16">
+              <div className="basis-6/12 space-y-4">
+                <p>
+                  Testing a wallet or service is easy. Choose a bitcoin app from the <a href="#support">list below</a> that has
+                  not been tested yet, or choose one that is not on the list. Then, open the app, scan the QR code below,
+                  and see what happens.
+                </p>
+
+                <img src="qr-bip21-bolt11.png" alt="BIP21 QR code with a BOLT 11 Lightning invoice" />
+              </div>
+              <div className="basis-6/12 space-y-4">
+                <h4>Interpreting what you see</h4>
+
+                <ul className="list-disc space-y-4 ml-4">
+                  <li>
+                    If the app is an on-chain only wallet:
+                    <ul className="list-disc space-y-4 ml-8 mt-4">
+                      <li>
+                        If the app fails to scan the QR code, then it <strong >can NOT scan BIP21 QR codes</strong>.
+                        Lightning is <strong>not applicable</strong> in this case.
+                      </li>
+                      <li>
+                        If the app successfully scans the QR code and recognizes the "bc1q..." address,
+                        then it <strong>CAN scan BIP21 QR codes</strong>.
+                        Lightning is <strong>not applicable</strong> in this case.
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    If the app supports Lightning:
+                    <ul className="list-disc space-y-4 ml-8 mt-4">
+                      <li>
+                        If the app scans the QR code but tries to initiate an on-chain payment using the "bc1q..."
+                        address, then it <strong>CAN scan the BIP21 QR code</strong> but <strong>can NOT recognize lightning</strong>.
+                      </li>
+                      <li>
+                        If the app scans the QR code and tries to initiate a Lightning payment,
+                        then it <strong>CAN scan the BIP21 QR code</strong> and <strong>CAN recognize Lightning</strong>.
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+
+                <p>
+                  Once you have your results, submit a PR to update the <a href="https://github.com/sbddesign/bip21-site/blob/main/wallet_support.json">wallet_support.json</a> file
+                  on GitHub. If you are not comfortable working with the code, then simply <a href="https://github.com/sbddesign/bip21-site/issues/new">file an issue</a> in
+                  our GitHub repo or message us in <strong>#unified-qr-code</strong> on <a href="https://join.slack.com/t/bitcoindesign/shared_invite/zt-10sxfovaq-isViijl4RThKRs_TsAQnuA">Slack</a>.
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <h3>How to implement support</h3>
+
+          <p className="text-lg">
+            Here's a list of references to help with implementation and testing.
+          </p>
+
+          <ul className="md:text-center">
+            <li>
+              <a href="https://github.com/peakshift/bitcoin-ux/tree/master/packages/payment-requests">
+                Peakshift Bitcoin UX Payment Requests Package
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/sbddesign/bip21-lightning">
+                QR Code Generator for Testing
+              </a>
+            </li>
+          </ul>
+          
+          
+
+          <h3 className="text-xl mb-4" id="support">Software and services supporting BIP21</h3>
           
           <div className="bg-slate-200 p-4 font-light space-y-4 rounded">
             <h4 className="font-medium">Defining support</h4>
@@ -290,26 +367,6 @@ export default function Home() {
               </div>
             </a>
           </div>
-        </div>
-
-        <div className="pt-24 pb-24 pl-12 pr-12 max-w-4xl text-center space-y-4 flex flex-col items-center container mx-auto max-w-screen-lg">
-          <h2 className="text-bpr-blue">Developer Resources</h2>
-          <p className="text-lg">
-            Here's a list of references to help with implementation and testing.
-          </p>
-
-          <ul>
-            <li>
-              <a href="https://github.com/peakshift/bitcoin-ux/tree/master/packages/payment-requests">
-                Peakshift Bitcoin UX Payment Requests Package
-              </a>
-            </li>
-            <li>
-              <a href="https://github.com/sbddesign/bip21-lightning">
-                QR Code Generator for Testing
-              </a>
-            </li>
-          </ul>
         </div>
       </main>
     </div>
