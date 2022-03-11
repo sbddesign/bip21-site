@@ -8,6 +8,7 @@ import {
   WalletIcon,
   MenuIcon
 } from "@bitcoin-design/bitcoin-icons-react/filled";
+import { BitcoinCircleIcon as BitcoinCircleIconOutline } from "@bitcoin-design/bitcoin-icons-react/outline";
 import Example from "../components/example";
 import Table from "../components/table";
 import React from "react";
@@ -66,10 +67,10 @@ export default function Home() {
       <div id="header-container" className="deactivated transparent">
         <div id="nav-overlay" className="fixed w-full h-full bg-white z-[47] lg:hidden deactivated" onClick={toggleMenu}></div>
 
-        <header className="fixed top-0 w-full left-0 z-[48] lg:flex lg:flex-row lg:bg-white lg:justify-between lg:items-center">
+        <header className="fixed top-0 w-full left-0 z-[48] lg:flex lg:flex-row lg:bg-white lg:justify-center lg:items-center">
           <div className="controls flex flex-row justify-between p-4 bg-white z-[50] relative">
             <a href="/">
-              <BitcoinCircleIcon className="logo text-black w-12 h-12" />
+              <BitcoinCircleIconOutline className="logo text-black w-8 h-8" />
               <span className="sr-only">Unified QRs for Bitcoin</span>
             </a>
             <MenuIcon className="text-black w-12 h-12 lg:hidden" onClick={toggleMenu} />
