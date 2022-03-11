@@ -188,7 +188,7 @@ export default function Home() {
 
           <div>
             <h2 className="text-bpr-purple mb-4">Common Questions &amp; Concerns</h2>
-            <div className="flex flex-row m-0 gap-16">
+            <div className="flex flex-col md:flex-row m-0 gap-8 md:gap-16">
               <div className="basis-6/12">
                 <h3>QR code size is very large</h3>
 
