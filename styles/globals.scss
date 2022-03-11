@@ -85,8 +85,8 @@ section {
 }
 
 #header-container {
-  &.transparent {
-    @apply bg-transparent lg:bg-transparent;
+  &.transparent.deactivated {
+    @apply lg:bg-transparent;
     
     a {
       @apply text-white drop-shadow-md;
@@ -97,6 +97,10 @@ section {
     }
     
     .logo {
+      @apply text-white;
+    }
+    
+    .menu-toggle {
       @apply text-white;
     }
   }

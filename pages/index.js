@@ -33,7 +33,7 @@ function changeMenuStyle(transparent = 'true') {
 }
 
 function checkScrollPosition(e) {
-  if(window.scrollY > 200) changeMenuStyle(false);
+  if(window.scrollY > 100) changeMenuStyle(false);
   else changeMenuStyle();
    
 }
@@ -70,10 +70,10 @@ export default function Home() {
         <header className="fixed top-0 w-full left-0 z-[48] lg:flex lg:flex-row lg:bg-white lg:justify-center lg:items-center">
           <div className="controls flex flex-row justify-between p-4 bg-white z-[50] relative">
             <a href="/">
-              <BitcoinCircleIconOutline className="logo text-black w-8 h-8" />
+              <BitcoinCircleIconOutline className="logo text-black w-12 h-12 lg:w-8 lg:h-8" />
               <span className="sr-only">Unified QRs for Bitcoin</span>
             </a>
-            <MenuIcon className="text-black w-12 h-12 lg:hidden" onClick={toggleMenu} />
+            <MenuIcon className="menu-toggle text-black w-12 h-12 lg:hidden" onClick={toggleMenu} />
           </div>
 
           <nav id="nav" className="deactivated p-4 bg-white z-[49]">
