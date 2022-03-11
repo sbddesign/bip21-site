@@ -5,7 +5,8 @@
     "recognizes_lightning": "yes",
     "creates_bip21": "no",
     "description": "",
-    "notes": ""
+    "notes": "",
+    "credit": "@sbddesign"
   },
   {
     "wallet": "Bluewallet",
@@ -13,7 +14,8 @@
     "recognizes_lightning": "yes",
     "creates_bip21": "no",
     "description": "Asks me to select a wallet, and I can choose my lightning wallet or on-chain wallet.",
-    "notes": "Note that Bluewallet has 2 scanning methods. You can select a wallet and then scan the QR, or you can scan the QR without selecting a wallet. If you choose the latter and scan a BIP21 QR with lightning param, then it will prompt you to select a wallet because it sees your on-chain and lightning wallet as both being valid choices for this payment."
+    "notes": "Note that Bluewallet has 2 scanning methods. You can select a wallet and then scan the QR, or you can scan the QR without selecting a wallet. If you choose the latter and scan a BIP21 QR with lightning param, then it will prompt you to select a wallet because it sees your on-chain and lightning wallet as both being valid choices for this payment.",
+    "credit": "@sbddesign"
   },
   {
     "wallet": "Breez",
@@ -21,7 +23,8 @@
     "recognizes_lightning": "yes",
     "creates_bip21": "no",
     "description": "",
-    "notes": ""
+    "notes": "",
+    "credit": "@sbddesign"
   },
   {
     "wallet": "Blixt",
@@ -29,7 +32,8 @@
     "recognizes_lightning": "yes",
     "creates_bip21": "no",
     "description": "QR code is not a valid bitcoin lightning invoice",
-    "notes": ""
+    "notes": "",
+    "credit": "@sbddesign"
   },
   {
     "wallet": "Phoenix",
@@ -37,7 +41,8 @@
     "recognizes_lightning": "yes",
     "creates_bip21": "no",
     "description": "",
-    "notes": ""
+    "notes": "",
+    "credit": "@sbddesign"
   },
   {
     "wallet": "Casa",
@@ -45,7 +50,8 @@
     "recognizes_lightning": "n/a",
     "creates_bip21": "no",
     "description": "",
-    "notes": ""
+    "notes": "",
+    "credit": "@sbddesign"
   },
   {
     "wallet": "CashApp",
@@ -53,7 +59,8 @@
     "recognizes_lightning": "no",
     "creates_bip21": "no",
     "description": "Takes me to PIN entry followed by on-chain TX fee selection",
-    "notes": ""
+    "notes": "",
+    "credit": "@sbddesign"
   },
   {
     "wallet": "Strike",
@@ -61,7 +68,8 @@
     "recognizes_lightning": "no",
     "creates_bip21": "no",
     "description": "Amount is too low\" I think it is defaulting to on-chain",
-    "notes": ""
+    "notes": "",
+    "credit": "@sbddesign"
   },
   {
     "wallet": "Zeus",
@@ -70,7 +78,8 @@
     "creates_bip21": "no",
     "description": "",
     "notes": "",
-    "issue_link": "https://github.com/ZeusLN/zeus/issues/879"
+    "issue_link": "https://github.com/ZeusLN/zeus/issues/879",
+    "credit": "@bosch"
   },
   {
     "wallet": "BitcoinBeach",
