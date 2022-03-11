@@ -45,21 +45,21 @@ export default function Home() {
   return (
     <div className="w-full max-w-80ch" onScroll={checkScrollPosition}>
       <Head>
-        <title>The Bitcoin Payment Request</title>
+        <title>Unified QRs for Bitcoin</title>
         <meta
           name="description"
           content="Let's talk about using BIP21 payment URIs to combine on-chain and lightning payments into a single QR code, simplifying the user experience."
         />
-        <meta property="og:image" content="bitcoin-payment-request-poster.jpg" />
+        <meta property="og:image" content="bitcoin-unified-qr-poster.jpg" />
         <meta property="og:image:width" content="1920" />
         <meta property="og:image:height" content="1080" />
-        <meta property="og:image:alt" content="Logo of the Bitcoin Payment Request" />
+        <meta property="og:image:alt" content="Logo of the Unified QR for Bitcoin" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@bitcoin_design" />
         <meta name="twitter:creator" content="@bitcoin_design" />
-        <meta name="twitter:title" content="The Bitcoin Payment Request" />
+        <meta name="twitter:title" content="Unified QRs for Bitcoin" />
         <meta name="twitter:description" content="Let's talk about using BIP21 payment URIs to combine on-chain and lightning payments into a single QR code, simplifying the user experience." />
-        <meta name="twitter:image" content="bitcoin-payment-request-poster.jpg" />
+        <meta name="twitter:image" content="bitcoin-unified-qr-poster.jpg" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       
@@ -70,7 +70,7 @@ export default function Home() {
           <div className="controls flex flex-row justify-between p-4 bg-white z-[50] relative">
             <a href="/">
               <BitcoinCircleIcon className="logo text-black w-12 h-12" />
-              <span className="sr-only">The Bitcoin Payment Request</span>
+              <span className="sr-only">Unified QRs for Bitcoin</span>
             </a>
             <MenuIcon className="text-black w-12 h-12 lg:hidden" onClick={toggleMenu} />
           </div>
@@ -100,7 +100,7 @@ export default function Home() {
           </div>
 
           <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold mb-12 drop-shadow-md">
-            The Bitcoin Payment Request
+            Unified QRs for Bitcoin
           </h1>
 
           <h3 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-medium drop-shadow-md mb-24 max-w-5xl">
@@ -168,7 +168,7 @@ export default function Home() {
           <div className="pt-12 pb-12 text-center space-y-8">
             <h2 className="text-bpr-pink" id="examples">Examples</h2>
 
-            <h3>Bitcoin Payment Request</h3>
+            <h3>Unified QRs for Bitcoin</h3>
             <div className="flex flex-col space-y-8 md:flex-row md:space-x-4 md:space-y-0 pb-12 lg:justify-around">
               <div className="basis-6/12 lg:basis-5/12 xl:basis-4/12">
                 <Example
@@ -290,7 +290,7 @@ export default function Home() {
           <h2 className="text-bpr-orange" id="contribute">How to contribute</h2>
 
           <p className="max-w-screen-sm md:text-center">
-            Adoption of the Bitcoin Payment Request is as simple as getting
+            Adoption of the a unified BIP21 QR code for bitcoin is as simple as getting
             more Lightning wallets, exchanges, and other bitcoin services to
             support it. See below for the current list of support.
             You can help by testing your favorite wallets and services for support, or by implementing this BIP21
