@@ -5,14 +5,46 @@ import {
   LightningIcon,
   QrCodeIcon,
   ScanIcon,
-  WalletIcon
+  WalletIcon,
+  MenuIcon
 } from "@bitcoin-design/bitcoin-icons-react/filled";
 import Example from "../components/example";
 import Table from "../components/table";
 
+window.addEventListener('scroll', checkScrollPosition);
+
+function toggleMenu() {
+  let header = document.getElementById('header-container');
+  if(header.classList.contains('deactivated')) header.classList.remove('deactivated');
+  else header.classList.add('deactivated');
+}
+
+function scrollTo(e){
+  e.preventDefault();
+  console.log(e.target.hash);
+  let element = document.getElementById( e.target.hash.substring(1) );
+  element.scrollIntoView({behavior: 'smooth', block: 'center'});
+  toggleMenu();
+}
+
+function changeMenuStyle(transparent = 'true') {
+  console.log('change menu style');
+  let header = document.getElementById('header-container');
+  if(transparent) header.classList.add('transparent');
+  else header.classList.remove('transparent');
+}
+
+function checkScrollPosition(e) {
+  console.log('sdfsdfsdf');
+  console.log(window.scrollY);
+  if(window.scrollY > 200) changeMenuStyle(false);
+  else changeMenuStyle();
+   
+}
+
 export default function Home() {
   return (
-    <div className="w-full max-w-80ch">
+    <div className="w-full max-w-80ch" onScroll={checkScrollPosition}>
       <Head>
         <title>The Bitcoin Payment Request</title>
         <meta
@@ -31,9 +63,36 @@ export default function Home() {
         <meta name="twitter:image" content="bitcoin-payment-request-poster.jpg" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      
+      <div id="header-container" className="deactivated transparent">
+        <div id="nav-overlay" className="fixed w-full h-full bg-white z-[47] lg:hidden deactivated" onClick={toggleMenu}></div>
 
+        <header className="fixed top-0 w-full left-0 z-[48] lg:flex lg:flex-row lg:bg-white lg:justify-between lg:items-center">
+          <div className="controls flex flex-row justify-between p-4 bg-white z-[50] relative">
+            <a href="/">
+              <BitcoinCircleIcon className="logo text-black w-12 h-12" />
+              <span className="sr-only">The Bitcoin Payment Request</span>
+            </a>
+            <MenuIcon className="text-black w-12 h-12 lg:hidden" onClick={toggleMenu} />
+          </div>
+
+          <nav id="nav" className="deactivated p-4 bg-white z-[49]">
+            <ul className="space-y-4 lg:flex lg:flex-row lg:space-x-4 lg:space-y-0 items-center lg:mb-0 lg:text-sm">
+              <li><a href="#problem" onClick={scrollTo}>Problem</a></li>
+              <li><a href="#solution" onClick={scrollTo}>Solution</a></li>
+              <li><a href="#examples" onClick={scrollTo}>Examples</a></li>
+              <li><a href="#why" onClick={scrollTo}>Why this technique?</a></li>
+              <li><a href="#faq" onClick={scrollTo}>Common Questions &amp; Concerns</a></li>
+              <li><a href="#contribute" onClick={scrollTo}>How to contribute</a></li>
+              <li><a href="#follow" onClick={scrollTo}>Follow</a></li>
+            </ul>
+          </nav>
+        </header>
+      </div>
+      
+      
       <main className="text-left">
-        <div className="hero text-center text-white flex items-center justify-center flex-col w-full p-12 h-screen lg:p-36">
+        <div className="hero text-center text-white flex items-center justify-center flex-col w-full p-12 pt-16 h-screen lg:p-36">
           <div className="min-w-[156px] min-h-[156px]">
             <BitcoinCircleIcon
               style={{ width: "156px", height: "156px" }}
@@ -60,7 +119,7 @@ export default function Home() {
         <div className="container mx-auto px-12 max-w-screen-xl">
           <section>
             <div className="basis-6/12 space-y-4 flex justify-center flex-col">
-              <h2 className="text-bpr-purple">The Problem</h2>
+              <h2 className="text-bpr-purple" id="problem">The Problem</h2>
 
               <h3>
                 Asking users to choose between on-chain and lightning payments can be confusing &mdash; but it's been
@@ -85,7 +144,7 @@ export default function Home() {
 
           <section>
             <div className="basis-6/12 space-y-4 flex justify-center flex-col">
-              <h2 className="text-bpr-orange">A Solution</h2>
+              <h2 className="text-bpr-orange" id="solution">A Solution</h2>
 
               <h3>BIP21 Payment URIs with an optional lightning parameter</h3>
 
@@ -108,7 +167,7 @@ export default function Home() {
           </section>
 
           <div className="pt-12 pb-12 text-center space-y-8">
-            <h2 className="text-bpr-pink">Examples</h2>
+            <h2 className="text-bpr-pink" id="examples">Examples</h2>
 
             <h3>Bitcoin Payment Request</h3>
             <div className="flex flex-col space-y-8 md:flex-row md:space-x-4 md:space-y-0 pb-12 lg:justify-around">
@@ -153,7 +212,7 @@ export default function Home() {
 
           <section>
             <div className="basis-6/12 space-y-4 flex flex-col justify-center">
-              <h2 className="text-bpr-blue">Why this technique?</h2>
+              <h2 className="text-bpr-blue" id="why">Why this technique?</h2>
               <p>
                 BIP21 is an existing and agreed-upon standard. Most existing
                 on-chain bitcoin wallets already support BIP21. When
@@ -171,7 +230,7 @@ export default function Home() {
                 This technique is even <a href="https://github.com/lightning/bolts/blob/master/11-payment-encoding.md#encoding-overview" className="text-bpr-cyan font-medium">mentioned in the BOLT 11 spec</a>!
               </p>
             </div>
-            <div class="basis-6/12 flex justify-center p-6">
+            <div className="basis-6/12 flex justify-center p-6">
               <div className="bg-bpr-orange w-[240px] h-[240px] md:w-[340px] md:h-[340px]">
                 <img src="qr-bip21-bolt11.png" alt="Sample of a BIP21 and BOLT11 QR code" className="drop-shadow-xl rotate-[-12deg]" />
               </div>
@@ -180,14 +239,14 @@ export default function Home() {
 
           <div className="flex justify-center p-12 mb-8">
             <picture>
-              <source srcset="flowchart.png 1x, flowchart@2x.png 2x" media="(min-width: 768px)" />
-              <source srcset="flowchart-mobile.png, flowchart-mobile@2x.png 2x" />
+              <source srcSet="flowchart.png 1x, flowchart@2x.png 2x" media="(min-width: 768px)" />
+              <source srcSet="flowchart-mobile.png, flowchart-mobile@2x.png 2x" />
               <img src="flowchart.png" alt="Flowchart of a decision tree for how a BIP21 QR should be interpreted" />
             </picture>
           </div>
 
           <div>
-            <h2 className="text-bpr-purple mb-4">Common Questions &amp; Concerns</h2>
+            <h2 className="text-bpr-purple mb-4" id="faq">Common Questions &amp; Concerns</h2>
             <div className="flex flex-col md:flex-row m-0 gap-8 md:gap-16">
               <div className="basis-6/12">
                 <h3>QR code size is very large</h3>
@@ -229,7 +288,7 @@ export default function Home() {
         </div>
 
         <div className="md:p-12 flex flex-col md:items-center space-y-8 p-4 container mx-auto">
-          <h2 className="text-bpr-orange">How to contribute</h2>
+          <h2 className="text-bpr-orange" id="contribute">How to contribute</h2>
 
           <p className="max-w-screen-sm md:text-center">
             Adoption of the Bitcoin Payment Request is as simple as getting
@@ -350,7 +409,7 @@ export default function Home() {
         </div>
         
         <div className="pt-24 pb-24 pl-12 pr-12 max-w-4xl text-center space-y-4 flex flex-col items-center container mx-auto max-w-screen-lg">
-          <h2 className="text-bpr-pink">Follow along</h2>
+          <h2 className="text-bpr-pink" id="follow">Follow along</h2>
           <p className="text-xl">
             Leave feedback and participate in the conversation on GitHub or in the Bitcoin Design slack workspace in
             the #unified-qr-code channel.
