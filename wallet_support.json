@@ -87,7 +87,8 @@
     "recognizes_lightning": "no",
     "creates_bip21": "no",
     "description": "",
-    "notes": ""
+    "notes": "",
+    "credit": "@sbddesign"
   },
   {
     "wallet": "Bluewallet - onchain",
@@ -95,7 +96,8 @@
     "recognizes_lightning": "n/a",
     "creates_bip21": "no",
     "description": "recognizes_the QR",
-    "notes": ""
+    "notes": "",
+    "credit": "@sbddesign"
   },
   {
     "wallet": "BitPay",
@@ -103,7 +105,8 @@
     "recognizes_lightning": "n/a",
     "creates_bip21": "no",
     "description": "",
-    "notes": ""
+    "notes": "",
+    "credit": "@sbddesign"
   },
   {
     "wallet": "Chaincase",
@@ -111,7 +114,8 @@
     "recognizes_lightning": "n/a",
     "creates_bip21": "no",
     "description": "Pulls in the entire string including the 'bitcoin:', but I think it sees it as an on-chain address",
-    "notes": ""
+    "notes": "",
+    "credit": "@sbddesign"
   },
   {
     "wallet": "Zebedee",
@@ -119,13 +123,14 @@
     "recognizes_lightning": "no",
     "creates_bip21": "no",
     "description": "This looks like an on-chain QR code...",
-    "notes": ""
+    "notes": "",
+    "credit": "@sbddesign"
   },
   {
     "wallet": "Coinbase",
     "scans_bip21": "",
     "recognizes_lightning": "",
-    "creates_bip21": "no",
+    "creates_bip21": "",
     "description": "",
     "notes": ""
   },
@@ -133,7 +138,7 @@
     "wallet": "Wallet of Satoshi",
     "scans_bip21": "",
     "recognizes_lightning": "",
-    "creates_bip21": "no",
+    "creates_bip21": "",
     "description": "",
     "notes": ""
   },
@@ -141,7 +146,7 @@
     "wallet": "Binance",
     "scans_bip21": "",
     "recognizes_lightning": "",
-    "creates_bip21": "no",
+    "creates_bip21": "",
     "description": "",
     "notes": ""
   },
@@ -149,7 +154,7 @@
     "wallet": "Kraken",
     "scans_bip21": "",
     "recognizes_lightning": "",
-    "creates_bip21": "no",
+    "creates_bip21": "",
     "description": "",
     "notes": ""
   },
@@ -157,7 +162,7 @@
     "wallet": "Gemini",
     "scans_bip21": "",
     "recognizes_lightning": "",
-    "creates_bip21": "no",
+    "creates_bip21": "",
     "description": "",
     "notes": ""
   },
@@ -165,7 +170,7 @@
     "wallet": "Electrum",
     "scans_bip21": "",
     "recognizes_lightning": "",
-    "creates_bip21": "no",
+    "creates_bip21": "",
     "description": "",
     "notes": ""
   },
@@ -173,8 +178,17 @@
     "wallet": "OKCoin",
     "scans_bip21": "",
     "recognizes_lightning": "",
-    "creates_bip21": "no",
+    "creates_bip21": "",
     "description": "",
     "notes": ""
+  },
+  {
+    "wallet": "Alby",
+    "scans_bip21": "no",
+    "recognizes_lightning": "no",
+    "creates_bip21": "",
+    "description": "",
+    "notes": "",
+    "credit": "@bosch"
   }
 ]
