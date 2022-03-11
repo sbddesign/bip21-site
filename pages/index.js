@@ -10,8 +10,7 @@ import {
 } from "@bitcoin-design/bitcoin-icons-react/filled";
 import Example from "../components/example";
 import Table from "../components/table";
-
-window.addEventListener('scroll', checkScrollPosition);
+import React from "react";
 
 function toggleMenu() {
   let header = document.getElementById('header-container');
@@ -21,28 +20,28 @@ function toggleMenu() {
 
 function scrollTo(e){
   e.preventDefault();
-  console.log(e.target.hash);
   let element = document.getElementById( e.target.hash.substring(1) );
   element.scrollIntoView({behavior: 'smooth', block: 'center'});
   toggleMenu();
 }
 
 function changeMenuStyle(transparent = 'true') {
-  console.log('change menu style');
   let header = document.getElementById('header-container');
   if(transparent) header.classList.add('transparent');
   else header.classList.remove('transparent');
 }
 
 function checkScrollPosition(e) {
-  console.log('sdfsdfsdf');
-  console.log(window.scrollY);
   if(window.scrollY > 200) changeMenuStyle(false);
   else changeMenuStyle();
    
 }
 
 export default function Home() {
+  React.useEffect(()=>{
+    window.addEventListener('scroll', checkScrollPosition);
+  });
+  
   return (
     <div className="w-full max-w-80ch" onScroll={checkScrollPosition}>
       <Head>
