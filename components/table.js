@@ -1,12 +1,15 @@
 import wallets from "../wallet_support.json";
-import { CrossIcon } from '@bitcoin-design/bitcoin-icons-react/filled';
-import { CheckIcon } from '@bitcoin-design/bitcoin-icons-react/filled';
-import { QuestionIcon } from '@bitcoin-design/bitcoin-icons-react/filled';
-import { ScanIcon } from "@bitcoin-design/bitcoin-icons-react/filled";
-import { WalletIcon } from "@bitcoin-design/bitcoin-icons-react/filled";
-import { LightningIcon } from "@bitcoin-design/bitcoin-icons-react/filled";
-import { QrCodeIcon } from "@bitcoin-design/bitcoin-icons-react/filled";
-import { AlertIcon } from "@bitcoin-design/bitcoin-icons-react/filled";
+import {
+  CrossIcon,
+  CheckIcon,
+  QuestionIcon,
+  QuestionIcon,
+  ScanIcon,
+  WalletIcon,
+  LightningIcon,
+  QrCodeIcon,
+  AlertIcon
+} from '@bitcoin-design/bitcoin-icons-react/filled';
 
 export default function Table() {
   function ynm(status) {
