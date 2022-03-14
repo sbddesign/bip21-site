@@ -51,7 +51,7 @@ export default function Home() {
           name="description"
           content="Let's talk about using BIP21 payment URIs to combine on-chain and lightning payments into a single QR code, simplifying the user experience."
         />
-        <meta property="og:image" content="bitcoin-unified-qr-poster.jpg" />
+        <meta property="og:image" content="https://bitcoinqr.dev/bitcoin-unified-qr-poster.jpg" />
         <meta property="og:image:width" content="1920" />
         <meta property="og:image:height" content="1080" />
         <meta property="og:image:alt" content="Logo of the Unified QR for Bitcoin" />
@@ -60,7 +60,7 @@ export default function Home() {
         <meta name="twitter:creator" content="@bitcoin_design" />
         <meta name="twitter:title" content="Unified QRs for Bitcoin" />
         <meta name="twitter:description" content="Let's talk about using BIP21 payment URIs to combine on-chain and lightning payments into a single QR code, simplifying the user experience." />
-        <meta name="twitter:image" content="bitcoin-unified-qr-poster.jpg" />
+        <meta name="twitter:image" content="https://bitcoinqr.dev/bitcoin-unified-qr-poster.jpg" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       
