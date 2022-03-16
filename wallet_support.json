@@ -97,6 +97,15 @@
     "notes": ""
   },
   {
+    "wallet": "Edge Wallet",
+    "scans_bip21": "yes",
+    "recognizes_lightning": "no",
+    "creates_bip21": "no",
+    "description": "Can decode the QRcode that contains a BIP21 URI with bolt11 and the external onchain fallback. The URI can also be pasted, the onchain address is detected and users can send",
+    "notes": "",
+    "credit": "@theDavidCoen"
+  },
+  {
     "wallet": "Electrum",
     "scans_bip21": "",
     "recognizes_lightning": "",
