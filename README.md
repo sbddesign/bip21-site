@@ -16,6 +16,7 @@ This is a WIP microsite to promote the usage of a BIP21 payment URI QR code that
 | Cash App  | ✔️ | ❌ | Takes user to PIN entry followed by on-chain TX fee selection. |           
 | Chaincase | ✔️ | N/A | Pulls in the entire string including the 'bitcoin:', but I think it sees it as an on-chain address. |            
 | Coinbase |   |    |  |  
+| Edge Wallet  | ✔️ | ❌ | Can decode the QRcode that contains a BIP21 URI with bolt11 and the external onchain fallback. The URI can also be pasted, the onchain address is detected and users can send |
 | Electrum |  |  |  |
 | Green wallet |  |   |
 | Muun | ✔️ | ✔️  |            |  |
