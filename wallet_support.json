@@ -72,6 +72,21 @@
   },
   {
     "wallet": {
+      "name": "Blockstream Green",
+      "uri": "https://blockstream.com/green/"
+    },
+    "scans_bip21": "",
+    "recognizes_lightning": "",
+    "creates_bip21": "",
+    "description": "",
+    "notes": "",
+    "credit": {
+      "name": "",
+      "uri": ""
+    }
+  },
+  {
+    "wallet": {
       "name": "Bluewallet",
       "uri": "https://bluewallet.io/"
     },
@@ -221,6 +236,21 @@
   },
   {
     "wallet": {
+      "name": "Nunchuk",
+      "uri": "https://nunchuk.io/"
+    },
+    "scans_bip21": "",
+    "recognizes_lightning": "",
+    "creates_bip21": "",
+    "description": "",
+    "notes": "",
+    "credit": {
+      "name": "",
+      "uri": ""
+    }
+  },
+  {
+    "wallet": {
       "name": "OKCoin",
       "uri": "https://www.okcoin.com/"
     },
@@ -243,6 +273,36 @@
     "credit": {
       "name": "@sbddesign",
       "uri": "https://github.com/sbddesign"
+    }
+  },
+  {
+    "wallet": {
+      "name": "Samourai",
+      "uri": "https://samouraiwallet.com/"
+    },
+    "scans_bip21": "yes",
+    "recognizes_lightning": "yes",
+    "creates_bip21": "",
+    "description": "Needed a channel open to test but seemed to read the invoice.",
+    "notes": "",
+    "credit": {
+      "name": "@bosch",
+      "uri": "https://github.com/Bosch-0"
+    }
+  },
+  {
+    "wallet": {
+      "name": "Simple Bitcoin Wallet",
+      "uri": ""
+    },
+    "scans_bip21": "yes",
+    "recognizes_lightning": "yes",
+    "creates_bip21": "",
+    "description": "Needed a channel open to test but seemed to read the invoice.",
+    "notes": "",
+    "credit": {
+      "name": "@bosch",
+      "uri": "https://github.com/Bosch-0"
     }
   },
   {
@@ -270,6 +330,21 @@
     "creates_bip21": "",
     "description": "",
     "notes": ""
+  },
+  {
+    "wallet": {
+      "name": "Zap",
+      "uri": "https://zaphq.io/"
+    },
+    "scans_bip21": "",
+    "recognizes_lightning": "",
+    "creates_bip21": "",
+    "description": "",
+    "notes": "",
+    "credit": {
+      "name": "",
+      "uri": ""
+    }
   },
   {
     "wallet": {
