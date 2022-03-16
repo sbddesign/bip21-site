@@ -1,0 +1,57 @@
+name: Wallet Test Submission
+description: Submit your report of a wallet, exchange, or other bitcoin service for compatibility with unified BIP21 QR codes
+title: "[Wallet Test]: "
+labels: ["wallet-test"]
+assignees:
+  - sbddesign
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+  - type: input
+    id: wallet_name
+    attributes:
+      label: App Name
+      description: The name of the wallet, exchange, or service provider you tested
+      placeholder: ex. Boss Wallet
+  - type: input
+    id: wallet_uri
+    attributes:
+      label: App Website
+      description: The website of the wallet, exchange, or service provider you tested
+      placeholder: ex. bosswallet3000.com
+  - type: dropdown
+    id: scans_bip21
+    attributes:
+      label: Scans BIP-21
+      description: Did the wallet successfully scan the BIP21 QR code?
+      options:
+        - Yes
+        - No
+  - type: dropdown
+    id: recognizes_lightning
+    attributes:
+      label: Recognize Lightning
+      description: Did the wallet recognize the BOLT 11 invoice in the BIP-21 QR code?
+      options:
+        - Yes
+        - No
+        - Not applicable - the wallet doesn't support Lightning
+  - type: dropdown
+    id: creates_bip21
+    attributes:
+      label: Creates BIP-21 QR codes
+      description: Is the wallet capable of creating BIP-21 QR codes when the user wants to request a payment? This is not common!
+      options:
+        - Yes (more common)
+        - No
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Optional - describe what happened. For example, if it failed to scan, you would include the error message the app gave you here.
+      placeholder: The wallet said "can't scan because this is not a valid lightning invoice"...
+      value: ""
+    validations:
+      required: true
