@@ -246,7 +246,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="md:p-12 flex flex-col md:items-center space-y-8 p-4 container mx-auto">
+        <div className="md:p-12 flex flex-col md:items-center space-y-8 p-4 mx-auto">
           <h2 className="text-bpr-orange" id="plan">The Plan</h2>
 
           <p className="max-w-screen-sm md:text-center">
@@ -341,8 +341,6 @@ export default function Home() {
               </a>
             </li>
           </ul>
-          
-          
 
           <h3 className="text-xl mb-4" id="support">Software and services supporting BIP21</h3>
           
@@ -365,6 +363,7 @@ export default function Home() {
               Is there an open issue or discussion about adding this feature?
             </div>
           </div>
+          
           <Table/>
         </div>
 
