@@ -254,8 +254,9 @@
     "scans_bip21": "yes",
     "recognizes_lightning": "no",
     "creates_bip21": "no",
-    "description": "Amount is too low\" I think it is defaulting to on-chain",
+    "description": "Recognizes the bitcoin address fine, seems to ignore the lightning invoice.",
     "notes": "",
+    "issue_link": "https://twitter.com/StephenDeLorme/status/1504207670567395330",
     "credit": {
       "name": "@sbddesign",
       "uri": "https://github.com/sbddesign"
