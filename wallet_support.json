@@ -12,7 +12,10 @@
     "credit": "@bosch"
   },
   {
-    "wallet": "Binance",
+    "wallet": {
+      "name": "Binance",
+      "uri": "https://www.binance.com/"
+    },
     "scans_bip21": "",
     "recognizes_lightning": "",
     "creates_bip21": "",
@@ -20,7 +23,10 @@
     "notes": ""
   },
   {
-    "wallet": "BitcoinBeach",
+    "wallet": {
+      "name": "BitcoinBeach",
+      "uri": "https://galoy.io/"
+    },
     "scans_bip21": "yes",
     "recognizes_lightning": "no",
     "creates_bip21": "no",
@@ -29,7 +35,10 @@
     "credit": "@sbddesign"
   },
   {
-    "wallet": "BitPay",
+    "wallet": {
+      "name": "BitPay",
+      "uri": "https://bitpay.com/"
+    },
     "scans_bip21": "yes",
     "recognizes_lightning": "n/a",
     "creates_bip21": "no",
@@ -38,7 +47,10 @@
     "credit": "@sbddesign"
   },
   {
-    "wallet": "Blixt",
+    "wallet": {
+      "name": "Blixt",
+      "uri": "https://blixtwallet.github.io/"
+    },
     "scans_bip21": "yes",
     "recognizes_lightning": "yes",
     "creates_bip21": "no",
@@ -47,7 +59,10 @@
     "credit": "@sbddesign"
   },
   {
-    "wallet": "Bluewallet",
+    "wallet": {
+      "name": "Bluewallet",
+      "uri": "https://bluewallet.io/"
+    },
     "scans_bip21": "yes",
     "recognizes_lightning": "yes",
     "creates_bip21": "no",
@@ -56,7 +71,10 @@
     "credit": "@sbddesign"
   },
   {
-    "wallet": "Breez",
+    "wallet": {
+      "name": "Breez",
+      "uri": "https://breez.technology/"
+    },
     "scans_bip21": "yes",
     "recognizes_lightning": "yes",
     "creates_bip21": "no",
@@ -65,7 +83,10 @@
     "credit": "@sbddesign"
   },
   {
-    "wallet": "Casa",
+    "wallet": {
+      "name": "Casa",
+      "uri": "https://keys.casa/"
+    },
     "scans_bip21": "yes",
     "recognizes_lightning": "n/a",
     "creates_bip21": "no",
@@ -74,7 +95,10 @@
     "credit": "@sbddesign"
   },
   {
-    "wallet": "CashApp",
+    "wallet": {
+      "name": "CashApp",
+      "uri": "https://cash.app/"
+    },
     "scans_bip21": "yes",
     "recognizes_lightning": "no",
     "creates_bip21": "no",
@@ -83,7 +107,10 @@
     "credit": "@sbddesign"
   },
   {
-    "wallet": "Chaincase",
+    "wallet": {
+      "name": "Chaincase",
+      "uri": "https://chaincase.app/"
+    },
     "scans_bip21": "yes",
     "recognizes_lightning": "n/a",
     "creates_bip21": "no",
@@ -92,7 +119,10 @@
     "credit": "@sbddesign"
   },
   {
-    "wallet": "Coinbase",
+    "wallet": {
+      "name": "Coinbase",
+      "uri": "https://www.coinbase.com/"
+    },
     "scans_bip21": "",
     "recognizes_lightning": "",
     "creates_bip21": "",
@@ -100,7 +130,10 @@
     "notes": ""
   },
   {
-    "wallet": "Edge Wallet",
+    "wallet": {
+      "name": "Edge Wallet",
+      "uri": "https://edge.app/"
+    },
     "scans_bip21": "yes",
     "recognizes_lightning": "no",
     "creates_bip21": "no",
@@ -109,7 +142,10 @@
     "credit": "@theDavidCoen"
   },
   {
-    "wallet": "Electrum",
+    "wallet": {
+      "name": "Electrum",
+      "uri": "https://electrum.org/"
+    },
     "scans_bip21": "",
     "recognizes_lightning": "",
     "creates_bip21": "",
@@ -117,7 +153,10 @@
     "notes": ""
   },
   {
-    "wallet": "Gemini",
+    "wallet": {
+      "name": "Gemini",
+      "uri": "https://www.gemini.com/"
+    },
     "scans_bip21": "",
     "recognizes_lightning": "",
     "creates_bip21": "",
@@ -125,7 +164,10 @@
     "notes": ""
   },
   {
-    "wallet": "Kraken",
+    "wallet": {
+      "name": "Kraken",
+      "uri": "https://www.kraken.com/"
+    },
     "scans_bip21": "",
     "recognizes_lightning": "",
     "creates_bip21": "",
@@ -133,7 +175,10 @@
     "notes": ""
   },
   {
-    "wallet": "Muun",
+    "wallet": {
+      "name": "Muun",
+      "uri": "https://muun.com/"
+    },
     "scans_bip21": "yes",
     "recognizes_lightning": "yes",
     "creates_bip21": "no",
@@ -142,7 +187,10 @@
     "credit": "@sbddesign"
   },
   {
-    "wallet": "OKCoin",
+    "wallet": {
+      "name": "OKCoin",
+      "uri": "https://www.okcoin.com/"
+    },
     "scans_bip21": "",
     "recognizes_lightning": "",
     "creates_bip21": "",
@@ -150,7 +198,10 @@
     "notes": ""
   },
   {
-    "wallet": "Phoenix",
+    "wallet": {
+      "name": "Phoenix",
+      "uri": "https://phoenix.acinq.co/"
+    },
     "scans_bip21": "yes",
     "recognizes_lightning": "yes",
     "creates_bip21": "no",
@@ -159,7 +210,10 @@
     "credit": "@sbddesign"
   },
   {
-    "wallet": "Strike",
+    "wallet": {
+      "name": "Strike",
+      "uri": "https://strike.me/"
+    },
     "scans_bip21": "yes",
     "recognizes_lightning": "no",
     "creates_bip21": "no",
@@ -168,7 +222,10 @@
     "credit": "@sbddesign"
   },
   {
-    "wallet": "Wallet of Satoshi",
+    "wallet": {
+      "name": "Wallet of Satoshi",
+      "uri": "https://www.walletofsatoshi.com/"
+    },
     "scans_bip21": "",
     "recognizes_lightning": "",
     "creates_bip21": "",
@@ -176,7 +233,10 @@
     "notes": ""
   },
   {
-    "wallet": "Zebedee",
+    "wallet": {
+      "name": "Zebedee",
+      "uri": "https://zebedee.io/"
+    },
     "scans_bip21": "no",
     "recognizes_lightning": "no",
     "creates_bip21": "no",
@@ -185,7 +245,10 @@
     "credit": "@sbddesign"
   },
   {
-    "wallet": "Zeus",
+    "wallet": {
+      "name": "Zeus",
+      "uri": "https://zeusln.app/"
+    },
     "scans_bip21": "yes",
     "recognizes_lightning": "no",
     "creates_bip21": "no",
