@@ -119,7 +119,7 @@ export default function Home() {
         <div className="container mx-auto px-12 max-w-screen-xl">
           <section>
             <div className="basis-6/12 space-y-4 flex justify-center flex-col">
-              <h2 className="text-bpr-purple" id="problem">The Problem</h2>
+              <h2 className="text-bpr-pink" id="problem">The Problem</h2>
 
               <h3>
                 Asking users to choose between on-chain and lightning payments can be confusing &mdash; but it's been
