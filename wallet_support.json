@@ -1,6 +1,9 @@
 [
   {
-    "wallet": "Alby",
+    "wallet": {
+      "name": "Alby",
+      "uri": "https://getalby.com/"
+    },
     "scans_bip21": "no",
     "recognizes_lightning": "no",
     "creates_bip21": "",

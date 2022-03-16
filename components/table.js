@@ -48,7 +48,11 @@ export default function Table() {
         {wallets.map((w) => (
           <li className="border-b border-black p-4 last:border-b-0">
             <div className="flex flex-wrap space-y-4 md:space-y-0 md:flex-nowrap rounded-xl items-center font-light">
-              <div className="basis-full md:basis-2/12 text-left font-medium md:font-light">{w.wallet}</div>
+              <div className="basis-full md:basis-2/12 text-left font-medium md:font-light">
+                {typeof w.wallet === 'object' ?
+                  <a href={w.wallet.uri}>{w.wallet.name}</a>
+                : w.wallet}
+              </div>
               <div className="md:basis-2/12 flex items-center md:justify-center">
                 <span className="sr-only">
                   {w.scans_bip21 === "yes" ? "Scans BIP21 QR codes" : w.scans_bip21 === "no" ? "Does not scan BIP21 QR codes" : "Unknown BIP21 support"}
