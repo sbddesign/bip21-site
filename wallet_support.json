@@ -35,6 +35,7 @@
     "creates_bip21": "no",
     "description": "",
     "notes": "",
+    "issue_link": "https://github.com/GaloyMoney/galoy-mobile/issues/411",
     "credit": {
       "name": "@sbddesign",
       "uri": "https://github.com/sbddesign"
