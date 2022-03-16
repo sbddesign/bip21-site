@@ -9,7 +9,10 @@
     "creates_bip21": "",
     "description": "",
     "notes": "",
-    "credit": "@bosch"
+    "credit": {
+      "name": "@bosch",
+      "uri": "https://github.com/Bosch-0"
+    }
   },
   {
     "wallet": {
@@ -32,7 +35,10 @@
     "creates_bip21": "no",
     "description": "",
     "notes": "",
-    "credit": "@sbddesign"
+    "credit": {
+      "name": "@sbddesign",
+      "uri": "https://github.com/sbddesign"
+    }
   },
   {
     "wallet": {
@@ -44,7 +50,10 @@
     "creates_bip21": "no",
     "description": "",
     "notes": "",
-    "credit": "@sbddesign"
+    "credit": {
+      "name": "@sbddesign",
+      "uri": "https://github.com/sbddesign"
+    }
   },
   {
     "wallet": {
@@ -56,7 +65,10 @@
     "creates_bip21": "no",
     "description": "QR code is not a valid bitcoin lightning invoice",
     "notes": "",
-    "credit": "@sbddesign"
+    "credit": {
+      "name": "@sbddesign",
+      "uri": "https://github.com/sbddesign"
+    }
   },
   {
     "wallet": {
@@ -68,7 +80,10 @@
     "creates_bip21": "no",
     "description": "Asks me to select a wallet, and I can choose my lightning wallet or on-chain wallet.",
     "notes": "Note that Bluewallet has 2 scanning methods. You can select a wallet and then scan the QR, or you can scan the QR without selecting a wallet. If you choose the latter and scan a BIP21 QR with lightning param, then it will prompt you to select a wallet because it sees your on-chain and lightning wallet as both being valid choices for this payment.",
-    "credit": "@sbddesign"
+    "credit": {
+      "name": "@sbddesign",
+      "uri": "https://github.com/sbddesign"
+    }
   },
   {
     "wallet": {
@@ -80,7 +95,10 @@
     "creates_bip21": "no",
     "description": "",
     "notes": "",
-    "credit": "@sbddesign"
+    "credit": {
+      "name": "@sbddesign",
+      "uri": "https://github.com/sbddesign"
+    }
   },
   {
     "wallet": {
@@ -92,7 +110,10 @@
     "creates_bip21": "no",
     "description": "",
     "notes": "",
-    "credit": "@sbddesign"
+    "credit": {
+      "name": "@sbddesign",
+      "uri": "https://github.com/sbddesign"
+    }
   },
   {
     "wallet": {
@@ -104,7 +125,10 @@
     "creates_bip21": "no",
     "description": "Takes me to PIN entry followed by on-chain TX fee selection",
     "notes": "",
-    "credit": "@sbddesign"
+    "credit": {
+      "name": "@sbddesign",
+      "uri": "https://github.com/sbddesign"
+    }
   },
   {
     "wallet": {
@@ -116,7 +140,10 @@
     "creates_bip21": "no",
     "description": "Pulls in the entire string including the 'bitcoin:', but I think it sees it as an on-chain address",
     "notes": "",
-    "credit": "@sbddesign"
+    "credit": {
+      "name": "@sbddesign",
+      "uri": "https://github.com/sbddesign"
+    }
   },
   {
     "wallet": {
@@ -139,7 +166,10 @@
     "creates_bip21": "no",
     "description": "Can decode the QRcode that contains a BIP21 URI with bolt11 and the external onchain fallback. The URI can also be pasted, the onchain address is detected and users can send",
     "notes": "",
-    "credit": "@theDavidCoen"
+    "credit": {
+      "name": "@theDavidCoen",
+      "uri": "https://github.com/theDavidCoen"
+    }
   },
   {
     "wallet": {
@@ -184,7 +214,10 @@
     "creates_bip21": "no",
     "description": "",
     "notes": "",
-    "credit": "@sbddesign"
+    "credit": {
+      "name": "@sbddesign",
+      "uri": "https://github.com/sbddesign"
+    }
   },
   {
     "wallet": {
@@ -207,7 +240,10 @@
     "creates_bip21": "no",
     "description": "",
     "notes": "",
-    "credit": "@sbddesign"
+    "credit": {
+      "name": "@sbddesign",
+      "uri": "https://github.com/sbddesign"
+    }
   },
   {
     "wallet": {
@@ -219,7 +255,10 @@
     "creates_bip21": "no",
     "description": "Amount is too low\" I think it is defaulting to on-chain",
     "notes": "",
-    "credit": "@sbddesign"
+    "credit": {
+      "name": "@sbddesign",
+      "uri": "https://github.com/sbddesign"
+    }
   },
   {
     "wallet": {
@@ -242,7 +281,10 @@
     "creates_bip21": "no",
     "description": "This looks like an on-chain QR code...",
     "notes": "",
-    "credit": "@sbddesign"
+    "credit": {
+      "name": "@sbddesign",
+      "uri": "https://github.com/sbddesign"
+    }
   },
   {
     "wallet": {
@@ -255,6 +297,9 @@
     "description": "",
     "notes": "",
     "issue_link": "https://github.com/ZeusLN/zeus/issues/879",
-    "credit": "@bosch"
+    "credit": {
+      "name": "@bosch",
+      "uri": "https://github.com/Bosch-0"
+    }
   }
 ]

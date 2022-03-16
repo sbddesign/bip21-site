@@ -128,7 +128,10 @@ export default function Table() {
               </div>
               <div className="md:basis-2/12 flex justify-center items-center">
                 <ContactsIcon className="w-8 h-8 text-bpr-black inline md:hidden" />
-                { w.credit ? <span className="md:sr-only">Tested by </span> : <span className="text-bpr-pink">Needs Testing</span>}{w.credit}
+                { w.credit ? <span className="md:sr-only">Tested by </span> : <span className="text-bpr-pink">Needs Testing</span>}
+                {typeof w.credit === 'object' ?
+                  <a href={w.credit.uri}>{w.credit.name}</a>
+                : w.credit}
               </div>
             </div>
           </li>
