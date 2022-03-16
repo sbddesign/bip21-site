@@ -1,15 +1,24 @@
 [
   {
-    "wallet": "Alby",
+    "wallet": {
+      "name": "Alby",
+      "uri": "https://getalby.com/"
+    },
     "scans_bip21": "no",
     "recognizes_lightning": "no",
     "creates_bip21": "",
     "description": "",
     "notes": "",
-    "credit": "@bosch"
+    "credit": {
+      "name": "@bosch",
+      "uri": "https://github.com/Bosch-0"
+    }
   },
   {
-    "wallet": "Binance",
+    "wallet": {
+      "name": "Binance",
+      "uri": "https://www.binance.com/"
+    },
     "scans_bip21": "",
     "recognizes_lightning": "",
     "creates_bip21": "",
@@ -17,79 +26,130 @@
     "notes": ""
   },
   {
-    "wallet": "BitcoinBeach",
+    "wallet": {
+      "name": "BitcoinBeach",
+      "uri": "https://galoy.io/"
+    },
     "scans_bip21": "yes",
     "recognizes_lightning": "no",
     "creates_bip21": "no",
     "description": "",
     "notes": "",
-    "credit": "@sbddesign"
+    "credit": {
+      "name": "@sbddesign",
+      "uri": "https://github.com/sbddesign"
+    }
   },
   {
-    "wallet": "BitPay",
+    "wallet": {
+      "name": "BitPay",
+      "uri": "https://bitpay.com/"
+    },
     "scans_bip21": "yes",
     "recognizes_lightning": "n/a",
     "creates_bip21": "no",
     "description": "",
     "notes": "",
-    "credit": "@sbddesign"
+    "credit": {
+      "name": "@sbddesign",
+      "uri": "https://github.com/sbddesign"
+    }
   },
   {
-    "wallet": "Blixt",
+    "wallet": {
+      "name": "Blixt",
+      "uri": "https://blixtwallet.github.io/"
+    },
     "scans_bip21": "yes",
     "recognizes_lightning": "yes",
     "creates_bip21": "no",
     "description": "QR code is not a valid bitcoin lightning invoice",
     "notes": "",
-    "credit": "@sbddesign"
+    "credit": {
+      "name": "@sbddesign",
+      "uri": "https://github.com/sbddesign"
+    }
   },
   {
-    "wallet": "Bluewallet",
+    "wallet": {
+      "name": "Bluewallet",
+      "uri": "https://bluewallet.io/"
+    },
     "scans_bip21": "yes",
     "recognizes_lightning": "yes",
     "creates_bip21": "no",
     "description": "Asks me to select a wallet, and I can choose my lightning wallet or on-chain wallet.",
     "notes": "Note that Bluewallet has 2 scanning methods. You can select a wallet and then scan the QR, or you can scan the QR without selecting a wallet. If you choose the latter and scan a BIP21 QR with lightning param, then it will prompt you to select a wallet because it sees your on-chain and lightning wallet as both being valid choices for this payment.",
-    "credit": "@sbddesign"
+    "credit": {
+      "name": "@sbddesign",
+      "uri": "https://github.com/sbddesign"
+    }
   },
   {
-    "wallet": "Breez",
+    "wallet": {
+      "name": "Breez",
+      "uri": "https://breez.technology/"
+    },
     "scans_bip21": "yes",
     "recognizes_lightning": "yes",
     "creates_bip21": "no",
     "description": "",
     "notes": "",
-    "credit": "@sbddesign"
+    "credit": {
+      "name": "@sbddesign",
+      "uri": "https://github.com/sbddesign"
+    }
   },
   {
-    "wallet": "Casa",
+    "wallet": {
+      "name": "Casa",
+      "uri": "https://keys.casa/"
+    },
     "scans_bip21": "yes",
     "recognizes_lightning": "n/a",
     "creates_bip21": "no",
     "description": "",
     "notes": "",
-    "credit": "@sbddesign"
+    "credit": {
+      "name": "@sbddesign",
+      "uri": "https://github.com/sbddesign"
+    }
   },
   {
-    "wallet": "CashApp",
+    "wallet": {
+      "name": "CashApp",
+      "uri": "https://cash.app/"
+    },
     "scans_bip21": "yes",
     "recognizes_lightning": "no",
     "creates_bip21": "no",
     "description": "Takes me to PIN entry followed by on-chain TX fee selection",
     "notes": "",
-    "credit": "@sbddesign"
+    "credit": {
+      "name": "@sbddesign",
+      "uri": "https://github.com/sbddesign"
+    }
   },
   {
-    "wallet": "Chaincase",
+    "wallet": {
+      "name": "Chaincase",
+      "uri": "https://chaincase.app/"
+    },
     "scans_bip21": "yes",
     "recognizes_lightning": "n/a",
     "creates_bip21": "no",
     "description": "Pulls in the entire string including the 'bitcoin:', but I think it sees it as an on-chain address",
     "notes": "",
-    "credit": "@sbddesign"
+    "credit": {
+      "name": "@sbddesign",
+      "uri": "https://github.com/sbddesign"
+    }
   },
   {
-    "wallet": "Coinbase",
+    "wallet": {
+      "name": "Coinbase",
+      "uri": "https://www.coinbase.com/"
+    },
     "scans_bip21": "",
     "recognizes_lightning": "",
     "creates_bip21": "",
@@ -97,16 +157,25 @@
     "notes": ""
   },
   {
-    "wallet": "Edge Wallet",
+    "wallet": {
+      "name": "Edge Wallet",
+      "uri": "https://edge.app/"
+    },
     "scans_bip21": "yes",
     "recognizes_lightning": "n/a",
     "creates_bip21": "no",
     "description": "Can decode the QRcode that contains a BIP21 URI with bolt11 and the external onchain fallback. The URI can also be pasted, the onchain address is detected and users can send",
     "notes": "",
-    "credit": "@theDavidCoen"
+    "credit": {
+      "name": "@theDavidCoen",
+      "uri": "https://github.com/theDavidCoen"
+    }
   },
   {
-    "wallet": "Electrum",
+    "wallet": {
+      "name": "Electrum",
+      "uri": "https://electrum.org/"
+    },
     "scans_bip21": "",
     "recognizes_lightning": "",
     "creates_bip21": "",
@@ -114,7 +183,10 @@
     "notes": ""
   },
   {
-    "wallet": "Gemini",
+    "wallet": {
+      "name": "Gemini",
+      "uri": "https://www.gemini.com/"
+    },
     "scans_bip21": "",
     "recognizes_lightning": "",
     "creates_bip21": "",
@@ -122,7 +194,10 @@
     "notes": ""
   },
   {
-    "wallet": "Kraken",
+    "wallet": {
+      "name": "Kraken",
+      "uri": "https://www.kraken.com/"
+    },
     "scans_bip21": "",
     "recognizes_lightning": "",
     "creates_bip21": "",
@@ -130,16 +205,25 @@
     "notes": ""
   },
   {
-    "wallet": "Muun",
+    "wallet": {
+      "name": "Muun",
+      "uri": "https://muun.com/"
+    },
     "scans_bip21": "yes",
     "recognizes_lightning": "yes",
     "creates_bip21": "no",
     "description": "",
     "notes": "",
-    "credit": "@sbddesign"
+    "credit": {
+      "name": "@sbddesign",
+      "uri": "https://github.com/sbddesign"
+    }
   },
   {
-    "wallet": "OKCoin",
+    "wallet": {
+      "name": "OKCoin",
+      "uri": "https://www.okcoin.com/"
+    },
     "scans_bip21": "",
     "recognizes_lightning": "",
     "creates_bip21": "",
@@ -147,25 +231,40 @@
     "notes": ""
   },
   {
-    "wallet": "Phoenix",
+    "wallet": {
+      "name": "Phoenix",
+      "uri": "https://phoenix.acinq.co/"
+    },
     "scans_bip21": "yes",
     "recognizes_lightning": "yes",
     "creates_bip21": "no",
     "description": "",
     "notes": "",
-    "credit": "@sbddesign"
+    "credit": {
+      "name": "@sbddesign",
+      "uri": "https://github.com/sbddesign"
+    }
   },
   {
-    "wallet": "Strike",
+    "wallet": {
+      "name": "Strike",
+      "uri": "https://strike.me/"
+    },
     "scans_bip21": "yes",
     "recognizes_lightning": "no",
     "creates_bip21": "no",
     "description": "Amount is too low\" I think it is defaulting to on-chain",
     "notes": "",
-    "credit": "@sbddesign"
+    "credit": {
+      "name": "@sbddesign",
+      "uri": "https://github.com/sbddesign"
+    }
   },
   {
-    "wallet": "Wallet of Satoshi",
+    "wallet": {
+      "name": "Wallet of Satoshi",
+      "uri": "https://www.walletofsatoshi.com/"
+    },
     "scans_bip21": "",
     "recognizes_lightning": "",
     "creates_bip21": "",
@@ -173,22 +272,34 @@
     "notes": ""
   },
   {
-    "wallet": "Zebedee",
+    "wallet": {
+      "name": "Zebedee",
+      "uri": "https://zebedee.io/"
+    },
     "scans_bip21": "no",
     "recognizes_lightning": "no",
     "creates_bip21": "no",
     "description": "This looks like an on-chain QR code...",
     "notes": "",
-    "credit": "@sbddesign"
+    "credit": {
+      "name": "@sbddesign",
+      "uri": "https://github.com/sbddesign"
+    }
   },
   {
-    "wallet": "Zeus",
+    "wallet": {
+      "name": "Zeus",
+      "uri": "https://zeusln.app/"
+    },
     "scans_bip21": "yes",
     "recognizes_lightning": "no",
     "creates_bip21": "no",
     "description": "",
     "notes": "",
     "issue_link": "https://github.com/ZeusLN/zeus/issues/879",
-    "credit": "@bosch"
+    "credit": {
+      "name": "@bosch",
+      "uri": "https://github.com/Bosch-0"
+    }
   }
 ]
