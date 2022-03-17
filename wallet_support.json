@@ -148,6 +148,22 @@
   },
   {
     "wallet": {
+      "name": "Chivo",
+      "uri": "https://www.chivowallet.com/"
+    },
+    "scans_bip21": "yes",
+    "recognizes_lightning": "no",
+    "creates_bip21": "no",
+    "description": "",
+    "notes": "",
+    "issue_link": "https://twitter.com/StephenDeLorme/status/1504253220041940996",
+    "credit": {
+      "name": "@jcarlolife",
+      "uri": "https://twitter.com/jcarlolife"
+    }
+  },
+  {
+    "wallet": {
       "name": "Coinbase",
       "uri": "https://www.coinbase.com/"
     },
