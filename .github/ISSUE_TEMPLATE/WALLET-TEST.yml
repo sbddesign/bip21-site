@@ -1,4 +1,4 @@
-name: 1 - Submit a wallet you have tested
+name: Submit a wallet you have tested
 description: Submit your report of a wallet, exchange, or other bitcoin service for compatibility with unified BIP21 QR codes
 title: "[Wallet Test]: "
 labels: ["wallet-test"]
