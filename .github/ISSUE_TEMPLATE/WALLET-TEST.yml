@@ -1,4 +1,4 @@
-name: Wallet Test Submission
+name: 1 - Submit a wallet you have tested
 description: Submit your report of a wallet, exchange, or other bitcoin service for compatibility with unified BIP21 QR codes
 title: "[Wallet Test]: "
 labels: ["wallet-test"]
@@ -15,12 +15,16 @@ body:
       label: App Name
       description: The name of the wallet, exchange, or service provider you tested
       placeholder: ex. Boss Wallet
+    validations:
+      required: true
   - type: input
     id: wallet_uri
     attributes:
       label: App Website
       description: The website of the wallet, exchange, or service provider you tested
       placeholder: ex. bosswallet3000.com
+    validations:
+      required: true
   - type: dropdown
     id: scans_bip21
     attributes:
@@ -29,6 +33,8 @@ body:
       options:
         - "Yes"
         - "No"
+    validations:
+      required: true
   - type: dropdown
     id: recognizes_lightning
     attributes:
@@ -38,6 +44,8 @@ body:
         - "Yes"
         - "No"
         - "Not applicable - the wallet doesn't support Lightning"
+    validations:
+      required: true
   - type: dropdown
     id: creates_bip21
     attributes:
@@ -46,12 +54,13 @@ body:
       options:
         - Yes (more common)
         - No
+    validations:
+      required: true
   - type: textarea
     id: description
     attributes:
       label: Description
       description: Optional - describe what happened. For example, if it failed to scan, you would include the error message the app gave you here.
       placeholder: The wallet said "can't scan because this is not a valid lightning invoice"...
-      value: "The error message said..."
     validations:
       required: true
