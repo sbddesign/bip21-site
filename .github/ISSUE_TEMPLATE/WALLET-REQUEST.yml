@@ -2,8 +2,6 @@ name: Request for a wallet or service to be tested
 description: Submit your report of a wallet, exchange, or other bitcoin service for compatibility with unified BIP21 QR codes
 title: "[Request a Test]: "
 labels: ["wallet-request"]
-assignees:
-  - sbddesign
 body:
   - type: markdown
     attributes:
