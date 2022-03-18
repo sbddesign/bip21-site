@@ -27,17 +27,17 @@ body:
       label: Scans BIP-21
       description: Did the wallet successfully scan the BIP21 QR code?
       options:
-        - Yes
-        - No
+        - "Yes"
+        - "No"
   - type: dropdown
     id: recognizes_lightning
     attributes:
       label: Recognize Lightning
       description: Did the wallet recognize the BOLT 11 invoice in the BIP-21 QR code?
       options:
-        - Yes
-        - No
-        - Not applicable - the wallet doesn't support Lightning
+        - "Yes"
+        - "No"
+        - "Not applicable - the wallet doesn't support Lightning"
   - type: dropdown
     id: creates_bip21
     attributes:
@@ -52,6 +52,6 @@ body:
       label: Description
       description: Optional - describe what happened. For example, if it failed to scan, you would include the error message the app gave you here.
       placeholder: The wallet said "can't scan because this is not a valid lightning invoice"...
-      value: ""
+      value: "The error message said..."
     validations:
       required: true
