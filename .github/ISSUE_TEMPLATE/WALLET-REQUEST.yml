@@ -1,0 +1,35 @@
+name: Request having a wallet or service to be tested
+description: Submit your report of a wallet, exchange, or other bitcoin service for compatibility with unified BIP21 QR codes
+title: "[Wallet Test]: "
+labels: ["wallet-test"]
+assignees:
+  - sbddesign
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to request this?
+  - type: input
+    id: wallet_name
+    attributes:
+      label: App Name
+      description: The name of the wallet, exchange, or service provider you would like to be tested.
+      placeholder: ex. Boss Wallet
+    validations:
+      required: true
+  - type: input
+    id: wallet_uri
+    attributes:
+      label: App Website
+      description: The website of the wallet, exchange, or service provider you would like to be tested.
+      placeholder: ex. bosswallet3000.com
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Other notes
+      description: Optional - other usefule notes. For example, if the app in question is only available in certain regions, this would be a good place to specify that.
+      placeholder: "This wallet is only available in XYZ countries..."
+    validations:
+      required: false
