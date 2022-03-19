@@ -76,14 +76,14 @@
       "name": "Blockstream Green",
       "uri": "https://blockstream.com/green/"
     },
-    "scans_bip21": "",
-    "recognizes_lightning": "",
-    "creates_bip21": "",
+    "scans_bip21": "yes",
+    "recognizes_lightning": "n/a",
+    "creates_bip21": "n/a",
     "description": "",
     "notes": "",
     "credit": {
-      "name": "",
-      "uri": ""
+      "name": "@john_zaprite",
+      "uri": "https://twitter.com/john_zaprite"
     }
   },
   {
@@ -343,12 +343,16 @@
       "name": "Wallet of Satoshi",
       "uri": "https://www.walletofsatoshi.com/"
     },
-    "scans_bip21": "",
-    "recognizes_lightning": "",
-    "creates_bip21": "",
+    "scans_bip21": "yes",
+    "recognizes_lightning": "yes",
+    "creates_bip21": "no",
     "description": "",
-    "notes": ""
-  },
+    "notes": "",
+    "credit": {
+      "name": "@john_zaprite",
+      "uri": "https://twitter.com/john_zaprite"
+      }
+},
   {
     "wallet": {
       "name": "Zap",
