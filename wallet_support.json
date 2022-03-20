@@ -179,7 +179,7 @@
   },
   {
     "wallet": {
-      "name": "Coinbase",
+      "name": "Coinbase (Exchange)",
       "uri": "https://www.coinbase.com/"
     },
     "scans_bip21": "",
@@ -187,6 +187,21 @@
     "creates_bip21": "",
     "description": "",
     "notes": ""
+  },
+  {
+    "wallet": {
+      "name": "Coinbase (Wallet)",
+      "uri": "https://www.coinbase.com/"
+    },
+    "scans_bip21": "yes",
+    "recognizes_lightning": "n/a",
+    "creates_bip21": "no",
+    "description": "",
+    "notes": "",
+    "credit": {
+      "name": "@moneyball",
+      "uri": "https://github.com/moneyball"
+    }
   },
   {
     "wallet": {
