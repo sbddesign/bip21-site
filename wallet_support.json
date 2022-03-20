@@ -208,11 +208,15 @@
       "name": "Electrum",
       "uri": "https://electrum.org/"
     },
-    "scans_bip21": "",
-    "recognizes_lightning": "",
-    "creates_bip21": "",
+    "scans_bip21": "yes",
+    "recognizes_lightning": "yes",
+    "creates_bip21": "no",
     "description": "",
-    "notes": ""
+    "notes": "",
+     "credit": {
+      "name": "@bitkarrot",
+      "uri": "https://github.com/bitkarrot"
+    }
   },
   {
     "wallet": {
