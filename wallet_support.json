@@ -355,10 +355,11 @@
       "uri": "https://zaphq.io/"
     },
     "scans_bip21": "yes",
-    "recognizes_lightning": "no",
+    "recognizes_lightning": "",
     "creates_bip21": "no",
     "description": "",
-    "notes": "",
+    "issue_link": "https://github.com/LN-Zap/zap-android/pull/273",
+    "notes": "Seems like the Android and Desktop versions at least would recognize Lightning but hard to verify with the test QR-Code as wallet defaults back to on-chain in case LN invoice is invalid. Nothing mentioned in the zap-iOS repo.",
     "credit": {
       "name": "@velaia",
       "uri": "https://github.com/velaia"
