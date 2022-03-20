@@ -39,7 +39,7 @@ body:
     id: recognizes_lightning
     attributes:
       label: Recognize Lightning
-      description: Did the wallet recognize the BOLT 11 invoice in the BIP-21 QR code?
+      description: If the wallet supports Lightning, did it recognize the BOLT 11 invoice in the BIP-21 QR code?
       options:
         - "Yes"
         - "No"
@@ -52,8 +52,9 @@ body:
       label: Creates BIP-21 QR codes
       description: Is the wallet capable of creating BIP-21 QR codes when the user wants to request a payment? This is not common!
       options:
-        - Yes (more common)
-        - No
+        - "No (more common)"
+        - "Yes"
+        - "I'm not sure"
     validations:
       required: true
   - type: textarea
