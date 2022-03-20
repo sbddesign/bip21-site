@@ -212,7 +212,8 @@
     "recognizes_lightning": "yes",
     "creates_bip21": "no",
     "description": "",
-    "notes": "",
+      "notes": "",
+      "issue_link": "https://github.com/spesmilo/electrum/issues/7253",
      "credit": {
       "name": "@bitkarrot",
       "uri": "https://github.com/bitkarrot"
