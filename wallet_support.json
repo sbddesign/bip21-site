@@ -78,7 +78,7 @@
     },
     "scans_bip21": "yes",
     "recognizes_lightning": "n/a",
-    "creates_bip21": "n/a",
+    "creates_bip21": "no",
     "description": "",
     "notes": "",
     "credit": {
