@@ -313,7 +313,7 @@
       "uri": "https://samouraiwallet.com/"
     },
     "scans_bip21": "yes",
-    "recognizes_lightning": "N/A",
+    "recognizes_lightning": "n/a",
     "creates_bip21": "no",
     "description": "",
     "notes": "",
