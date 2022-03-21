@@ -315,7 +315,7 @@ export default function Home() {
                 </ul>
                 
                 <p>
-                  <strong>Optional:</strong> you may also document if the app is capable of creating a BIP21 payment URI when you attempt request a payment. The way to determine if a QR code is a BIP21 URI is to decode the QR and see if it begins with <pre className="inline">bitcoin:</pre>. If this is too advanced for you or you are otherwise unsure, you can simply say "I'm not sure" for this detail; this will most commonly be a <strong>no</strong> for most wallets today. 
+                  <strong>Optional:</strong> you may also document if the app is capable of creating a BIP21 payment URI when you request a payment. The way to determine if a QR code is a BIP21 URI is to decode the QR and see if it begins with <pre className="inline">bitcoin:</pre>. If this is too advanced for you or you are otherwise unsure, you can simply say "I'm not sure" for this detail; this will most commonly be a <strong>no</strong> for most wallets today. 
                 </p>
 
                 <p>
