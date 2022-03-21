@@ -1,0 +1,79 @@
+[
+  {
+    "hardware": {
+      "name": "iPhone XS",
+      "uri": "https://support.apple.com/kb/SP779"
+    },
+    "software": [
+      {
+        "wallet": {
+          "name": "Muun",
+          "uri": "https://muun.com/"
+        },
+        "scans": "yes",
+        "description": "Works perfectly.",
+        "credit": {
+          "name": "@sbddesign",
+          "uri": "https://github.com/sbddesign"
+        }
+      },
+      {
+        "wallet": {
+          "name": "Phoenix",
+          "uri": "https://phoenix.acinq.co/"
+        },
+        "scans": "yes",
+        "description": "Works perfectly.",
+        "credit": {
+          "name": "@sbddesign",
+          "uri": "https://github.com/sbddesign"
+        }
+      },
+      {
+        "wallet": {
+          "name": "Zeus",
+          "uri": "https://zeusln.app/"
+        },
+        "scans": "yes",
+        "description": "Works perfectly.",
+        "credit": {
+          "name": "@sbddesign",
+          "uri": "https://github.com/sbddesign"
+        }
+      }
+    ]
+  },
+  {
+    "hardware": {
+      "name": "Cheap Android Phone"
+    },
+    "software": [
+      {
+        "wallet": {
+          "name": "Muun",
+          "uri": "https://muun.com/"
+        },
+        "description": "It will scan, but takes a lot of shifting the phone's distance from the QR code. This is also an issue with BOLT11 invoices.",
+        "scans": "mixed",
+        "issue_link": "https://github.com/sbddesign/bip21-site",
+        "credit": {
+          "name": "@sbddesign",
+          "uri": "https://github.com/sbddesign"
+        }
+      },
+      {
+        "wallet": {
+          "name": "Fictional Test Wallet",
+          "uri": "https://bitcoinqr.dev"
+        },
+        "description": "Will not scan at all.",
+        "scans": "no",
+        "issue_link": "https://github.com/sbddesign/bip21-site",
+        "credit": {
+          "name": "@sbddesign",
+          "uri": "https://github.com/sbddesign"
+        }
+      }
+    ]
+  }
+]
