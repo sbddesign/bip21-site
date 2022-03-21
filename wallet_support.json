@@ -313,9 +313,9 @@
       "uri": "https://samouraiwallet.com/"
     },
     "scans_bip21": "yes",
-    "recognizes_lightning": "yes",
-    "creates_bip21": "",
-    "description": "Needed a channel open to test but seemed to read the invoice.",
+    "recognizes_lightning": "N/A",
+    "creates_bip21": "no",
+    "description": "",
     "notes": "",
     "credit": {
       "name": "@bosch",
