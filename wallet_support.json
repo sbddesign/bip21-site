@@ -118,6 +118,21 @@
   },
   {
     "wallet": {
+      "name": "BTCPay Server",
+      "uri": "https://btcpayserver.org/"
+    },
+    "scans_bip21": "no",
+    "recognizes_lightning": "?",
+    "creates_bip21": "no",
+    "description": "",
+    "notes": "",
+    "credit": {
+      "name": "@bitkarrot",
+      "uri": "https://github.com/bitkarrot"
+    }
+  },
+  {
+    "wallet": {
       "name": "Casa",
       "uri": "https://keys.casa/"
     },
