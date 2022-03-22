@@ -242,6 +242,21 @@
   },
   {
     "wallet": {
+      "name": "Hexa",
+      "uri": "https://hexawallet.io/"
+    },
+    "scans_bip21": "yes",
+    "recognizes_lightning": "n/a",
+    "creates_bip21": "no",
+    "description": "",
+    "notes": "",
+    "credit": {
+      "name": "@antuz123",
+      "uri": "https://github.com/antuz123"
+    }
+  },
+  {
+    "wallet": {
       "name": "Kraken",
       "uri": "https://www.kraken.com/"
     },
