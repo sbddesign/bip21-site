@@ -242,6 +242,21 @@
   },
   {
     "wallet": {
+      "name": "Hexa",
+      "uri": "https://hexawallet.io/"
+    },
+    "scans_bip21": "yes",
+    "recognizes_lightning": "n/a",
+    "creates_bip21": "no",
+    "description": "",
+    "notes": "",
+    "credit": {
+      "name": "@antuz123",
+      "uri": "https://github.com/antuz123"
+    }
+  },
+  {
+    "wallet": {
       "name": "Kraken",
       "uri": "https://www.kraken.com/"
     },
@@ -313,9 +328,9 @@
       "uri": "https://samouraiwallet.com/"
     },
     "scans_bip21": "yes",
-    "recognizes_lightning": "yes",
-    "creates_bip21": "",
-    "description": "Needed a channel open to test but seemed to read the invoice.",
+    "recognizes_lightning": "n/a",
+    "creates_bip21": "no",
+    "description": "",
     "notes": "",
     "credit": {
       "name": "@bosch",
@@ -373,14 +388,15 @@
       "name": "Zap",
       "uri": "https://zaphq.io/"
     },
-    "scans_bip21": "",
+    "scans_bip21": "yes",
     "recognizes_lightning": "",
-    "creates_bip21": "",
-    "description": "",
+    "creates_bip21": "no",
+    "description": "Zap defaults to on-chain if the included invoice is expired, but it recognizes Lightning when the invoice is still valid.",
+    "issue_link": "https://github.com/LN-Zap/zap-android/pull/273",
     "notes": "",
     "credit": {
-      "name": "",
-      "uri": ""
+      "name": "@velaia",
+      "uri": "https://github.com/velaia"
     }
   },
   {
