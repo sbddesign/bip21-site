@@ -12,6 +12,7 @@ import { BitcoinCircleIcon as BitcoinCircleIconOutline } from "@bitcoin-design/b
 import Example from "../components/example";
 import Table from "../components/table";
 import React from "react";
+import HardwareTable from "../components/hardware-table";
 
 function toggleMenu() {
   let header = document.getElementById('header-container');
@@ -246,7 +247,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="md:p-12 flex flex-col md:items-center space-y-8 p-4 mx-auto">
+        <div className="md:p-12 flex flex-col md:items-center space-y-8 p-4 mx-auto mb-8">
           <h2 className="text-bpr-orange" id="plan">The Plan</h2>
 
           <p className="max-w-screen-sm md:text-center">
@@ -346,7 +347,7 @@ export default function Home() {
             </li>
           </ul>
 
-          <h3 className="text-xl mb-4" id="support">Software and services supporting BIP21</h3>
+          <h3 className="pt-8" id="support">Software and services supporting BIP21</h3>
           
           <div className="bg-slate-200 p-4 font-light space-y-4 rounded">
             <h4 className="font-medium">Defining support</h4>
@@ -369,6 +370,14 @@ export default function Home() {
           </div>
           
           <Table/>
+
+          <h3 className="pt-8" id="support">Hardware Support</h3>
+          
+          <p>BIP21 QR codes that contain Lightning invoices can get very large. Here is documentation on how different mobile devices fare when attempting to scan these large QR codes.</p>
+          
+          <p>These results differ from the results above. Here, we are simply checking if an app is capable of reading the very large QR code, and <strong>disregarding</strong> whether or not it notices the Lightning invoice.</p>
+          
+          <HardwareTable />
         </div>
 
         <div className="container mx-auto px-12 max-w-screen-xl">

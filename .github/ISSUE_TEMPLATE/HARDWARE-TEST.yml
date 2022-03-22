@@ -1,0 +1,42 @@
+name: Submit a wallet you have tested
+description: Submit your report of a wallet, exchange, or other bitcoin service for compatibility with unified BIP21 QR codes
+title: "[Wallet Test]: "
+labels: ["wallet-test"]
+assignees:
+  - sbddesign
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+  - type: input
+    id: hardware_name
+    attributes:
+      label: Hardware Name
+      description: The name of the hardware device you tested.
+      placeholder: ex. MegaPhone Model X3000
+    validations:
+      required: true
+  - type: input
+    id: hardware_uri
+    attributes:
+      label: Hardware Website
+      description: Optionally, the manufacturer's website or link to hardware tech specs.
+      placeholder: ex. megaphoneinc.co/x3000/tech-specs.html
+  - type: dropdown
+    id: scans
+    attributes:
+      label: Scans BIP-21
+      description: Did the wallet successfully scan the BIP21 QR code?
+      options:
+        - "Yes"
+        - "No"
+        - "Mixed - it scanned, but with difficulties"
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Optional - describe what happened. For example, if your scan results were "mixed", describe your experience.
+      placeholder: It scanned eventually, but I had to get the phone at the right angle.

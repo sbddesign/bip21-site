@@ -1,0 +1,46 @@
+[
+  {
+    "hardware": {
+      "name": "iPhone XS",
+      "uri": "https://support.apple.com/kb/SP779"
+    },
+    "software": [
+      {
+        "wallet": {
+          "name": "Muun",
+          "uri": "https://muun.com/"
+        },
+        "scans": "yes",
+        "description": "Works perfectly.",
+        "credit": {
+          "name": "@sbddesign",
+          "uri": "https://github.com/sbddesign"
+        }
+      },
+      {
+        "wallet": {
+          "name": "Phoenix",
+          "uri": "https://phoenix.acinq.co/"
+        },
+        "scans": "yes",
+        "description": "Works perfectly.",
+        "credit": {
+          "name": "@sbddesign",
+          "uri": "https://github.com/sbddesign"
+        }
+      },
+      {
+        "wallet": {
+          "name": "Zeus",
+          "uri": "https://zeusln.app/"
+        },
+        "scans": "yes",
+        "description": "Works perfectly.",
+        "credit": {
+          "name": "@sbddesign",
+          "uri": "https://github.com/sbddesign"
+        }
+      }
+    ]
+  }
+]
