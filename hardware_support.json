@@ -62,5 +62,25 @@
         }
       }
     ]
+  },
+  {
+    "hardware": {
+      "name": "iPhone 11",
+      "uri": "https://www.apple.com/uk/shop/buy-iphone/iphone-11"
+    },
+    "software": [
+      {
+        "wallet": {
+          "name": "Phoenix",
+          "uri": "https://phoenix.acinq.co"
+        },
+        "scans": "yes",
+        "description": "Works very good",
+        "credit": {
+          "name": "@ConorOkus",
+          "uri": "https://github.com/conorokus"
+        }
+      }
+    ]
   }
 ]
