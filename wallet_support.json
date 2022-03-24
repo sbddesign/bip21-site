@@ -389,7 +389,7 @@
       "uri": "https://zaphq.io/"
     },
     "scans_bip21": "yes",
-    "recognizes_lightning": "",
+    "recognizes_lightning": "yes",
     "creates_bip21": "no",
     "description": "Zap defaults to on-chain if the included invoice is expired, but it recognizes Lightning when the invoice is still valid.",
     "issue_link": "https://github.com/LN-Zap/zap-android/pull/273",
