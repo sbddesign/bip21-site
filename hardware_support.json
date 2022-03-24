@@ -42,5 +42,25 @@
         }
       }
     ]
+  },
+  {
+    "hardware": {
+      "name": "Samsung Galaxy A12",
+      "uri": "https://www.samsung.com/us/mobile/phones/galaxy-a/galaxy-a12-unlocked-sm-a125uzkdxaa/"
+    },
+    "software": [
+      {
+        "wallet": {
+          "name": "Muun",
+          "uri": "https://muun.com/"
+        },
+        "scans": "yes",
+        "description": "Works very good. It is capable of reading the QR from a surprising distance. If the QR takes up a quarter to a half the width of the screen, it will take a second to refocus and then scan. The closer the QR is to the camera, the faster it works.",
+        "credit": {
+          "name": "@sbddesign",
+          "uri": "https://github.com/sbddesign"
+        }
+      }
+    ]
   }
 ]
