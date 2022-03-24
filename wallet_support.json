@@ -118,6 +118,21 @@
   },
   {
     "wallet": {
+      "name": "BTCPay Server",
+      "uri": "https://btcpayserver.org/"
+    },
+    "scans_bip21": "n/a",
+    "recognizes_lightning": "n/a",
+    "creates_bip21": "no",
+    "description": "BTCPayServer does not scan QR codes. The primary use case for BTCPay would be to create BIP21 URIs instead of having an on-chain and lightning tab, which would require more industry support first.",
+    "notes": "",
+    "credit": {
+      "name": "@bitkarrot",
+      "uri": "https://github.com/bitkarrot"
+    }
+  },
+  {
+    "wallet": {
       "name": "Casa",
       "uri": "https://keys.casa/"
     },
