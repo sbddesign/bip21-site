@@ -1,7 +1,7 @@
 name: Submit a device you have tested
 description: Submit your report of a wallet, exchange, or other bitcoin service for compatibility with unified BIP21 QR codes
-title: "[Wallet Test]: "
-labels: ["wallet-test"]
+title: "[Hardware Test]: "
+labels: ["hardware-test"]
 assignees:
   - sbddesign
 body:
@@ -23,6 +23,20 @@ body:
       label: Hardware Website
       description: Optionally, the manufacturer's website or link to hardware tech specs.
       placeholder: ex. megaphoneinc.co/x3000/tech-specs.html
+  - type: input
+    id: wallet_name
+    attributes:
+      label: App Name
+      description: The name of the wallet, exchange, or service provider you used on this piece of hardware
+      placeholder: ex. Boss Wallet
+    validations:
+      required: true
+  - type: input
+    id: wallet_uri
+    attributes:
+      label: App Website
+      description: The website of the wallet, exchange, or service provider you tested
+      placeholder: ex. bosswallet3000.com
   - type: dropdown
     id: scans
     attributes:
