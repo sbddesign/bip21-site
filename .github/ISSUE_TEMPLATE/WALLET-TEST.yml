@@ -33,6 +33,7 @@ body:
       options:
         - "Yes"
         - "No"
+        - "Not applicable - this software doesn't scan QR codes"
     validations:
       required: true
   - type: dropdown
