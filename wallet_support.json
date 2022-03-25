@@ -121,14 +121,14 @@
       "name": "BTCPay Server",
       "uri": "https://btcpayserver.org/"
     },
-    "scans_bip21": "n/a",
+    "scans_bip21": "yes",
     "recognizes_lightning": "n/a",
-    "creates_bip21": "no",
-    "description": "BTCPayServer does not scan QR codes. The primary use case for BTCPay would be to create BIP21 URIs instead of having an on-chain and lightning tab, which would require more industry support first.",
+    "creates_bip21": "yes",
+    "description": "The BTCPayServer back-office Wallet > Send page will scan BIP21 URIs; Send > Wallet is on-chain only, so lightning is N/A in this context. The POS or store front-end is capable of generating a BIP21 URI containing a BOLT11 invoice if the admin turns this feature on in the settings. Props to @bitkarrot for a previous testing attempt.",
     "notes": "",
     "credit": {
-      "name": "@bitkarrot",
-      "uri": "https://github.com/bitkarrot"
+      "name": "@pavlenex, @bitkarrot",
+      "uri": "https://github.com/sbddesign/bip21-site/issues/53"
     }
   },
   {
