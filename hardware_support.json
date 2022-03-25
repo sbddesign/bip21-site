@@ -82,5 +82,25 @@
         }
       }
     ]
+  },
+  {
+    "hardware": {
+      "name": "iPhone 8",
+      "uri": "https://support.apple.com/kb/SP767"
+    },
+    "software": [
+      {
+        "wallet": {
+          "name": "BlueWallet",
+          "uri": "https://bluewallet.io/"
+        },
+        "scans": "yes",
+        "description": "Scans well.",
+        "credit": {
+          "name": "@pavlenex",
+          "uri": "https://github.com/pavlenex"
+        }
+      }
+    ]
   }
 ]
