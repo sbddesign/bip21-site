@@ -324,6 +324,21 @@
   },
   {
     "wallet": {
+      "name": "OpenNode",
+      "uri": "https://www.opennode.com/"
+    },
+    "scans_bip21": "n/a",
+    "recognizes_lightning": "n/a",
+    "creates_bip21": "yes",
+    "description": "OpenNode is a Lightning Payment Provider that allows merchants to accept bitcoin. For developers, they provide an API to generate and manage generic \"charges\" that can be paid over either a bitcoin transaction or a lightning invoice. The charges API response object includes a `uri` field which contains a BIP21 URI + BOLT11 invoice.",
+    "notes": "",
+    "credit": {
+      "name": "@alexlwn123",
+      "uri": "https://github.com/alexlwn123"
+    }
+  },
+  {
+    "wallet": {
       "name": "Phoenix",
       "uri": "https://phoenix.acinq.co/"
     },
