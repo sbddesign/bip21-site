@@ -355,6 +355,21 @@
   },
   {
     "wallet": {
+      "name": "River",
+      "uri": "https://river.com/"
+    },
+    "scans_bip21": "yes",
+    "recognizes_lightning": "no",
+    "creates_bip21": "no",
+    "description": "",
+    "notes": "",
+    "credit": {
+      "name": "@bruteforcecat",
+      "uri": "https://github.com/bruteforcecat"
+    }
+  },
+  {
+    "wallet": {
       "name": "Samourai",
       "uri": "https://samouraiwallet.com/"
     },
