@@ -272,14 +272,18 @@
   },
   {
     "wallet": {
-      "name": "Kraken",
+      "name": "Kraken / Kraken Pro",
       "uri": "https://www.kraken.com/"
     },
-    "scans_bip21": "",
-    "recognizes_lightning": "",
-    "creates_bip21": "",
-    "description": "",
-    "notes": ""
+    "scans_bip21": "yes",
+    "recognizes_lightning": "no",
+    "creates_bip21": "yes",
+    "description": "The website and mobile apps do support creating a BIP21 QR code for deposits, but not with a lightning param.",
+    "notes": "",
+    "credit": {
+      "name": "@PierreRochard",
+      "uri": "https://github.com/PierreRochard"
+    }
   },
   {
     "wallet": {
