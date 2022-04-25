@@ -305,14 +305,15 @@
       "name": "Nunchuk",
       "uri": "https://nunchuk.io/"
     },
-    "scans_bip21": "",
-    "recognizes_lightning": "",
-    "creates_bip21": "",
+    "scans_bip21": "yes",
+    "recognizes_lightning": "n/a",
+    "creates_bip21": "no",
     "description": "",
-    "notes": "",
+    "notes": "On-chain only, does not generate BIP21 addresses",
+    "issue_link": "https://github.com/nunchuk-io/nunchuk-desktop/issues/10",
     "credit": {
-      "name": "",
-      "uri": ""
+      "name": "@bosch",
+      "uri": "https://github.com/Bosch-0"
     }
   },
   {
@@ -354,6 +355,21 @@
     "credit": {
       "name": "@sbddesign",
       "uri": "https://github.com/sbddesign"
+    }
+  },
+  {
+    "wallet": {
+      "name": "River",
+      "uri": "https://river.com/"
+    },
+    "scans_bip21": "yes",
+    "recognizes_lightning": "no",
+    "creates_bip21": "no",
+    "description": "",
+    "notes": "",
+    "credit": {
+      "name": "@bruteforcecat",
+      "uri": "https://github.com/bruteforcecat"
     }
   },
   {
