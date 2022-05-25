@@ -43,6 +43,21 @@
   },
   {
     "wallet": {
+      "name": "The Bitcoin Company",
+      "uri": "https://thebitcoincompany.com/"
+    },
+    "scans_bip21": "yes",
+    "recognizes_lightning": "yes",
+    "creates_bip21": "no",
+    "description": "",
+    "notes": "",
+    "credit": {
+      "name": "@benthecarman",
+      "uri": "https://github.com/benthecarman"
+    }
+  },
+  {
+    "wallet": {
       "name": "BitPay",
       "uri": "https://bitpay.com/"
     },
