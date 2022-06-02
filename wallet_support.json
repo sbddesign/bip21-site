@@ -4,14 +4,14 @@
       "name": "Alby",
       "uri": "https://getalby.com/"
     },
-    "scans_bip21": "no",
-    "recognizes_lightning": "no",
-    "creates_bip21": "",
+    "scans_bip21": "yes",
+    "recognizes_lightning": "yes",
+    "creates_bip21": "no",
     "description": "",
     "notes": "",
     "credit": {
-      "name": "@bosch",
-      "uri": "https://github.com/Bosch-0"
+      "name": "@sbddesign",
+      "uri": "https://github.com/sbddesign"
     }
   },
   {
