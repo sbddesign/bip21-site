@@ -169,6 +169,12 @@ export default function Home() {
 
           <div className="pt-12 pb-12 text-center space-y-8">
             <h2 className="text-bpr-pink" id="examples">Examples</h2>
+            
+            <p className="max-w-4xl mx-auto">
+              Note that every example features uppercase `bech32` strings (bitcoin addresses, invoices, and offers).
+              When a QR code is encoded in mixed mode, it can use alphanumeric mode for the uppercase strings to reduce
+              the resolution of the QR code and make it more easily readable by devices.
+            </p>
 
             <h3>Unified QRs for Bitcoin</h3>
             <div className="flex flex-col space-y-8 md:flex-row md:space-x-4 md:space-y-0 pb-12 lg:justify-around">
@@ -177,7 +183,7 @@ export default function Home() {
                   title="BIP21 URI with BOLT 11 invoice"
                   src="qr-bip21-bolt11.png"
                   caption="This includes an on-chain address and a BOLT 11 invoice. It is easily backwards compatible, but is quite large."
-                  raw="bitcoin:bc1qylh3u67j673h6y6alv70m0pl2yz53tzhvxgg7u?amount=0.00001&label=sbddesign%3A%20For%20lunch%20Tuesday&message=For%20lunch%20Tuesday&lightning=lnbc10u1p3pj257pp5yztkwjcz5ftl5laxkav23zmzekaw37zk6kmv80pk4xaev5qhtz7qdpdwd3xger9wd5kwm36yprx7u3qd36kucmgyp282etnv3shjcqzpgxqyz5vqsp5usyc4lk9chsfp53kvcnvq456ganh60d89reykdngsmtj6yw3nhvq9qyyssqjcewm5cjwz4a6rfjx77c490yced6pemk0upkxhy89cmm7sct66k8gneanwykzgdrwrfje69h9u5u0w57rrcsysas7gadwmzxc8c6t0spjazup6"
+                  raw="bitcoin:BC1QYLH3U67J673H6Y6ALV70M0PL2YZ53TZHVXGG7U?amount=0.00001&label=sbddesign%3A%20For%20lunch%20Tuesday&message=For%20lunch%20Tuesday&lightning=LNBC10U1P3PJ257PP5YZTKWJCZ5FTL5LAXKAV23ZMZEKAW37ZK6KMV80PK4XAEV5QHTZ7QDPDWD3XGER9WD5KWM36YPRX7U3QD36KUCMGYP282ETNV3SHJCQZPGXQYZ5VQSP5USYC4LK9CHSFP53KVCNVQ456GANH60D89REYKDNGSMTJ6YW3NHVQ9QYYSSQJCEWM5CJWZ4A6RFJX77C490YCED6PEMK0UPKXHY89CMM7SCT66K8GNEANWYKZGDRWRFJE69H9U5U0W57RRCSYSAS7GADWMZXC8C6T0SPJAZUP6"
                 />
               </div>
               <div className="basis-6/12 lg:basis-5/12 xl:basis-4/12">
@@ -185,7 +191,7 @@ export default function Home() {
                   title="BIP21 URI with BOLT 12 offer"
                   src="qr-bip21-bolt12.png"
                   caption="While BOLT 12 is not widely implemented yet, we can see that using an offer instead of an invoice reduces the QR code size significantly."
-                  raw="bitcoin:bc1qylh3u67j673h6y6alv70m0pl2yz53tzhvxgg7u?amount=0.00001&label=sbddesign%3A%20For%20lunch%20Tuesday&message=For%20lunch%20Tuesday&lightning=lno1pg257enxv4ezqcneype82um50ynhxgrwdajx283qfwdpl28qqmc78ymlvhmxcsywdk5wrjnj36jryg488qwlrnzyjczs"
+                  raw="bitcoin:BC1QYLH3U67J673H6Y6ALV70M0PL2YZ53TZHVXGG7U?amount=0.00001&label=sbddesign%3A%20For%20lunch%20Tuesday&message=For%20lunch%20Tuesday&lightning=LNO1PG257ENXV4EZQCNEYPE82UM50YNHXGRWDAJX283QFWDPL28QQMC78YMLVHMXCSYWDK5WRJNJ36JRYG488QWLRNZYJCZS"
                 />
               </div>
             </div>
@@ -197,7 +203,7 @@ export default function Home() {
                   title="BIP21 URI with On-chain address"
                   src="qr-bip21-on-chain.png"
                   caption="A standard BIP 21 URI, for reference. This has the smallest QR code, but will not work with lightning."
-                  raw="bitcoin:bc1qylh3u67j673h6y6alv70m0pl2yz53tzhvxgg7u?amount=0.00001&label=sbddesign%3A%20For%20lunch%20Tuesday&message=For%20lunch%20Tuesday"
+                  raw="bitcoin:BC1QYLH3U67J673H6Y6ALV70M0PL2YZ53TZHVXGG7U?amount=0.00001&label=sbddesign%3A%20For%20lunch%20Tuesday&message=For%20lunch%20Tuesday"
                 />
               </div>
               <div className="basis-6/12 lg:basis-5/12 xl:basis-4/12">
@@ -205,7 +211,7 @@ export default function Home() {
                   title="BOLT 11 Invoice"
                   src="qr-bolt11.png"
                   caption="BOLT 11 invoice QR codes are already significantly large, even without the additional data of the BIP21 URI."
-                  raw="lnbc10u1p3pj257pp5yztkwjcz5ftl5laxkav23zmzekaw37zk6kmv80pk4xaev5qhtz7qdpdwd3xger9wd5kwm36yprx7u3qd36kucmgyp282etnv3shjcqzpgxqyz5vqsp5usyc4lk9chsfp53kvcnvq456ganh60d89reykdngsmtj6yw3nhvq9qyyssqjcewm5cjwz4a6rfjx77c490yced6pemk0upkxhy89cmm7sct66k8gneanwykzgdrwrfje69h9u5u0w57rrcsysas7gadwmzxc8c6t0spjazup6"
+                  raw="LNBC10U1P3PJ257PP5YZTKWJCZ5FTL5LAXKAV23ZMZEKAW37ZK6KMV80PK4XAEV5QHTZ7QDPDWD3XGER9WD5KWM36YPRX7U3QD36KUCMGYP282ETNV3SHJCQZPGXQYZ5VQSP5USYC4LK9CHSFP53KVCNVQ456GANH60D89REYKDNGSMTJ6YW3NHVQ9QYYSSQJCEWM5CJWZ4A6RFJX77C490YCED6PEMK0UPKXHY89CMM7SCT66K8GNEANWYKZGDRWRFJE69H9U5U0W57RRCSYSAS7GADWMZXC8C6T0SPJAZUP6"
                 />
               </div>
             </div>
