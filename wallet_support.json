@@ -118,6 +118,21 @@
   },
   {
     "wallet": {
+      "name": "Bottlepay",
+      "uri": "https://bottlepay.com/"
+    },
+    "scans_bip21": "yes",
+    "recognizes_lightning": "no",
+    "creates_bip21": "no",
+    "description": "Takes user directly to on-chain payment screen.",
+    "notes": "",
+    "credit": {
+      "name": "@pete001",
+      "uri": "https://github.com/pete001"
+    }
+  },
+  {
+    "wallet": {
       "name": "Breez",
       "uri": "https://breez.technology/"
     },
