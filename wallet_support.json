@@ -58,6 +58,22 @@
   },
   {
     "wallet": {
+      "name": "Bitnob",
+      "uri": "https://bitnob.com/"
+    },
+    "scans_bip21": "yes",
+    "recognizes_lightning": "yes",
+    "creates_bip21": "yes",
+    "description": "Scans BIP21 QR codes and recognises lightning addresses. Generates BIP21 QR code without lightning parameter",
+    "notes": "",
+    "issue_link": "",
+    "credit": {
+      "name": "@MichaelEjila",
+      "uri": "https://github.com/MichaelEjila"
+    }
+  },
+  {
+    "wallet": {
       "name": "BitPay",
       "uri": "https://bitpay.com/"
     },
@@ -493,22 +509,6 @@
     "credit": {
       "name": "@bosch",
       "uri": "https://github.com/Bosch-0"
-    }
-  },
-  {
-    "wallet": {
-      "name": "Bitnob",
-      "uri": "https://bitnob.com/"
-    },
-    "scans_bip21": "yes",
-    "recognizes_lightning": "yes",
-    "creates_bip21": "yes",
-    "description": "Scans BIP21 QR codes and recognises lightning addresses. Generates BIP21 QR code without lightning parameter",
-    "notes": "",
-    "issue_link": "",
-    "credit": {
-      "name": "@MichaelEjila",
-      "uri": "https://github.com/MichaelEjila"
     }
   }
 ]
