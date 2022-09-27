@@ -458,10 +458,10 @@
     "creates_bip21": "no",
     "description": "Strike has been updated to recognize the lightning param after scanning",
     "notes": "",
-    "issue_link": "https://twitter.com/StephenDeLorme/status/1504207670567395330",
+    "issue_link": "",
     "credit": {
-      "name": "Strike Team",
-      "uri": ""
+      "name": "@sbddesign, manuela, verbiricha",
+      "uri": "https://github.com/sbddesign/bip21-site/pull/72#issue-1387877559"
     }
   },
   {
