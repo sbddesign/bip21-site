@@ -454,14 +454,14 @@
       "uri": "https://strike.me/"
     },
     "scans_bip21": "yes",
-    "recognizes_lightning": "no",
+    "recognizes_lightning": "yes",
     "creates_bip21": "no",
-    "description": "Recognizes the bitcoin address fine, seems to ignore the lightning invoice.",
+    "description": "Strike has been updated to recognize the lightning param after scanning",
     "notes": "",
     "issue_link": "https://twitter.com/StephenDeLorme/status/1504207670567395330",
     "credit": {
-      "name": "@sbddesign",
-      "uri": "https://github.com/sbddesign"
+      "name": "Strike Team",
+      "uri": ""
     }
   },
   {
