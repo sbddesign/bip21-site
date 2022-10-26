@@ -198,9 +198,9 @@
       "uri": "https://cash.app/"
     },
     "scans_bip21": "yes",
-    "recognizes_lightning": "no",
-    "creates_bip21": "no",
-    "description": "Takes me to PIN entry followed by on-chain TX fee selection",
+    "recognizes_lightning": "yes",
+    "creates_bip21": "yes",
+    "description": "After the most recent update, I scanned a BIP21 QR and CashApp recognized the lightning invoice. When scanning a BIP21 QR with an expired invoice, it falls back to the on-chain address. When receiving, it generates a BIP21 QR by default.",
     "notes": "",
     "credit": {
       "name": "@sbddesign",
