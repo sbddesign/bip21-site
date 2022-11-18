@@ -138,12 +138,12 @@
       "uri": "https://bottlepay.com/"
     },
     "scans_bip21": "yes",
-    "recognizes_lightning": "no",
+    "recognizes_lightning": "yes",
     "creates_bip21": "no",
-    "description": "Takes user directly to on-chain payment screen.",
+    "description": "Takes user directly to lightning payment screen.",
     "notes": "",
     "credit": {
-      "name": "@pete001",
+      "name": "@pete001, @tom-smith8",
       "uri": "https://github.com/pete001"
     }
   },
