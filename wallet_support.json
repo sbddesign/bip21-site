@@ -333,6 +333,21 @@
   },
   {
     "wallet": {
+      "name": "LNBits",
+      "uri": "https://github.com/lnbits/lnbits"
+    },
+    "scans_bip21": "no",
+    "recognizes_lightning": "no",
+    "creates_bip21": "no",
+    "description": "When scanning the QR, it gives the folling error: Malformed request: checksum is incorrect. 400 BAD_REQUEST",
+    "notes": "",
+    "credit": {
+      "name": "@mutatrum",
+      "uri": "https://github.com/mutatrum"
+    }
+  },  
+  {
+    "wallet": {
       "name": "Muun",
       "uri": "https://muun.com/"
     },
