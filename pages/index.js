@@ -351,6 +351,16 @@ export default function Home() {
                 QR Code Generator for Testing
               </a>
             </li>
+            <li>
+              <a href="https://raw.githubusercontent.com/sbddesign/bip21-site/main/tests/vectors.txt">
+                Test vectors from @prusnak
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/sbddesign/bip21-site/blob/main/tests/vectors-generate.py">
+                Python script for generating test vectors from @prusnak
+              </a>
+            </li>
           </ul>
 
           <h3 className="pt-8" id="support">Software and services supporting BIP21</h3>
