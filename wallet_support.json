@@ -341,6 +341,7 @@
     "creates_bip21": "no",
     "description": "When scanning the QR, it gives the folling error: Malformed request: checksum is incorrect. 400 BAD_REQUEST",
     "notes": "",
+    "issue_link": "https://github.com/lnbits/lnbits/issues/1202",
     "credit": {
       "name": "@mutatrum",
       "uri": "https://github.com/mutatrum"
