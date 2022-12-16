@@ -354,8 +354,8 @@
     },
     "scans_bip21": "yes",
     "recognizes_lightning": "yes",
-    "creates_bip21": "no",
-    "description": "",
+    "creates_bip21": "yes",
+    "description": "Go to Settings > Lightning Network > Receiving protocol and set it to\"Unified\" to enable this feature",
     "notes": "",
     "credit": {
       "name": "@sbddesign",
