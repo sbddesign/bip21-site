@@ -89,6 +89,21 @@
   },
   {
     "wallet": {
+      "name": "Bitrefill",
+      "uri": "https://bitrefill.com/"
+    },
+    "scans_bip21": "no",
+    "recognizes_lightning": "n/a",
+    "creates_bip21": "yes",
+    "description": "Unified bip21 is set in the QR code and button URI and is created for orders paid with the payment method bitcoin",
+    "notes": "Note that Bitrefill is a merchant and not a wallet",
+    "credit": {
+      "name": "@juscamarena",
+      "uri": "https://twitter.com/juscamarena"
+    }
+  },
+  {
+    "wallet": {
       "name": "Blixt",
       "uri": "https://blixtwallet.github.io/"
     },
