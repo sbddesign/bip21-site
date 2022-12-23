@@ -92,11 +92,11 @@
       "name": "Bitrefill",
       "uri": "https://bitrefill.com/"
     },
-    "scans_bip21": "no",
-    "recognizes_lightning": "n/a",
+    "scans_bip21": "yes",
+    "recognizes_lightning": "yes",
     "creates_bip21": "yes",
     "description": "Unified bip21 is set in the QR code and button URI and is created for orders paid with the payment method bitcoin",
-    "notes": "Note that Bitrefill is a merchant and not a wallet",
+    "notes": "Note that Bitrefill is a merchant and not a wallet. In the account refund flow when selecting lightning we support scanning a bip21 and parsing the lightning invoice from the lightning param",
     "credit": {
       "name": "@juscamarena",
       "uri": "https://twitter.com/juscamarena"
