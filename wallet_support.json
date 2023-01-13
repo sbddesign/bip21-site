@@ -556,5 +556,21 @@
       "name": "@benthecarman",
       "uri": "https://github.com/benthecarman"
     }
+  },
+  {
+    "wallet": {
+      "name": "Exodus",
+      "uri": "https://www.exodus.com/"
+    },
+    "scans_bip21": "yes",
+    "recognizes_lightning": "no",
+    "creates_bip21": "no",
+    "description": "The wallet does not parse lightning param when scanning in lightning mode. It scans the on chain address when selecting bitcoin at least.",
+    "notes": "",
+    "issue_link": "https://twitter.com/MichaelRihani/status/1555026695022731264?s=20&t=zDzAdL_pncYiRxD9hjrV6w",
+    "credit": {
+      "name": "Michael Rihani / Justin Camarena",
+      "uri": "https://github.com/sbddesign/bip21-site/issues/79"
+    }
   }
 ]
