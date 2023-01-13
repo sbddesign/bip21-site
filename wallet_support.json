@@ -1,17 +1,18 @@
 [
   {
     "wallet": {
-      "name": "Alby",
-      "uri": "https://getalby.com/"
+      "name": "Zap",
+      "uri": "https://zaphq.io/"
     },
     "scans_bip21": "yes",
     "recognizes_lightning": "yes",
     "creates_bip21": "no",
-    "description": "",
+    "description": "Zap defaults to on-chain if the included invoice is expired, but it recognizes Lightning when the invoice is still valid.",
+    "issue_link": "https://github.com/LN-Zap/zap-android/pull/273",
     "notes": "",
     "credit": {
-      "name": "@sbddesign",
-      "uri": "https://github.com/sbddesign"
+      "name": "@velaia",
+      "uri": "https://github.com/velaia"
     }
   },
   {
@@ -39,21 +40,6 @@
     "credit": {
       "name": "@sbddesign",
       "uri": "https://github.com/sbddesign"
-    }
-  },
-  {
-    "wallet": {
-      "name": "The Bitcoin Company",
-      "uri": "https://thebitcoincompany.com/"
-    },
-    "scans_bip21": "yes",
-    "recognizes_lightning": "yes",
-    "creates_bip21": "no",
-    "description": "",
-    "notes": "",
-    "credit": {
-      "name": "@benthecarman",
-      "uri": "https://github.com/benthecarman"
     }
   },
   {
@@ -509,22 +495,6 @@
       "name": "@john_zaprite",
       "uri": "https://twitter.com/john_zaprite"
       }
-},
-  {
-    "wallet": {
-      "name": "Zap",
-      "uri": "https://zaphq.io/"
-    },
-    "scans_bip21": "yes",
-    "recognizes_lightning": "yes",
-    "creates_bip21": "no",
-    "description": "Zap defaults to on-chain if the included invoice is expired, but it recognizes Lightning when the invoice is still valid.",
-    "issue_link": "https://github.com/LN-Zap/zap-android/pull/273",
-    "notes": "",
-    "credit": {
-      "name": "@velaia",
-      "uri": "https://github.com/velaia"
-    }
   },
   {
     "wallet": {
@@ -555,6 +525,36 @@
     "credit": {
       "name": "@bosch",
       "uri": "https://github.com/Bosch-0"
+    }
+  },
+  {
+    "wallet": {
+      "name": "Alby",
+      "uri": "https://getalby.com/"
+    },
+    "scans_bip21": "yes",
+    "recognizes_lightning": "yes",
+    "creates_bip21": "no",
+    "description": "",
+    "notes": "",
+    "credit": {
+      "name": "@sbddesign",
+      "uri": "https://github.com/sbddesign"
+    }
+  },
+  {
+    "wallet": {
+      "name": "The Bitcoin Company",
+      "uri": "https://thebitcoincompany.com/"
+    },
+    "scans_bip21": "yes",
+    "recognizes_lightning": "yes",
+    "creates_bip21": "no",
+    "description": "",
+    "notes": "",
+    "credit": {
+      "name": "@benthecarman",
+      "uri": "https://github.com/benthecarman"
     }
   }
 ]

@@ -11,11 +11,30 @@ import {
   ContactsIcon,
   InfoIcon
 } from '@bitcoin-design/bitcoin-icons-react/filled';
+import React from "react";
 
 export default function Table() {
+  const [sortedWallets, setSortedWallets] = React.useState([])
+
   function ynm(status) {
     return status === "yes" ? <CheckIcon className="w-8 h-8 text-bpr-blue" /> : status === "no" ? <CrossIcon className="w-8 h-8 text-bpr-pink" /> : status === "n/a" ? "N/A" : <QuestionIcon className="w-8 h-8 text-bpr-purple" />;
   }
+
+  function sortWallets(){
+    let sorted = wallets.sort((a,b)=>{
+      let a1 = a.wallet.name.toLowerCase().replace(/\s+/g, '')
+      let b1 = b.wallet.name.toLowerCase().replace(/\s+/g, '')
+      if(a1.startsWith('the')) a1 = a1.substring(3)
+      if(b1.startsWith('the')) b1 = b1.substring(3)
+      return a1 < b1 ? -1 : a1 > b1 ? 1 : 0
+    })
+    setSortedWallets(sorted)
+    return sorted
+  }
+
+  React.useEffect(()=>{
+    sortWallets()
+  }, [])
 
   return (
     <div className="flex flex-col items-center px-4 w-full text-center max-w-[2000px]">
@@ -50,8 +69,8 @@ export default function Table() {
         </div>
       </div>
       <ul className="w-full m-0">
-        {wallets.map((w) => (
-          <li className="border-b border-black p-8 lg:p-4 last:border-b-0">
+        {sortedWallets.map((w, key) => (
+          <li className="border-b border-black p-8 lg:p-4 last:border-b-0" key={key}>
             <div className="flex flex-wrap space-y-4 lg:space-y-0 lg:flex-nowrap rounded-xl items-center font-light">
               <div className="basis-full lg:basis-2/12 text-left font-medium lg:font-light">
                 {typeof w.wallet === 'object' ?
