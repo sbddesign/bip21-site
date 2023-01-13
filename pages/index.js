@@ -36,7 +36,6 @@ function changeMenuStyle(transparent = 'true') {
 function checkScrollPosition(e) {
   if(window.scrollY > 100) changeMenuStyle(false);
   else changeMenuStyle();
-   
 }
 
 export default function Home() {
