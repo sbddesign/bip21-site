@@ -15,8 +15,8 @@ export default function HardwareTable() {
   return(
     <div className="flex flex-col items-center px-4 w-full text-center max-w-[2000px] space-y-16">
       
-      {hardware.map((h)=>(
-        <div className="w-full">
+      {hardware.map((h, key)=>(
+        <div className="w-full" key={key}>
           <h4 className="text-left flex flex-row items-start items-center pl-3 pb-4">
             <DevicesIcon className="w-8 h-8" />
             {h.hardware.uri ? <a href={h.hardware.uri}>{h.hardware.name}</a> : <span>{h.hardware.name}</span>}
@@ -44,8 +44,8 @@ export default function HardwareTable() {
             </div>
           </div>
           <ul className="w-full m-0">
-            {h.software.map((s) => (
-              <li className="border-b border-black p-8 lg:p-4 last:border-b-0">
+            {h.software.map((s, key) => (
+              <li className="border-b border-black p-8 lg:p-4 last:border-b-0" key={key}>
                 <div className="flex flex-wrap space-y-4 lg:space-y-0 lg:flex-nowrap rounded-xl items-center font-light">
                   <div className="basis-full lg:basis-3/12 text-left font-medium lg:font-light">
                     {s.wallet.uri ? <a href={s.wallet.uri}>{s.wallet.name}</a> : <span>{s.wallet.name}</span>}
