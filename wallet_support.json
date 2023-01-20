@@ -572,5 +572,20 @@
       "name": "Michael Rihani / Justin Camarena",
       "uri": "https://github.com/sbddesign/bip21-site/issues/79"
     }
+  },
+  {
+    "wallet": {
+      "name": "Coinjar",
+      "uri": "https://www.coinjar.com/"
+    },
+    "scans_bip21": "no",
+    "recognizes_lightning": "no",
+    "creates_bip21": "no",
+    "description": "App says 'Crypto address is invalid or of an unsupported variant'",
+    "notes": "",
+    "credit": {
+      "name": "chendo",
+    }
   }
+
 ]
