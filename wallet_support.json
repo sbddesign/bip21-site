@@ -584,7 +584,8 @@
     "description": "App says 'Crypto address is invalid or of an unsupported variant'",
     "notes": "",
     "credit": {
-      "name": "chendo",
+      "name": "@chendo",
+      "uri": "https://mastodon.social/@chendo"
     }
   }
 
