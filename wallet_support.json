@@ -483,6 +483,22 @@
   },
   {
     "wallet": {
+      "name": "Swiss Bitcoin Pay",
+      "uri": "https://swiss-bitcoin-pay.ch"
+    },
+    "scans_bip21": "n/a",
+    "recognizes_lightning": "n/a",
+    "creates_bip21": "yes",
+    "description": "Swiss Bitcoin Pay is a merchant-oriented, non-custodial PoS app, allowing to generate BIP21 unified QR codes",
+    "notes": "",
+    "issue_link": "",
+    "credit": {
+      "name": "@SwissBitcoinPay",
+      "uri": "https://github.com/SwissBitcoinPay"
+    }
+  }, 
+  {
+    "wallet": {
       "name": "Wallet of Satoshi",
       "uri": "https://www.walletofsatoshi.com/"
     },
