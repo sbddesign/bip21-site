@@ -259,11 +259,15 @@
       "name": "Coinbase (Exchange)",
       "uri": "https://www.coinbase.com/"
     },
-    "scans_bip21": "",
-    "recognizes_lightning": "",
-    "creates_bip21": "",
-    "description": "",
-    "notes": ""
+    "scans_bip21": "no",
+    "recognizes_lightning": "no",
+    "creates_bip21": "no",
+    "description": "QR scanner only accepts plain Bitcoin address. Code scanning option does not recognise BIP21",
+    "notes": "",
+    "credit": {
+      "name": "@chendo",
+      "uri": "https://mastodon.social/@chendo"
+    }    
   },
   {
     "wallet": {
