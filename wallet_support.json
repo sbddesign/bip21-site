@@ -241,6 +241,21 @@
   },
   {
     "wallet": {
+      "name": "Clams",
+      "uri": "https://clams.tech"
+    },
+    "scans_bip21": "yes",
+    "recognizes_lightning": "yes",
+    "creates_bip21": "no",
+    "description": "",
+    "notes": "",
+    "credit": {
+      "name": "@aaronbarnardsound",
+      "uri": "https://github.com/aaronbarnardsound"
+    }
+  },
+  {
+    "wallet": {
       "name": "Coinbase (Exchange)",
       "uri": "https://www.coinbase.com/"
     },
@@ -347,7 +362,7 @@
       "name": "@mutatrum",
       "uri": "https://github.com/mutatrum"
     }
-  },  
+  },
   {
     "wallet": {
       "name": "Muun",
@@ -494,7 +509,7 @@
     "credit": {
       "name": "@john_zaprite",
       "uri": "https://twitter.com/john_zaprite"
-      }
+    }
   },
   {
     "wallet": {
@@ -588,5 +603,4 @@
       "uri": "https://mastodon.social/@chendo"
     }
   }
-
 ]
