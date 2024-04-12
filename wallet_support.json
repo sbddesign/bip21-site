@@ -552,6 +552,22 @@
   },
   {
     "wallet": {
+      "name": "Wasabi Wallet",
+      "uri": "https://wasabiwallet.io/"
+    },
+    "scans_bip21": "yes",
+    "recognizes_lightning": "n/a",
+    "creates_bip21": "no",
+    "description": "Scans BIP21 QR codes but doesn't recognize lightning addresses. Doesn't generate BIP21 QR code",
+    "notes": "Currently QR code scanning doesn't work on macOS",
+    "issue_link": "https://github.com/zkSNACKs/WalletWasabi/issues/4259",
+    "credit": {
+      "name": "@yahiheb",
+      "uri": "https://github.com/yahiheb"
+    }
+  },
+  {
+    "wallet": {
       "name": "Zebedee",
       "uri": "https://zebedee.io/"
     },
