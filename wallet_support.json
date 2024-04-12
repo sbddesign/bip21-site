@@ -301,6 +301,21 @@
   },
   {
     "wallet": {
+      "name": "Envoy",
+      "uri": "https://foundationdevices.com/envoy/"
+    },
+    "scans_bip21": "yes",
+    "recognizes_lightning": "n/a",
+    "creates_bip21": "yes",
+    "description": "Envoy can generate and decode BIP 21 QR codes properly and use the on-chain address and amount, but does not yet support Lightning for sending or receiving.",
+    "notes": "",
+    "credit": {
+      "name": "@sethforprivacy",
+      "uri": "https://github.com/sethforprivacy"
+    }
+  },
+  {
+    "wallet": {
       "name": "Electrum",
       "uri": "https://electrum.org/"
     },
