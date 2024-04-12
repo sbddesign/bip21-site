@@ -360,15 +360,15 @@
       "name": "LNBits",
       "uri": "https://github.com/lnbits/lnbits"
     },
-    "scans_bip21": "no",
-    "recognizes_lightning": "no",
+    "scans_bip21": "yes",
+    "recognizes_lightning": "yes",
     "creates_bip21": "no",
-    "description": "When scanning the QR, it gives the folling error: Malformed request: checksum is incorrect. 400 BAD_REQUEST",
+    "description": "LNbits supports scanning BIP21 codes and recognizes Lightning since 04/23. Generating is an open issue.",
     "notes": "",
-    "issue_link": "https://github.com/lnbits/lnbits/issues/1202",
+    "issue_link": "https://github.com/lnbits/lnbits/issues/1812",
     "credit": {
-      "name": "@mutatrum",
-      "uri": "https://github.com/mutatrum"
+      "name": "@arbadacarbaYK",
+      "uri": "https://github.com/arbadacarbaYK"
     }
   },
   {
