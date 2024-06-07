@@ -195,6 +195,21 @@
   },
   {
     "wallet": {
+      "name": "Cake Wallet",
+      "uri": "https://cakewallet.com/"
+    },
+    "scans_bip21": "yes",
+    "recognizes_lightning": "n/a",
+    "creates_bip21": "yes",
+    "description": "Cake can generate and decode BIP21 QR codes properly and use the on-chain address, amount, and note, but does not yet support lightning for sending or receiving. Cake can generate BIP21 QR codes with only the amount attribute.",
+    "notes": "",
+    "credit": {
+      "name": "@chrismuntean",
+      "uri": "https://github.com/chrismuntean/"
+    }
+  },
+  {
+    "wallet": {
       "name": "CashApp",
       "uri": "https://cash.app/"
     },
