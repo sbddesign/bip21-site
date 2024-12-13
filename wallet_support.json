@@ -657,5 +657,20 @@
       "name": "@chendo",
       "uri": "https://mastodon.social/@chendo"
     }
+  },
+  {
+    "wallet": {
+      "name": "Bitkit",
+      "uri": "https://bitkit.to/"
+    },
+    "scans_bip21": "yes",
+    "recognizes_lightning": "yes",
+    "creates_bip21": "no",
+    "description": "",
+    "notes": "",
+    "credit": {
+      "name": "@thisispav",
+      "uri": "https://github.com/thisispav"
+    }
   }
 ]
