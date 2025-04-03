@@ -251,7 +251,7 @@
     "credit": {
       "name": "@chendo",
       "uri": "https://mastodon.social/@chendo"
-    }    
+    }
   },
   {
     "wallet": {
@@ -518,7 +518,7 @@
       "name": "@SwissBitcoinPay",
       "uri": "https://github.com/SwissBitcoinPay"
     }
-  }, 
+  },
   {
     "wallet": {
       "name": "Wallet of Satoshi",
@@ -655,6 +655,21 @@
     "credit": {
       "name": "@thisispav",
       "uri": "https://github.com/thisispav"
+    }
+  },
+  {
+    "wallet": {
+      "name": "Helm",
+      "uri": "https://helm-wallet.com/"
+    },
+    "scans_bip21": "yes",
+    "recognizes_lightning": "yes",
+    "creates_bip21": "no",
+    "description": "",
+    "notes": "",
+    "credit": {
+      "name": "@bordalix",
+      "uri": "https://github.com/bordalix"
     }
   },
   {
