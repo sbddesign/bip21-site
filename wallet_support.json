@@ -1,22 +1,6 @@
 [
   {
     "wallet": {
-      "name": "Zap",
-      "uri": "https://zaphq.io/"
-    },
-    "scans_bip21": "yes",
-    "recognizes_lightning": "yes",
-    "creates_bip21": "no",
-    "description": "Zap defaults to on-chain if the included invoice is expired, but it recognizes Lightning when the invoice is still valid.",
-    "issue_link": "https://github.com/LN-Zap/zap-android/pull/273",
-    "notes": "",
-    "credit": {
-      "name": "@velaia",
-      "uri": "https://github.com/velaia"
-    }
-  },
-  {
-    "wallet": {
       "name": "Binance",
       "uri": "https://www.binance.com/"
     },
@@ -701,6 +685,21 @@
     "credit": {
       "name": "@bordalix",
       "uri": "https://github.com/bordalix"
+    }
+  },
+  {
+    "wallet": {
+      "name": "BitBanana",
+      "uri": "https://bitbanana.app/"
+    },
+    "scans_bip21": "yes",
+    "recognizes_lightning": "yes",
+    "creates_bip21": "no",
+    "description": "Bitbanana defaults to on-chain if the included invoice is expired, but it recognizes Lightning when the invoice is still valid.",
+    "notes": "",
+    "credit": {
+      "name": "@MichaelWuensch",
+      "uri": "https://github.com/michaelWuensch"
     }
   }
 ]
