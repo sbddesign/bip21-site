@@ -460,6 +460,21 @@
   },
   {
     "wallet": {
+      "name": "Proton",
+      "uri": "https://proton.me/wallet"
+    },
+    "scans_bip21": "no",
+    "recognizes_lightning": "no",
+    "creates_bip21": "no",
+    "description": "Error saying it isn't a valid email or bitcoin address.",
+    "notes": "",
+    "credit": {
+      "name": "@ConorOkus",
+      "uri": "https://github.com/ConorOkus"
+    }
+  },
+  {
+    "wallet": {
       "name": "River",
       "uri": "https://river.com/"
     },
