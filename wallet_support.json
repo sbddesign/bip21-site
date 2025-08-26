@@ -489,6 +489,21 @@
   },
   {
     "wallet": {
+      "name": "SeedSigner",
+      "uri": "https://seedsigner.com"
+    },
+    "scans_bip21": "yes",
+    "recognizes_lightning": "n/a",
+    "creates_bip21": "n/a",
+    "description": "Scans BIP21 QR codes that contain an onchain address.",
+    "notes": "",
+    "credit": {
+      "name": "@kdmukai",
+      "uri": "https://github.com/kdmukai"
+    }
+  },
+  {
+    "wallet": {
       "name": "Simple Bitcoin Wallet",
       "uri": ""
     },
