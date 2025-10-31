@@ -447,10 +447,10 @@
       "name": "Proton",
       "uri": "https://proton.me/wallet"
     },
-    "scans_bip21": "no",
+    "scans_bip21": "yes",
     "recognizes_lightning": "no",
     "creates_bip21": "no",
-    "description": "Error saying it isn't a valid email or bitcoin address.",
+    "description": "",
     "notes": "",
     "credit": {
       "name": "@ConorOkus",
