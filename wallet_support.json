@@ -318,11 +318,15 @@
       "name": "Gemini",
       "uri": "https://www.gemini.com/"
     },
-    "scans_bip21": "",
+    "scans_bip21": "yes",
     "recognizes_lightning": "",
     "creates_bip21": "",
     "description": "",
-    "notes": ""
+    "notes": "",
+    "credit": {
+      "name": "@ConorOkus",
+      "uri": "https://github.com/ConorOkus"
+    }
   },
   {
     "wallet": {
