@@ -180,7 +180,7 @@ export default function Home() {
               <div className="basis-6/12 lg:basis-5/12 xl:basis-4/12">
                 <Example
                   title="BIP21 URI with BOLT 11 invoice"
-                  src="qr-bip21-bolt11.png"
+                  src="qr-bip321-bolt11.png"
                   caption="This includes an on-chain address and a BOLT 11 invoice. It is easily backwards compatible, but is quite large."
                   raw="bitcoin:BC1QYLH3U67J673H6Y6ALV70M0PL2YZ53TZHVXGG7U?amount=0.00001&label=sbddesign%3A%20For%20lunch%20Tuesday&message=For%20lunch%20Tuesday&lightning=LNBC10U1P3PJ257PP5YZTKWJCZ5FTL5LAXKAV23ZMZEKAW37ZK6KMV80PK4XAEV5QHTZ7QDPDWD3XGER9WD5KWM36YPRX7U3QD36KUCMGYP282ETNV3SHJCQZPGXQYZ5VQSP5USYC4LK9CHSFP53KVCNVQ456GANH60D89REYKDNGSMTJ6YW3NHVQ9QYYSSQJCEWM5CJWZ4A6RFJX77C490YCED6PEMK0UPKXHY89CMM7SCT66K8GNEANWYKZGDRWRFJE69H9U5U0W57RRCSYSAS7GADWMZXC8C6T0SPJAZUP6"
                 />
@@ -188,7 +188,7 @@ export default function Home() {
               <div className="basis-6/12 lg:basis-5/12 xl:basis-4/12">
                 <Example
                   title="BIP21 URI with BOLT 12 offer"
-                  src="qr-bip21-bolt12.png"
+                  src="qr-bip321-bolt12.png"
                   caption="While BOLT 12 is not widely implemented yet, we can see that using an offer instead of an invoice reduces the QR code size significantly."
                   raw="bitcoin:BC1QYLH3U67J673H6Y6ALV70M0PL2YZ53TZHVXGG7U?amount=0.00001&label=sbddesign%3A%20For%20lunch%20Tuesday&message=For%20lunch%20Tuesday&lno=LNO1PG257ENXV4EZQCNEYPE82UM50YNHXGRWDAJX283QFWDPL28QQMC78YMLVHMXCSYWDK5WRJNJ36JRYG488QWLRNZYJCZS"
                 />
@@ -200,7 +200,7 @@ export default function Home() {
               <div className="basis-6/12 lg:basis-5/12 xl:basis-4/12">
                 <Example
                   title="BIP21 URI with On-chain address"
-                  src="qr-bip21-on-chain.png"
+                  src="qr-bip321-on-chain.png"
                   caption="A standard BIP 21 URI, for reference. This has the smallest QR code, but will not work with lightning."
                   raw="bitcoin:BC1QYLH3U67J673H6Y6ALV70M0PL2YZ53TZHVXGG7U?amount=0.00001&label=sbddesign%3A%20For%20lunch%20Tuesday&message=For%20lunch%20Tuesday"
                 />
@@ -238,7 +238,7 @@ export default function Home() {
             </div>
             <div className="basis-6/12 flex justify-center p-6">
               <div className="bg-bpr-orange w-[240px] h-[240px] md:w-[340px] md:h-[340px]">
-                <img src="qr-bip21-bolt11.png" alt="Sample of a BIP21 and BOLT11 QR code" className="drop-shadow-xl rotate-[-12deg]" />
+                <img src="qr-bip321-bolt11.png" alt="Sample of a BIP21 and BOLT11 QR code" className="drop-shadow-xl rotate-[-12deg]" />
               </div>
             </div>
           </section>
@@ -285,7 +285,7 @@ export default function Home() {
                   and see what happens.
                 </p>
 
-                <img src="qr-bip21-bolt11.png" alt="BIP21 QR code with a BOLT 11 Lightning invoice" />
+                <img src="qr-bip321-bolt11.png" alt="BIP21 QR code with a BOLT 11 Lightning invoice" />
               </div>
               <div className="basis-6/12 space-y-4">
                 <h4>Interpreting what you see</h4>
