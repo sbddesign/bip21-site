@@ -1,5 +1,5 @@
 name: Submit a wallet you have tested
-description: Submit your report of a wallet, exchange, or other bitcoin service for compatibility with unified BIP21 QR codes
+description: Submit your report of a wallet, exchange, or other bitcoin service for compatibility with unified BIP 321 QR codes
 title: "[Wallet Test]: "
 labels: ["wallet-test"]
 assignees:
@@ -26,10 +26,10 @@ body:
     validations:
       required: true
   - type: dropdown
-    id: scans_bip21
+    id: scans_bip321
     attributes:
-      label: Scans BIP-21
-      description: Did the wallet successfully scan the BIP21 QR code?
+      label: Scans BIP 321
+      description: Did the wallet successfully scan the BIP 321 QR code?
       options:
         - "Yes"
         - "No"
@@ -40,7 +40,7 @@ body:
     id: recognizes_lightning
     attributes:
       label: Recognize Lightning
-      description: If the wallet supports Lightning, did it recognize the BOLT 11 invoice in the BIP-21 QR code?
+      description: If the wallet supports Lightning, did it recognize the BOLT 11 invoice in the BIP 321 QR code?
       options:
         - "Yes"
         - "No"
@@ -48,10 +48,10 @@ body:
     validations:
       required: true
   - type: dropdown
-    id: creates_bip21
+    id: creates_bip321
     attributes:
-      label: Creates BIP-21 QR codes
-      description: Is the wallet capable of creating BIP-21 QR codes when the user wants to request a payment? This is not common!
+      label: Creates BIP 321 QR codes
+      description: Is the wallet capable of creating BIP 321 QR codes when the user wants to request a payment? This is not common!
       options:
         - "No (more common)"
         - "Yes"
