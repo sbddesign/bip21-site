@@ -79,24 +79,24 @@ export default function Table() {
               </div>
               <div className="lg:basis-1/12 flex items-center lg:justify-center">
                 <span className="sr-only">
-                  {w.scans_bip21 === "yes" ? "Scans BIP21 QR codes" : w.scans_bip21 === "no" ? "Does not scan BIP21 QR codes" : "Unknown BIP21 support"}
+                  {w.scans_bip321 === "yes" ? "Scans BIP 321 QR codes" : w.scans_bip321 === "no" ? "Does not scan BIP 321 QR codes" : "Unknown BIP 321 support"}
                 </span>
                 <span className="hidden lg:block">
-                  {ynm(w.scans_bip21)}
+                  {ynm(w.scans_bip321)}
                 </span>
-                {w.scans_bip21 === "yes" ?
+                {w.scans_bip321 === "yes" ?
                   <span className="flex lg:hidden items-center mr-4">
-                    <CheckIcon className="w-8 h-8 text-bpr-blue inline" /> Scans BIP21
+                    <CheckIcon className="w-8 h-8 text-bpr-blue inline" /> Scans BIP 321
                   </span>
-                : w.scans_bip21 === "no" ?
+                : w.scans_bip321 === "no" ?
                   <span className="flex lg:hidden items-center mr-4">
-                    <CrossIcon className="w-8 h-8 text-bpr-pink inline" /> Doesn't scan BIP21
+                    <CrossIcon className="w-8 h-8 text-bpr-pink inline" /> Doesn't scan BIP 321
                   </span> :
                 ""}
               </div>
               <div className="lg:basis-1/12 flex justify-center">
                 <span className="sr-only">
-                  {w.recognizes_lightning === "yes" ? "Recognizes the lightning parameter" : w.recognizes_lightning === "no" ? "Does not scan BIP21 QR codes" : w.recognizes_lightning === "n/a" ? "Not Applicable" : "Unknown lightning support"}
+                  {w.recognizes_lightning === "yes" ? "Recognizes the lightning parameter" : w.recognizes_lightning === "no" ? "Does not scan BIP 321 QR codes" : w.recognizes_lightning === "n/a" ? "Not Applicable" : "Unknown lightning support"}
                 </span>
                 <span className="hidden lg:block">
                   {ynm(w.recognizes_lightning)}
@@ -115,22 +115,22 @@ export default function Table() {
                 }
               </div>
               <div className="lg:basis-1/12 flex justify-center">
-                {w.creates_bip21 === "yes" ?
+                {w.creates_bip321 === "yes" ?
                   <span className="flex lg:hidden items-center mr-4">
                     <CheckIcon className="w-8 h-8 text-bpr-blue inline" />
-                    Creates BIP21 QR codes
+                    Creates BIP 321 QR codes
                   </span>
-                  : w.creates_bip21 === "no" ?
+                  : w.creates_bip321 === "no" ?
                     <span className="flex lg:hidden items-center mr-4">
                       <CrossIcon className="w-8 h-8 text-bpr-pink inline" />
-                      Doesn't create BIP21 QR codes
+                      Doesn't create BIP 321 QR codes
                     </span>
                     : ""
                 }
                 <span className="hidden lg:block">
-                  {ynm(w.creates_bip21)}
+                  {ynm(w.creates_bip321)}
                 </span>
-                {w.creates_bip21 === "yes" ?
+                {w.creates_bip321 === "yes" ?
                   <span className="flex lg:hidden items-center mr-4">
                     <QrCodeIcon className="w-8 h-8 text-black inline" /> <span>Creates</span>
                   </span>
@@ -158,7 +158,7 @@ export default function Table() {
                 : '' }
               </div>
               <div className="lg:hidden flex justify-center">
-                { w.scans_bip21 === "no" && w.recognizes_lightning == "no" && !w.issue_link ?
+                { w.scans_bip321 === "no" && w.recognizes_lightning == "no" && !w.issue_link ?
                   <div>No support. Open an issue!</div>
                 : ""}
               </div>
