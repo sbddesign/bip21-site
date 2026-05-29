@@ -1,6 +1,6 @@
-# BIP21 Microsite
+# BIP 321 Microsite
 
-This is a WIP microsite to promote the usage of a BIP21 payment URI QR code that can include lightning invoices or offers.
+This is a WIP microsite to promote the usage of a BIP 321 payment URI QR code that can include lightning invoices or offers.
 
 ## Wallet support
 

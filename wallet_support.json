@@ -4,9 +4,9 @@
       "name": "Binance",
       "uri": "https://www.binance.com/"
     },
-    "scans_bip21": "",
+    "scans_bip321": "",
     "recognizes_lightning": "",
-    "creates_bip21": "",
+    "creates_bip321": "",
     "description": "",
     "notes": ""
   },
@@ -15,9 +15,9 @@
       "name": "BitcoinBeach",
       "uri": "https://galoy.io/"
     },
-    "scans_bip21": "yes",
+    "scans_bip321": "yes",
     "recognizes_lightning": "no",
-    "creates_bip21": "no",
+    "creates_bip321": "no",
     "description": "",
     "notes": "",
     "issue_link": "https://github.com/GaloyMoney/galoy-mobile/issues/411",
@@ -31,10 +31,10 @@
       "name": "Bitnob",
       "uri": "https://bitnob.com/"
     },
-    "scans_bip21": "yes",
+    "scans_bip321": "yes",
     "recognizes_lightning": "yes",
-    "creates_bip21": "yes",
-    "description": "Scans BIP21 QR codes and recognises lightning addresses. Generates BIP21 QR code without lightning parameter",
+    "creates_bip321": "yes",
+    "description": "Scans BIP 321 QR codes and recognises lightning addresses. Generates BIP 321 QR code without lightning parameter",
     "notes": "",
     "issue_link": "",
     "credit": {
@@ -47,9 +47,9 @@
       "name": "BitPay",
       "uri": "https://bitpay.com/"
     },
-    "scans_bip21": "yes",
+    "scans_bip321": "yes",
     "recognizes_lightning": "n/a",
-    "creates_bip21": "no",
+    "creates_bip321": "no",
     "description": "",
     "notes": "",
     "credit": {
@@ -62,11 +62,11 @@
       "name": "Bitrefill",
       "uri": "https://bitrefill.com/"
     },
-    "scans_bip21": "yes",
+    "scans_bip321": "yes",
     "recognizes_lightning": "yes",
-    "creates_bip21": "yes",
-    "description": "Unified bip21 is set in the QR code and button URI and is created for orders paid with the payment method bitcoin",
-    "notes": "Note that Bitrefill is a merchant and not a wallet. In the account refund flow when selecting lightning we support scanning a bip21 and parsing the lightning invoice from the lightning param",
+    "creates_bip321": "yes",
+    "description": "Unified BIP 321 is set in the QR code and button URI and is created for orders paid with the payment method bitcoin",
+    "notes": "Note that Bitrefill is a merchant and not a wallet. In the account refund flow when selecting lightning we support scanning a BIP 321 and parsing the lightning invoice from the lightning param",
     "credit": {
       "name": "@juscamarena",
       "uri": "https://twitter.com/juscamarena"
@@ -77,9 +77,9 @@
       "name": "Blixt",
       "uri": "https://blixtwallet.github.io/"
     },
-    "scans_bip21": "yes",
+    "scans_bip321": "yes",
     "recognizes_lightning": "yes",
-    "creates_bip21": "no",
+    "creates_bip321": "no",
     "description": "QR code is not a valid bitcoin lightning invoice",
     "notes": "",
     "credit": {
@@ -92,9 +92,9 @@
       "name": "Blockstream Green",
       "uri": "https://blockstream.com/green/"
     },
-    "scans_bip21": "yes",
+    "scans_bip321": "yes",
     "recognizes_lightning": "n/a",
-    "creates_bip21": "no",
+    "creates_bip321": "no",
     "description": "",
     "notes": "",
     "credit": {
@@ -107,11 +107,11 @@
       "name": "Bluewallet",
       "uri": "https://bluewallet.io/"
     },
-    "scans_bip21": "yes",
+    "scans_bip321": "yes",
     "recognizes_lightning": "yes",
-    "creates_bip21": "no",
+    "creates_bip321": "no",
     "description": "Asks me to select a wallet, and I can choose my lightning wallet or on-chain wallet.",
-    "notes": "Note that Bluewallet has 2 scanning methods. You can select a wallet and then scan the QR, or you can scan the QR without selecting a wallet. If you choose the latter and scan a BIP21 QR with lightning param, then it will prompt you to select a wallet because it sees your on-chain and lightning wallet as both being valid choices for this payment.",
+    "notes": "Note that Bluewallet has 2 scanning methods. You can select a wallet and then scan the QR, or you can scan the QR without selecting a wallet. If you choose the latter and scan a BIP 321 QR with lightning param, then it will prompt you to select a wallet because it sees your on-chain and lightning wallet as both being valid choices for this payment.",
     "credit": {
       "name": "@sbddesign",
       "uri": "https://github.com/sbddesign"
@@ -122,9 +122,9 @@
       "name": "Bottlepay",
       "uri": "https://bottlepay.com/"
     },
-    "scans_bip21": "yes",
+    "scans_bip321": "yes",
     "recognizes_lightning": "yes",
-    "creates_bip21": "no",
+    "creates_bip321": "no",
     "description": "Takes user directly to lightning payment screen.",
     "notes": "",
     "credit": {
@@ -137,9 +137,9 @@
       "name": "Breez",
       "uri": "https://breez.technology/"
     },
-    "scans_bip21": "yes",
+    "scans_bip321": "yes",
     "recognizes_lightning": "yes",
-    "creates_bip21": "no",
+    "creates_bip321": "no",
     "description": "",
     "notes": "",
     "credit": {
@@ -152,10 +152,10 @@
       "name": "BTCPay Server",
       "uri": "https://btcpayserver.org/"
     },
-    "scans_bip21": "yes",
+    "scans_bip321": "yes",
     "recognizes_lightning": "n/a",
-    "creates_bip21": "yes",
-    "description": "The BTCPayServer back-office Wallet > Send page will scan BIP21 URIs; Send > Wallet is on-chain only, so lightning is N/A in this context. The POS or store front-end is capable of generating a BIP21 URI containing a BOLT11 invoice if the admin turns this feature on in the settings. Props to @bitkarrot for a previous testing attempt.",
+    "creates_bip321": "yes",
+    "description": "The BTCPayServer back-office Wallet > Send page will scan BIP 321 URIs; Send > Wallet is on-chain only, so lightning is N/A in this context. The POS or store front-end is capable of generating a BIP 321 URI containing a BOLT11 invoice if the admin turns this feature on in the settings. Props to @bitkarrot for a previous testing attempt.",
     "notes": "",
     "credit": {
       "name": "@pavlenex, @bitkarrot",
@@ -167,9 +167,9 @@
       "name": "Casa",
       "uri": "https://keys.casa/"
     },
-    "scans_bip21": "yes",
+    "scans_bip321": "yes",
     "recognizes_lightning": "n/a",
-    "creates_bip21": "no",
+    "creates_bip321": "no",
     "description": "",
     "notes": "",
     "credit": {
@@ -182,10 +182,10 @@
       "name": "CashApp",
       "uri": "https://cash.app/"
     },
-    "scans_bip21": "yes",
+    "scans_bip321": "yes",
     "recognizes_lightning": "yes",
-    "creates_bip21": "yes",
-    "description": "After the most recent update, I scanned a BIP21 QR and CashApp recognized the lightning invoice. When scanning a BIP21 QR with an expired invoice, it falls back to the on-chain address. When receiving, it generates a BIP21 QR by default.",
+    "creates_bip321": "yes",
+    "description": "After the most recent update, I scanned a BIP 321 QR and CashApp recognized the lightning invoice. When scanning a BIP 321 QR with an expired invoice, it falls back to the on-chain address. When receiving, it generates a BIP 321 QR by default.",
     "notes": "",
     "credit": {
       "name": "@sbddesign",
@@ -197,9 +197,9 @@
       "name": "Chaincase",
       "uri": "https://chaincase.app/"
     },
-    "scans_bip21": "yes",
+    "scans_bip321": "yes",
     "recognizes_lightning": "n/a",
-    "creates_bip21": "no",
+    "creates_bip321": "no",
     "description": "Pulls in the entire string including the 'bitcoin:', but I think it sees it as an on-chain address",
     "notes": "",
     "credit": {
@@ -212,9 +212,9 @@
       "name": "Chivo",
       "uri": "https://www.chivowallet.com/"
     },
-    "scans_bip21": "yes",
+    "scans_bip321": "yes",
     "recognizes_lightning": "no",
-    "creates_bip21": "no",
+    "creates_bip321": "no",
     "description": "",
     "notes": "",
     "issue_link": "https://twitter.com/StephenDeLorme/status/1504253220041940996",
@@ -228,9 +228,9 @@
       "name": "Clams",
       "uri": "https://clams.tech"
     },
-    "scans_bip21": "yes",
+    "scans_bip321": "yes",
     "recognizes_lightning": "yes",
-    "creates_bip21": "no",
+    "creates_bip321": "no",
     "description": "",
     "notes": "",
     "credit": {
@@ -243,10 +243,10 @@
       "name": "Coinbase (Exchange)",
       "uri": "https://www.coinbase.com/"
     },
-    "scans_bip21": "no",
+    "scans_bip321": "no",
     "recognizes_lightning": "no",
-    "creates_bip21": "no",
-    "description": "QR scanner only accepts plain Bitcoin address. Code scanning option does not recognise BIP21",
+    "creates_bip321": "no",
+    "description": "QR scanner only accepts plain Bitcoin address. Code scanning option does not recognise BIP 321",
     "notes": "",
     "credit": {
       "name": "@chendo",
@@ -258,9 +258,9 @@
       "name": "Coinbase (Wallet)",
       "uri": "https://www.coinbase.com/"
     },
-    "scans_bip21": "yes",
+    "scans_bip321": "yes",
     "recognizes_lightning": "n/a",
-    "creates_bip21": "no",
+    "creates_bip321": "no",
     "description": "",
     "notes": "",
     "credit": {
@@ -273,10 +273,10 @@
       "name": "Edge Wallet",
       "uri": "https://edge.app/"
     },
-    "scans_bip21": "yes",
+    "scans_bip321": "yes",
     "recognizes_lightning": "n/a",
-    "creates_bip21": "no",
-    "description": "Can decode the QRcode that contains a BIP21 URI with bolt11 and the external onchain fallback. The URI can also be pasted, the onchain address is detected and users can send",
+    "creates_bip321": "no",
+    "description": "Can decode the QRcode that contains a BIP 321 URI with bolt11 and the external onchain fallback. The URI can also be pasted, the onchain address is detected and users can send",
     "notes": "",
     "credit": {
       "name": "@theDavidCoen",
@@ -288,10 +288,10 @@
       "name": "Envoy",
       "uri": "https://foundationdevices.com/envoy/"
     },
-    "scans_bip21": "yes",
+    "scans_bip321": "yes",
     "recognizes_lightning": "n/a",
-    "creates_bip21": "yes",
-    "description": "Envoy can generate and decode BIP 21 QR codes properly and use the on-chain address and amount, but does not yet support Lightning for sending or receiving.",
+    "creates_bip321": "yes",
+    "description": "Envoy can generate and decode BIP 321 QR codes properly and use the on-chain address and amount, but does not yet support Lightning for sending or receiving.",
     "notes": "",
     "credit": {
       "name": "@sethforprivacy",
@@ -303,9 +303,9 @@
       "name": "Electrum",
       "uri": "https://electrum.org/"
     },
-    "scans_bip21": "yes",
+    "scans_bip321": "yes",
     "recognizes_lightning": "no",
-    "creates_bip21": "no",
+    "creates_bip321": "no",
     "description": "",
     "notes": "",
     "credit": {
@@ -318,9 +318,9 @@
       "name": "Gemini",
       "uri": "https://www.gemini.com/"
     },
-    "scans_bip21": "yes",
+    "scans_bip321": "yes",
     "recognizes_lightning": "",
-    "creates_bip21": "",
+    "creates_bip321": "",
     "description": "",
     "notes": "",
     "credit": {
@@ -333,9 +333,9 @@
       "name": "Hexa",
       "uri": "https://hexawallet.io/"
     },
-    "scans_bip21": "yes",
+    "scans_bip321": "yes",
     "recognizes_lightning": "n/a",
-    "creates_bip21": "no",
+    "creates_bip321": "no",
     "description": "",
     "notes": "",
     "credit": {
@@ -348,10 +348,10 @@
       "name": "Kraken / Kraken Pro",
       "uri": "https://www.kraken.com/"
     },
-    "scans_bip21": "yes",
+    "scans_bip321": "yes",
     "recognizes_lightning": "no",
-    "creates_bip21": "yes",
-    "description": "The website and mobile apps do support creating a BIP21 QR code for deposits, but not with a lightning param.",
+    "creates_bip321": "yes",
+    "description": "The website and mobile apps do support creating a BIP 321 QR code for deposits, but not with a lightning param.",
     "notes": "",
     "credit": {
       "name": "@PierreRochard",
@@ -363,10 +363,10 @@
       "name": "LNBits",
       "uri": "https://github.com/lnbits/lnbits"
     },
-    "scans_bip21": "yes",
+    "scans_bip321": "yes",
     "recognizes_lightning": "yes",
-    "creates_bip21": "no",
-    "description": "LNbits supports scanning BIP21 codes and recognizes Lightning since 04/23. Generating is an open issue.",
+    "creates_bip321": "no",
+    "description": "LNbits supports scanning BIP 321 codes and recognizes Lightning since 04/23. Generating is an open issue.",
     "notes": "",
     "issue_link": "https://github.com/lnbits/lnbits/issues/1812",
     "credit": {
@@ -379,9 +379,9 @@
       "name": "Muun",
       "uri": "https://muun.com/"
     },
-    "scans_bip21": "yes",
+    "scans_bip321": "yes",
     "recognizes_lightning": "yes",
-    "creates_bip21": "yes",
+    "creates_bip321": "yes",
     "description": "Go to Settings > Lightning Network > Receiving protocol and set it to\"Unified\" to enable this feature",
     "notes": "",
     "credit": {
@@ -394,11 +394,11 @@
       "name": "Nunchuk",
       "uri": "https://nunchuk.io/"
     },
-    "scans_bip21": "yes",
+    "scans_bip321": "yes",
     "recognizes_lightning": "n/a",
-    "creates_bip21": "no",
+    "creates_bip321": "no",
     "description": "",
-    "notes": "On-chain only, does not generate BIP21 addresses",
+    "notes": "On-chain only, does not generate BIP 321 addresses",
     "issue_link": "https://github.com/nunchuk-io/nunchuk-desktop/issues/10",
     "credit": {
       "name": "@bosch",
@@ -410,9 +410,9 @@
       "name": "OKCoin",
       "uri": "https://www.okcoin.com/"
     },
-    "scans_bip21": "",
+    "scans_bip321": "",
     "recognizes_lightning": "",
-    "creates_bip21": "",
+    "creates_bip321": "",
     "description": "",
     "notes": ""
   },
@@ -421,10 +421,10 @@
       "name": "OpenNode",
       "uri": "https://www.opennode.com/"
     },
-    "scans_bip21": "n/a",
+    "scans_bip321": "n/a",
     "recognizes_lightning": "n/a",
-    "creates_bip21": "yes",
-    "description": "OpenNode is a Lightning Payment Provider that allows merchants to accept bitcoin. For developers, they provide an API to generate and manage generic \"charges\" that can be paid over either a bitcoin transaction or a lightning invoice. The charges API response object includes a `uri` field which contains a BIP21 URI + BOLT11 invoice.",
+    "creates_bip321": "yes",
+    "description": "OpenNode is a Lightning Payment Provider that allows merchants to accept bitcoin. For developers, they provide an API to generate and manage generic \"charges\" that can be paid over either a bitcoin transaction or a lightning invoice. The charges API response object includes a `uri` field which contains a BIP 321 URI + BOLT11 invoice.",
     "notes": "",
     "credit": {
       "name": "@alexlwn123",
@@ -436,9 +436,9 @@
       "name": "Phoenix",
       "uri": "https://phoenix.acinq.co/"
     },
-    "scans_bip21": "yes",
+    "scans_bip321": "yes",
     "recognizes_lightning": "yes",
-    "creates_bip21": "no",
+    "creates_bip321": "no",
     "description": "",
     "notes": "",
     "credit": {
@@ -451,9 +451,9 @@
       "name": "Proton",
       "uri": "https://proton.me/wallet"
     },
-    "scans_bip21": "yes",
+    "scans_bip321": "yes",
     "recognizes_lightning": "no",
-    "creates_bip21": "no",
+    "creates_bip321": "no",
     "description": "",
     "notes": "",
     "credit": {
@@ -466,9 +466,9 @@
       "name": "River",
       "uri": "https://river.com/"
     },
-    "scans_bip21": "yes",
+    "scans_bip321": "yes",
     "recognizes_lightning": "no",
-    "creates_bip21": "no",
+    "creates_bip321": "no",
     "description": "",
     "notes": "",
     "credit": {
@@ -481,9 +481,9 @@
       "name": "Samourai",
       "uri": "https://samouraiwallet.com/"
     },
-    "scans_bip21": "yes",
+    "scans_bip321": "yes",
     "recognizes_lightning": "n/a",
-    "creates_bip21": "no",
+    "creates_bip321": "no",
     "description": "",
     "notes": "",
     "credit": {
@@ -496,10 +496,10 @@
       "name": "SeedSigner",
       "uri": "https://seedsigner.com"
     },
-    "scans_bip21": "yes",
+    "scans_bip321": "yes",
     "recognizes_lightning": "n/a",
-    "creates_bip21": "n/a",
-    "description": "Scans BIP21 QR codes that contain an onchain address.",
+    "creates_bip321": "n/a",
+    "description": "Scans BIP 321 QR codes that contain an onchain address.",
     "notes": "",
     "credit": {
       "name": "@kdmukai",
@@ -511,9 +511,9 @@
       "name": "Simple Bitcoin Wallet",
       "uri": ""
     },
-    "scans_bip21": "yes",
+    "scans_bip321": "yes",
     "recognizes_lightning": "yes",
-    "creates_bip21": "",
+    "creates_bip321": "",
     "description": "Needed a channel open to test but seemed to read the invoice.",
     "notes": "",
     "credit": {
@@ -526,9 +526,9 @@
       "name": "Strike",
       "uri": "https://strike.me/"
     },
-    "scans_bip21": "yes",
+    "scans_bip321": "yes",
     "recognizes_lightning": "yes",
-    "creates_bip21": "no",
+    "creates_bip321": "no",
     "description": "Strike has been updated to recognize the lightning param after scanning",
     "notes": "",
     "issue_link": "",
@@ -542,10 +542,10 @@
       "name": "Swiss Bitcoin Pay",
       "uri": "https://swiss-bitcoin-pay.ch"
     },
-    "scans_bip21": "n/a",
+    "scans_bip321": "n/a",
     "recognizes_lightning": "n/a",
-    "creates_bip21": "yes",
-    "description": "Swiss Bitcoin Pay is a merchant-oriented, non-custodial PoS app, allowing to generate BIP21 unified QR codes",
+    "creates_bip321": "yes",
+    "description": "Swiss Bitcoin Pay is a merchant-oriented, non-custodial PoS app, allowing to generate BIP 321 unified QR codes",
     "notes": "",
     "issue_link": "",
     "credit": {
@@ -558,9 +558,9 @@
       "name": "Wallet of Satoshi",
       "uri": "https://www.walletofsatoshi.com/"
     },
-    "scans_bip21": "yes",
+    "scans_bip321": "yes",
     "recognizes_lightning": "yes",
-    "creates_bip21": "no",
+    "creates_bip321": "no",
     "description": "",
     "notes": "",
     "credit": {
@@ -573,10 +573,10 @@
       "name": "Wasabi Wallet",
       "uri": "https://wasabiwallet.io/"
     },
-    "scans_bip21": "yes",
+    "scans_bip321": "yes",
     "recognizes_lightning": "n/a",
-    "creates_bip21": "no",
-    "description": "Scans BIP21 QR codes but doesn't recognize lightning addresses. Doesn't generate BIP21 QR code",
+    "creates_bip321": "no",
+    "description": "Scans BIP 321 QR codes but doesn't recognize lightning addresses. Doesn't generate BIP 321 QR code",
     "notes": "Currently QR code scanning doesn't work on macOS",
     "issue_link": "https://github.com/zkSNACKs/WalletWasabi/issues/4259",
     "credit": {
@@ -589,9 +589,9 @@
       "name": "Zebedee",
       "uri": "https://zebedee.io/"
     },
-    "scans_bip21": "no",
+    "scans_bip321": "no",
     "recognizes_lightning": "no",
-    "creates_bip21": "no",
+    "creates_bip321": "no",
     "description": "This looks like an on-chain QR code...",
     "notes": "",
     "credit": {
@@ -604,9 +604,9 @@
       "name": "Zeus",
       "uri": "https://zeusln.app/"
     },
-    "scans_bip21": "yes",
+    "scans_bip321": "yes",
     "recognizes_lightning": "yes",
-    "creates_bip21": "yes",
+    "creates_bip321": "yes",
     "description": "",
     "notes": "",
     "issue_link": "https://github.com/ZeusLN/zeus/issues/879",
@@ -620,9 +620,9 @@
       "name": "Alby",
       "uri": "https://getalby.com/"
     },
-    "scans_bip21": "yes",
+    "scans_bip321": "yes",
     "recognizes_lightning": "yes",
-    "creates_bip21": "no",
+    "creates_bip321": "no",
     "description": "",
     "notes": "",
     "credit": {
@@ -635,9 +635,9 @@
       "name": "The Bitcoin Company",
       "uri": "https://thebitcoincompany.com/"
     },
-    "scans_bip21": "yes",
+    "scans_bip321": "yes",
     "recognizes_lightning": "yes",
-    "creates_bip21": "no",
+    "creates_bip321": "no",
     "description": "",
     "notes": "",
     "credit": {
@@ -650,9 +650,9 @@
       "name": "Exodus",
       "uri": "https://www.exodus.com/"
     },
-    "scans_bip21": "yes",
+    "scans_bip321": "yes",
     "recognizes_lightning": "no",
-    "creates_bip21": "no",
+    "creates_bip321": "no",
     "description": "The wallet does not parse lightning param when scanning in lightning mode. It scans the on chain address when selecting bitcoin at least.",
     "notes": "",
     "issue_link": "https://twitter.com/MichaelRihani/status/1555026695022731264?s=20&t=zDzAdL_pncYiRxD9hjrV6w",
@@ -666,9 +666,9 @@
       "name": "Coinjar",
       "uri": "https://www.coinjar.com/"
     },
-    "scans_bip21": "no",
+    "scans_bip321": "no",
     "recognizes_lightning": "no",
-    "creates_bip21": "no",
+    "creates_bip321": "no",
     "description": "App says 'Crypto address is invalid or of an unsupported variant'",
     "notes": "",
     "credit": {
@@ -681,9 +681,9 @@
       "name": "Bitkit",
       "uri": "https://bitkit.to/"
     },
-    "scans_bip21": "yes",
+    "scans_bip321": "yes",
     "recognizes_lightning": "yes",
-    "creates_bip21": "no",
+    "creates_bip321": "no",
     "description": "",
     "notes": "",
     "credit": {
@@ -696,9 +696,9 @@
       "name": "Helm",
       "uri": "https://helm-wallet.com/"
     },
-    "scans_bip21": "yes",
+    "scans_bip321": "yes",
     "recognizes_lightning": "yes",
-    "creates_bip21": "no",
+    "creates_bip321": "no",
     "description": "",
     "notes": "",
     "credit": {
@@ -711,9 +711,9 @@
       "name": "BitBanana",
       "uri": "https://bitbanana.app/"
     },
-    "scans_bip21": "yes",
+    "scans_bip321": "yes",
     "recognizes_lightning": "yes",
-    "creates_bip21": "no",
+    "creates_bip321": "no",
     "description": "Bitbanana defaults to on-chain if the included invoice is expired, but it recognizes Lightning when the invoice is still valid.",
     "notes": "",
     "credit": {

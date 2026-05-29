@@ -39,17 +39,29 @@ function checkScrollPosition(e) {
 }
 
 export default function Home() {
+  const [flowchartZoomed, setFlowchartZoomed] = React.useState(false);
+
   React.useEffect(()=>{
     window.addEventListener('scroll', checkScrollPosition);
   });
-  
+
+  React.useEffect(() => {
+    if (!flowchartZoomed) return;
+    const previouslyFocused = document.activeElement;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = '';
+      if (previouslyFocused instanceof HTMLElement) previouslyFocused.focus();
+    };
+  }, [flowchartZoomed]);
+
   return (
     <div className="w-full max-w-80ch" onScroll={checkScrollPosition}>
       <Head>
         <title>Unified QRs for Bitcoin</title>
         <meta
           name="description"
-          content="Let's talk about using BIP21 payment URIs to combine on-chain and lightning payments into a single QR code, simplifying the user experience."
+          content="Let's talk about using BIP 321 payment URIs to combine on-chain and lightning payments into a single QR code, simplifying the user experience."
         />
         <meta property="og:image" content="https://bitcoinqr.dev/bitcoin-unified-qr-poster.jpg" />
         <meta property="og:image:width" content="1920" />
@@ -59,7 +71,7 @@ export default function Home() {
         <meta name="twitter:site" content="@bitcoin_design" />
         <meta name="twitter:creator" content="@bitcoin_design" />
         <meta name="twitter:title" content="Unified QRs for Bitcoin" />
-        <meta name="twitter:description" content="Let's talk about using BIP21 payment URIs to combine on-chain and lightning payments into a single QR code, simplifying the user experience." />
+        <meta name="twitter:description" content="Let's talk about using BIP 321 payment URIs to combine on-chain and lightning payments into a single QR code, simplifying the user experience." />
         <meta name="twitter:image" content="https://bitcoinqr.dev/bitcoin-unified-qr-poster.jpg" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -146,23 +158,23 @@ export default function Home() {
             <div className="basis-6/12 space-y-4 flex justify-center flex-col">
               <h2 className="text-bpr-orange" id="solution">A Solution</h2>
 
-              <h3>BIP21 Payment URIs with an optional lightning parameter</h3>
+              <h3>BIP 321 Payment URIs with an optional lightning parameter</h3>
 
               <p>
-                <a href="https://github.com/bitcoin/bips/blob/master/bip-0021.mediawiki" className="text-bpr-cyan font-medium">BIP-21</a> defines a URI scheme for creating a “payment link”. By
+                <a href="https://github.com/bitcoin/bips/blob/master/bip-0321.mediawiki" className="text-bpr-cyan font-medium">BIP 321</a> defines a URI scheme for creating a “payment link”. By
                 default, it includes an on-chain address to send funds to.
               </p>
 
               <p>
-                BIP-21 was designed to be extensible. The spec allows
-                for <a href="https://github.com/bitcoin/bips/blob/master/bip-0021.mediawiki#examples" className="text-bpr-cyan font-medium">optional parameters</a> in the URI. Why can’t one of these
+                BIP 321 was designed to be extensible. The spec allows
+                for <a href="https://github.com/bitcoin/bips/blob/master/bip-0321.mediawiki#examples" className="text-bpr-cyan font-medium">optional parameters</a> in the URI. Why can’t one of these
                 parameters be used to include a BOLT 11 invoice, or
                 even a BOLT 12 offer in the future?
               </p>
             </div>
             
             <div className="basis-6/12 pt-6 md:p-6 flex justify-center items-center">
-              <img src="single-qr.svg" alt="Graphic representing a single, unified BIP-21 QR code" className="xl:w-8/12" />
+              <img src="single-qr.svg" alt="Graphic representing a single, unified BIP 321 QR code" className="xl:w-8/12" />
             </div>
           </section>
 
@@ -179,17 +191,17 @@ export default function Home() {
             <div className="flex flex-col space-y-8 md:flex-row md:space-x-4 md:space-y-0 pb-12 lg:justify-around">
               <div className="basis-6/12 lg:basis-5/12 xl:basis-4/12">
                 <Example
-                  title="BIP21 URI with BOLT 11 invoice"
-                  src="qr-bip21-bolt11.png"
+                  title="BIP 321 URI with BOLT 11 invoice (one-time use)"
+                  src="qr-bip321-bolt11.png"
                   caption="This includes an on-chain address and a BOLT 11 invoice. It is easily backwards compatible, but is quite large."
                   raw="bitcoin:BC1QYLH3U67J673H6Y6ALV70M0PL2YZ53TZHVXGG7U?amount=0.00001&label=sbddesign%3A%20For%20lunch%20Tuesday&message=For%20lunch%20Tuesday&lightning=LNBC10U1P3PJ257PP5YZTKWJCZ5FTL5LAXKAV23ZMZEKAW37ZK6KMV80PK4XAEV5QHTZ7QDPDWD3XGER9WD5KWM36YPRX7U3QD36KUCMGYP282ETNV3SHJCQZPGXQYZ5VQSP5USYC4LK9CHSFP53KVCNVQ456GANH60D89REYKDNGSMTJ6YW3NHVQ9QYYSSQJCEWM5CJWZ4A6RFJX77C490YCED6PEMK0UPKXHY89CMM7SCT66K8GNEANWYKZGDRWRFJE69H9U5U0W57RRCSYSAS7GADWMZXC8C6T0SPJAZUP6"
                 />
               </div>
               <div className="basis-6/12 lg:basis-5/12 xl:basis-4/12">
                 <Example
-                  title="BIP21 URI with BOLT 12 offer"
-                  src="qr-bip21-bolt12.png"
-                  caption="While BOLT 12 is not widely implemented yet, we can see that using an offer instead of an invoice reduces the QR code size significantly."
+                  title="BIP 321 URI with BOLT 12 offer (reusable)"
+                  src="qr-bip321-bolt12.png"
+                  caption="Using an offer instead of an invoice reduces the QR code size significantly."
                   raw="bitcoin:BC1QYLH3U67J673H6Y6ALV70M0PL2YZ53TZHVXGG7U?amount=0.00001&label=sbddesign%3A%20For%20lunch%20Tuesday&message=For%20lunch%20Tuesday&lno=LNO1PG257ENXV4EZQCNEYPE82UM50YNHXGRWDAJX283QFWDPL28QQMC78YMLVHMXCSYWDK5WRJNJ36JRYG488QWLRNZYJCZS"
                 />
               </div>
@@ -197,20 +209,30 @@ export default function Home() {
 
             <h3>Standard QR Codes</h3>
             <div className="flex flex-col space-y-8 md:flex-row md:space-x-4 md:space-y-0 pb-12 lg:justify-around">
-              <div className="basis-6/12 lg:basis-5/12 xl:basis-4/12">
+              <div className="basis-6/12 md:basis-4/12">
                 <Example
-                  title="BIP21 URI with On-chain address"
-                  src="qr-bip21-on-chain.png"
-                  caption="A standard BIP 21 URI, for reference. This has the smallest QR code, but will not work with lightning."
+                  title="BIP 321 URI with On-chain address (one-time use)"
+                  src="qr-bip321-on-chain.png"
+                  caption="A standard BIP 321 URI, for reference. This has the smallest QR code, but will not work with lightning."
                   raw="bitcoin:BC1QYLH3U67J673H6Y6ALV70M0PL2YZ53TZHVXGG7U?amount=0.00001&label=sbddesign%3A%20For%20lunch%20Tuesday&message=For%20lunch%20Tuesday"
                 />
               </div>
-              <div className="basis-6/12 lg:basis-5/12 xl:basis-4/12">
+              <div className="basis-6/12 md:basis-4/12">
                 <Example
                   title="BOLT 11 Invoice"
+                  subtitle="(one-time use)"
                   src="qr-bolt11.png"
-                  caption="BOLT 11 invoice QR codes are already significantly large, even without the additional data of the BIP21 URI."
+                  caption="BOLT 11 invoice QR codes are already significantly large, even without the additional data of the BIP 321 URI."
                   raw="LNBC10U1P3PJ257PP5YZTKWJCZ5FTL5LAXKAV23ZMZEKAW37ZK6KMV80PK4XAEV5QHTZ7QDPDWD3XGER9WD5KWM36YPRX7U3QD36KUCMGYP282ETNV3SHJCQZPGXQYZ5VQSP5USYC4LK9CHSFP53KVCNVQ456GANH60D89REYKDNGSMTJ6YW3NHVQ9QYYSSQJCEWM5CJWZ4A6RFJX77C490YCED6PEMK0UPKXHY89CMM7SCT66K8GNEANWYKZGDRWRFJE69H9U5U0W57RRCSYSAS7GADWMZXC8C6T0SPJAZUP6"
+                />
+              </div>
+              <div className="basis-6/12 md:basis-4/12">
+                <Example
+                  title="BOLT 12 Offer"
+                  subtitle="(reusable)"
+                  src="qr-bolt12.png"
+                  caption="A BOLT 12 offer on its own. Compact and reusable, but only works with lightning wallets that support BOLT 12."
+                  raw="LNO1PG257ENXV4EZQCNEYPE82UM50YNHXGRWDAJX283QFWDPL28QQMC78YMLVHMXCSYWDK5WRJNJ36JRYG488QWLRNZYJCZS"
                 />
               </div>
             </div>
@@ -220,15 +242,15 @@ export default function Home() {
             <div className="basis-6/12 space-y-4 flex flex-col justify-center">
               <h2 className="text-bpr-blue" id="why">Why this technique?</h2>
               <p>
-                BIP21 is an existing and agreed-upon standard. Most existing
-                on-chain bitcoin wallets already support BIP21. When
+                BIP 321 is an existing and agreed-upon standard. Most existing
+                on-chain bitcoin wallets already support BIP 321. When
                 these wallets scan the QR code on the right, they will retrieve
                 an on-chain address and ignore the Lightning invoice.
               </p>
 
               <p>
                 For Lightning wallets, adding support should be simple. They just need to know where to look for the
-                Lightning invoice in the BIP21 URI. Wallets can also give a choice of on-chain and Lightning, if the
+                Lightning invoice in the BIP 321 URI. Wallets can also give a choice of on-chain and Lightning, if the
                 wallet supports both.
               </p>
               
@@ -238,40 +260,65 @@ export default function Home() {
             </div>
             <div className="basis-6/12 flex justify-center p-6">
               <div className="bg-bpr-orange w-[240px] h-[240px] md:w-[340px] md:h-[340px]">
-                <img src="qr-bip21-bolt11.png" alt="Sample of a BIP21 and BOLT11 QR code" className="drop-shadow-xl rotate-[-12deg]" />
+                <img src="qr-bip321-bolt11.png" alt="Sample of a BIP 321 and BOLT11 QR code" className="drop-shadow-xl rotate-[-12deg]" />
               </div>
             </div>
           </section>
 
-          <div className="flex justify-center p-12 mb-8">
-            <picture>
-              <source srcSet="flowchart.png 1x, flowchart@2x.png 2x" media="(min-width: 768px)" />
-              <source srcSet="flowchart-mobile.png, flowchart-mobile@2x.png 2x" />
-              <img src="flowchart.png" alt="Flowchart of a decision tree for how a BIP21 QR should be interpreted" />
-            </picture>
+          <div className="flex justify-center -mx-12 px-2 py-8 mb-8 md:mx-0 md:p-12">
+            <button
+              type="button"
+              onClick={() => setFlowchartZoomed(true)}
+              aria-label="Zoom flowchart for a closer view"
+              className="block w-full max-w-5xl cursor-zoom-in"
+            >
+              <img
+                src="flowchart.svg"
+                alt="Flowchart of a decision tree for how a BIP 321 QR should be interpreted"
+                className="w-full block"
+              />
+            </button>
           </div>
+          {flowchartZoomed && (
+            <div
+              ref={(el) => el?.focus()}
+              onClick={() => setFlowchartZoomed(false)}
+              onKeyDown={(e) => { if (e.key === 'Escape') setFlowchartZoomed(false); }}
+              tabIndex={-1}
+              role="dialog"
+              aria-modal="true"
+              aria-label="Flowchart fullscreen view"
+              className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4 cursor-zoom-out outline-none"
+            >
+              <img
+                src="flowchart.svg"
+                alt="Flowchart of a decision tree for how a BIP 321 QR should be interpreted"
+                className="max-w-full max-h-full"
+              />
+            </div>
+          )}
         </div>
 
         <div className="md:p-12 flex flex-col md:items-center space-y-8 p-4 mx-auto mb-8">
           <h2 className="text-bpr-orange" id="plan">The Plan</h2>
 
           <p className="max-w-screen-sm md:text-center">
-            Adoption of the a unified BIP21 QR code for bitcoin is as simple as getting
+            Adoption of the a unified BIP 321 QR code for bitcoin is as simple as getting
             more Lightning wallets, exchanges, and other bitcoin services to
             support it. See below for the current list of support.
-            You can help by testing your favorite wallets and services for support, or by implementing this BIP21
+            You can help by testing your favorite wallets and services for support, or by implementing this BIP 321
             support in a wallet or service that does not have support.
           </p>
 
           <p className="max-w-screen-sm md:text-center font-medium">
-            The most important next step is getting wallets and services to support scanning BIP21 QR codes.
+            The most important next step is getting wallets and services to support scanning BIP 321 QR codes.
           </p>
 
           <p className="max-w-screen-sm md:text-center">
             Once there
             is wide support for <em>scanning</em> in place, wallets projects can decide if they want to roll out
-            support for <em>generating</em> BIP 21 QR codes. Likely, most projects will not default to generating
-            BIP21 QR codes if there is not wide support for scanning BIP21 QR codes first.
+            support for <em>generating</em> BIP 321 QR codes. Likely, most projects will not default to generating
+            BIP 321 QR codes if there is not wide support for scanning BIP 321 QR codes first.
           </p>
           
           <div className="max-w-screen-lg pt-8">
@@ -285,7 +332,7 @@ export default function Home() {
                   and see what happens.
                 </p>
 
-                <img src="qr-bip21-bolt11.png" alt="BIP21 QR code with a BOLT 11 Lightning invoice" />
+                <img src="qr-bip321-bolt11.png" alt="BIP 321 QR code with a BOLT 11 Lightning invoice" />
               </div>
               <div className="basis-6/12 space-y-4">
                 <h4>Interpreting what you see</h4>
@@ -295,12 +342,12 @@ export default function Home() {
                     If the app is an on-chain only wallet:
                     <ul className="list-disc space-y-4 ml-8 mt-4">
                       <li>
-                        If the app fails to scan the QR code, then it <strong >can NOT scan BIP21 QR codes</strong>.
+                        If the app fails to scan the QR code, then it <strong >can NOT scan BIP 321 QR codes</strong>.
                         Lightning is <strong>not applicable</strong> in this case.
                       </li>
                       <li>
                         If the app successfully scans the QR code and recognizes the "bc1q..." address,
-                        then it <strong>CAN scan BIP21 QR codes</strong>.
+                        then it <strong>CAN scan BIP 321 QR codes</strong>.
                         Lightning is <strong>not applicable</strong> in this case.
                       </li>
                     </ul>
@@ -310,24 +357,24 @@ export default function Home() {
                     <ul className="list-disc space-y-4 ml-8 mt-4">
                       <li>
                         If the app scans the QR code but tries to initiate an on-chain payment using the "bc1q..."
-                        address, then it <strong>CAN scan the BIP21 QR code</strong> but <strong>can NOT recognize lightning</strong>.
+                        address, then it <strong>CAN scan the BIP 321 QR code</strong> but <strong>can NOT recognize lightning</strong>.
                       </li>
                       <li>
                         If the app scans the QR code and tries to initiate a Lightning payment,
-                        then it <strong>CAN scan the BIP21 QR code</strong> and <strong>CAN recognize Lightning</strong>.
+                        then it <strong>CAN scan the BIP 321 QR code</strong> and <strong>CAN recognize Lightning</strong>.
                       </li>
                     </ul>
                   </li>
                 </ul>
                 
                 <p>
-                  <strong>Optional:</strong> you may also document if the app is capable of creating a BIP21 payment URI when you request a payment. The way to determine if a QR code is a BIP21 URI is to decode the QR and see if it begins with <pre className="inline">bitcoin:</pre>. If this is too advanced for you or you are otherwise unsure, you can simply say "I'm not sure" for this detail; this will most commonly be a <strong>no</strong> for most wallets today. 
+                  <strong>Optional:</strong> you may also document if the app is capable of creating a BIP 321 payment URI when you request a payment. The way to determine if a QR code is a BIP 321 URI is to decode the QR and see if it begins with <pre className="inline">bitcoin:</pre>. If this is too advanced for you or you are otherwise unsure, you can simply say "I'm not sure" for this detail; this will most commonly be a <strong>no</strong> for most wallets today. 
                 </p>
 
                 <p>
                   Once you have your results, submit a PR to update the <a href="https://github.com/sbddesign/bip21-site/blob/main/wallet_support.json">wallet_support.json</a> file
                   on GitHub. If you are not comfortable working with the code, then simply <a href="https://github.com/sbddesign/bip21-site/issues/new">file an issue</a> in
-                  our GitHub repo or message us in <strong>#unified-qr-code</strong> on <a href="https://join.slack.com/t/bitcoindesign/shared_invite/zt-10sxfovaq-isViijl4RThKRs_TsAQnuA">Slack</a>.
+                  our GitHub repo.
                 </p>
               </div>
             </div>
@@ -341,8 +388,8 @@ export default function Home() {
 
           <ul className="md:text-center">
             <li>
-              <a href="https://github.com/peakshift/bitcoin-ux/tree/master/packages/payment-requests">
-                Peakshift Bitcoin UX Payment Requests Package
+              <a href="https://crates.io/crates/bitcoin-payment-instructions">
+                Bitcoin Payment Instructions Rust Crate from @TheBlueMatt
               </a>
             </li>
             <li>
@@ -362,21 +409,21 @@ export default function Home() {
             </li>
           </ul>
 
-          <h3 className="pt-8" id="support">Software and services supporting BIP21</h3>
+          <h3 className="pt-8" id="support">Software and services supporting BIP 321</h3>
           
           <div className="bg-slate-200 p-4 font-light space-y-4 rounded">
             <h4 className="font-medium">Defining support</h4>
             <div className="flex">
               <ScanIcon className="w-8 h-8 text-black inline mr-2"/>
-              Can the wallet or service scan a BIP21 QR code?
+              Can the wallet or service scan a BIP 321 QR code?
             </div>
             <div className="flex">
               <LightningIcon className="w-8 h-8 text-black inline mr-2"/>
-              Can the wallet or service recognize the lightning parameter in the BIP21 URI?
+              Can the wallet or service recognize the lightning parameter in the BIP 321 URI?
             </div>
             <div className="flex">
               <QrCodeIcon className="w-8 h-8 text-black inline mr-2"/>
-              Can the wallet generate it's own BIP21 QR code?
+              Can the wallet generate it's own BIP 321 QR code?
             </div>
             <div className="flex">
               <AlertIcon className="w-8 h-8 text-black inline mr-2"/>
@@ -388,7 +435,7 @@ export default function Home() {
 
           <h3 className="pt-8" id="support">Hardware Support</h3>
           
-          <p>BIP21 QR codes that contain Lightning invoices can get very large. Here is documentation on how different mobile devices fare when attempting to scan these large QR codes.</p>
+          <p>BIP 321 QR codes that contain Lightning invoices can get very large. Here is documentation on how different mobile devices fare when attempting to scan these large QR codes.</p>
           
           <p>These results differ from the results above. Here, we are simply checking if an app is capable of reading the very large QR code, and <strong>disregarding</strong> whether or not it notices the Lightning invoice.</p>
           
@@ -398,7 +445,7 @@ export default function Home() {
         <div className="container mx-auto px-12 max-w-screen-xl">
           <h2 className="text-bpr-purple mb-4" id="faq">Common Questions &amp; Concerns</h2>
           <div className="flex flex-col md:flex-row m-0 gap-8 md:gap-16">
-            <div className="basis-6/12">
+            <div className="basis-6/12 md:basis-4/12 space-y-4">
               <h3>QR code size is very large</h3>
 
               <p>
@@ -411,7 +458,7 @@ export default function Home() {
                 animated QR codes or NFC could help avoid scanning problems.
               </p>
             </div>
-            <div className="basis-6/12 space-y-4">
+            <div className="basis-6/12 md:basis-4/12 space-y-4">
               <h3>Does this take away choice from the user?</h3>
 
               <p>In many situations, the user already lacks a choice in the matter. For example:</p>
@@ -433,24 +480,33 @@ export default function Home() {
                 take longer to confirm. Is this OK?"
               </p>
             </div>
+            <div className="basis-6/12 md:basis-4/12 space-y-4">
+              <h3>Why not put a human-readable address inside a BIP 321 URI?</h3>
+
+              <p>
+                The QR you scanned should already contain everything needed to pay. A human-readable identifier e.g <pre className="inline">bob@pay.me</pre> doesn&rsquo;t &mdash; it&rsquo;s a pointer that has to be resolved over the network before any payment can happen.
+              </p>
+
+              <p>
+                These identifiers are for names a human types or shares, not for a QR or link. Embedding one forces a DNS or LNURL lookup whose result the payer must trust on top of what they scanned: added latency, and another thing that can fail or be intercepted.
+              </p>
+
+              <p>
+                Used as intended &mdash; shared as a name a person types, not crammed into a scanned code &mdash; human-readable identifiers are a real UX win. To learn more, read Spiral&rsquo;s <a href="https://spiralbtc.substack.com/p/making-bitcoin-speak-human" className="text-bpr-cyan font-medium">Making Bitcoin Speak Human</a>.
+              </p>
+            </div>
           </div>
         </div>
           
         <div className="pt-24 pb-24 pl-12 pr-12 max-w-4xl text-center space-y-4 flex flex-col items-center container mx-auto max-w-screen-lg">
           <h2 className="text-bpr-pink" id="follow">Follow along</h2>
           <p className="text-xl">
-            Leave feedback and participate in the conversation on GitHub or in the Bitcoin Design slack workspace in
-            the #unified-qr-code channel.
+            Leave feedback and participate in the conversation on GitHub.
           </p>
           <div className="flex space-x-4">
             <a href="https://github.com/sbddesign/bip21-site">
               <div className="border-4 border-bpr-orange p-4 text-xl text-bpr-orange">
                 GitHub
-              </div>
-            </a>
-            <a href="https://join.slack.com/t/bitcoindesign/shared_invite/zt-10sxfovaq-isViijl4RThKRs_TsAQnuA">
-              <div className="border-4 border-bpr-orange p-4 text-xl text-bpr-orange">
-                Slack
               </div>
             </a>
           </div>

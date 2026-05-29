@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1760" role="img" aria-labelledby="flowchart-title">
+  <title id="flowchart-title">Flowchart of a decision tree for how a BIP 321 QR should be interpreted</title>
+  <defs>
+    <marker id="ah" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="14" markerHeight="14" markerUnits="userSpaceOnUse" orient="auto-start-reverse">
+      <path d="M1,1 L10,6 L1,11" fill="none" stroke="#F2A93B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="#F2A93B" stroke-width="3.5" stroke-linecap="round">
+    <path d="M660,125 C660,150 660,160 660,178" marker-end="url(#ah)"/>
+    <path d="M660,325 C660,355 660,375 660,398" marker-end="url(#ah)"/>
+    <path d="M555,545 C430,590 320,600 305,638" marker-end="url(#ah)"/>
+    <path d="M765,545 C890,590 950,600 835,638" marker-end="url(#ah)"/>
+    <path d="M305,795 C305,830 305,860 305,898" marker-end="url(#ah)"/>
+    <path d="M835,795 C835,835 880,865 900,898" marker-end="url(#ah)"/>
+    <path d="M900,1115 C900,1190 480,1190 445,1278" marker-end="url(#ah)"/>
+    <path d="M900,1115 C900,1190 1075,1190 1075,1278" marker-end="url(#ah)"/>
+    <path d="M445,1435 C445,1490 370,1505 370,1538" marker-end="url(#ah)"/>
+    <path d="M1075,1435 C1075,1490 1090,1505 1090,1538" marker-end="url(#ah)"/>
+  </g>
+  <g id="n-start">
+    <rect x="430" y="0" width="460" height="100" rx="6" ry="6" fill="#8FA8E0"/>
+    <text font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="28" font-weight="500" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central">
+      <tspan x="660" y="50">User scans BIP 321 QR code</tspan>
+    </text>
+  </g>
+  <g id="n-recog">
+    <rect x="270" y="200" width="780" height="100" rx="6" ry="6" fill="#8FA8E0"/>
+    <text font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="28" font-weight="500" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central">
+      <tspan x="660" y="250">Lightning wallet recognizes this as a BIP 321 URI</tspan>
+    </text>
+  </g>
+  <g id="n-q1">
+    <rect x="320" y="420" width="680" height="100" rx="6" ry="6" fill="#8FA8E0"/>
+    <text font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="28" font-weight="500" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central">
+      <tspan x="660" y="470">Is there a <tspan font-family="'SF Mono', ui-monospace, Menlo, Consolas, monospace" font-size="26"> lightning </tspan> parameter in the URI?</tspan>
+    </text>
+  </g>
+  <g id="n-yes1">
+    <rect x="240" y="660" width="130" height="110" rx="6" ry="6" fill="#8FA8E0"/>
+    <text font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="28" font-weight="500" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central">
+      <tspan x="305" y="715">Yes</tspan>
+    </text>
+  </g>
+  <g id="n-no1">
+    <rect x="770" y="660" width="130" height="110" rx="6" ry="6" fill="#8FA8E0"/>
+    <text font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="28" font-weight="500" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central">
+      <tspan x="835" y="715">No</tspan>
+    </text>
+  </g>
+  <g id="n-bolt">
+    <rect x="80" y="920" width="480" height="170" rx="6" ry="6" fill="#8FA8E0"/>
+    <text font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="28" font-weight="500" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central">
+      <tspan x="320" y="967">Attempt to parse this</tspan>
+      <tspan x="320" y="1005">parameter’s value as a</tspan>
+      <tspan x="320" y="1043">BOLT 11 invoice.</tspan>
+    </text>
+  </g>
+  <g id="n-q2">
+    <rect x="600" y="920" width="600" height="170" rx="6" ry="6" fill="#8FA8E0"/>
+    <text font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="28" font-weight="500" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central">
+      <tspan x="900" y="967">Does this wallet support</tspan>
+      <tspan x="900" y="1005">on-chain payments and/or</tspan>
+      <tspan x="900" y="1043">submarine swaps?</tspan>
+    </text>
+  </g>
+  <g id="n-yes2">
+    <rect x="380" y="1300" width="130" height="110" rx="6" ry="6" fill="#8FA8E0"/>
+    <text font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="28" font-weight="500" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central">
+      <tspan x="445" y="1355">Yes</tspan>
+    </text>
+  </g>
+  <g id="n-no2">
+    <rect x="1010" y="1300" width="130" height="110" rx="6" ry="6" fill="#8FA8E0"/>
+    <text font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="28" font-weight="500" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central">
+      <tspan x="1075" y="1355">No</tspan>
+    </text>
+  </g>
+  <g id="n-useaddr">
+    <rect x="80" y="1560" width="580" height="170" rx="6" ry="6" fill="#8FA8E0"/>
+    <text font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="28" font-weight="500" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central">
+      <tspan x="370" y="1607">Use the on-chain address</tspan>
+      <tspan x="370" y="1645">towards the beginning of</tspan>
+      <tspan x="370" y="1683">the URI</tspan>
+    </text>
+  </g>
+  <g id="n-fail">
+    <rect x="800" y="1560" width="580" height="170" rx="6" ry="6" fill="#8FA8E0"/>
+    <text font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="28" font-weight="500" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central">
+      <tspan x="1090" y="1607">Fail with an error message</tspan>
+      <tspan x="1090" y="1645">that helps user figure out</tspan>
+      <tspan x="1090" y="1683">what to do next</tspan>
+    </text>
+  </g>
+</svg>

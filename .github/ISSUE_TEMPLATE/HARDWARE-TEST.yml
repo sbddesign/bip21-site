@@ -1,5 +1,5 @@
 name: Submit a device you have tested
-description: Submit your report of a wallet, exchange, or other bitcoin service for compatibility with unified BIP21 QR codes
+description: Submit your report of a wallet, exchange, or other bitcoin service for compatibility with unified BIP 321 QR codes
 title: "[Hardware Test]: "
 labels: ["hardware-test"]
 assignees:
@@ -40,8 +40,8 @@ body:
   - type: dropdown
     id: scans
     attributes:
-      label: Scans BIP-21
-      description: Did the wallet successfully scan the BIP21 QR code?
+      label: Scans BIP 321
+      description: Did the wallet successfully scan the BIP 321 QR code?
       options:
         - "Yes"
         - "No"
